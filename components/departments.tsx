@@ -1,46 +1,64 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function Departments() {
   const departments = [
     {
       id: 'ict',
-      name: 'ICT',
-      fullName: 'Information & Communication Technology',
+      name: 'ATiT',
+      fullName: 'Association of Technology in IT',
       description: 'Software development, cybersecurity, and digital innovation',
       color: 'cyan',
-      icon: '💻'
+      logo: '/atit-logo.png'
     },
     {
       id: 'ent',
-      name: 'ENT',
-      fullName: 'Electronics & Nanotechnology',
+      name: 'ASEET',
+      fullName: 'Association of Students in Electronics Engineering & Technology',
       description: 'Electronics, microprocessors, and nanotechnology advances',
       color: 'cyan',
-      icon: '⚡'
+      logo: '/aseet-logo.png'
     },
     {
       id: 'mtt',
-      name: 'MTT',
-      fullName: 'Mechanical & Transport Technology',
+      name: 'AMT',
+      fullName: 'Association of Mechanical Technology',
       description: 'Robotics, automation, and mechanical innovations',
       color: 'green',
-      icon: '🔧'
+      logo: '/amt-logo.png'
     },
     {
       id: 'bpt',
-      name: 'BPT',
-      fullName: 'Biosystems & Process Technology',
+      name: 'RUBIC',
+      fullName: 'Rajarata University Biotechnology Innovation Club',
       description: 'Biotechnology, environmental tech, and bioengineering',
       color: 'cyan',
-      icon: '🧬'
+      logo: '/rubic-logo.png'
     },
     {
       id: 'fdt',
-      name: 'FDT',
-      fullName: 'Food & Dairy Technology',
+      name: 'AFRU',
+      fullName: 'Association of Food Researchers of the University',
       description: 'Food innovation, dairy technology, and agritech solutions',
       color: 'cyan',
-      icon: '🍽️'
+      logo: '/afru-logo.png'
+    },
+    {
+      id: 'rost',
+      name: 'ROST',
+      fullName: 'Rajarata Organization of Science & Technology',
+      description: 'Science and technology innovation',
+      color: 'cyan',
+      logo: '/rost-logo.png'
+    },
+    {
+      id: 'fot',
+      name: 'FOT Media',
+      fullName: 'Faculty of Technology Media',
+      description: 'Media and communication technology',
+      color: 'cyan',
+      logo: '/fot-media-logo.png'
     }
   ]
 
@@ -48,17 +66,46 @@ export default function Departments() {
     <section id="departments" className="relative py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
-          Departments
+          Association
         </h2>
         <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-          {departments.map((dept) => (
-            <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105">
-              <div className="text-4xl mb-3">{dept.icon}</div>
-              <h3 className="text-2xl font-bold text-accent mb-1">{dept.name}</h3>
-              <p className="text-sm text-primary font-semibold mb-3">{dept.fullName}</p>
-              <p className="text-foreground/70 text-xs line-clamp-2">{dept.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+          {departments.slice(0, 4).map((dept) => (
+            <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between">
+              <div className="w-32 h-32 mb-4 relative flex items-center justify-center">
+                <Image 
+                  src={dept.logo} 
+                  alt={`${dept.name} logo`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col items-center gap-2 flex-grow justify-center">
+                <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
+                <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
+                <p className="text-foreground/70 text-xs text-center line-clamp-3">{dept.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {departments.slice(4, 7).map((dept) => (
+            <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between">
+              <div className="w-32 h-32 mb-4 relative flex items-center justify-center">
+                <Image 
+                  src={dept.logo} 
+                  alt={`${dept.name} logo`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col items-center gap-2 flex-grow justify-center">
+                <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
+                <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
+                <p className="text-foreground/70 text-xs text-center line-clamp-3">{dept.description}</p>
+              </div>
             </div>
           ))}
         </div>

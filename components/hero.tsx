@@ -6,64 +6,53 @@ import Image from 'next/image'
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
-  const [showRobot, setShowRobot] = useState(true)
   const [typedText, setTypedText] = useState('')
   const fullText = 'EXTRU'
   const [typedYear, setTypedYear] = useState('')
   const fullYear = '2026'
   const [showFinalCursor, setShowFinalCursor] = useState(false)
+  const [showInitialCursor, setShowInitialCursor] = useState(true)
 
   useEffect(() => {
     setIsVisible(true)
 
-    // Typing animation for EXTRU
-    let currentIndex = 0
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setTypedText(fullText.slice(0, currentIndex))
-        currentIndex++
-      } else {
-        clearInterval(typingInterval)
-        // Start typing year after EXTRU is done
-        let yearIndex = 0
-        const yearInterval = setInterval(() => {
-          if (yearIndex <= fullYear.length) {
-            setTypedYear(fullYear.slice(0, yearIndex))
-            yearIndex++
-          } else {
-            clearInterval(yearInterval)
-            // Show final cursor after typing is complete
-            setShowFinalCursor(true)
-          }
-        }, 80)
-      }
-    }, 100)
-
-    const handleScroll = () => {
-      const homeSection = document.getElementById('home')
-      if (homeSection) {
-        const rect = homeSection.getBoundingClientRect()
-        // Show robot only when home section is in view
-        const isHomeVisible = rect.top < window.innerHeight && rect.bottom > 0
-        setShowRobot(isHomeVisible)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    handleScroll() // Check initial state
+    // Show initial cursor for 1500ms before typing starts
+    const initialTimer = setTimeout(() => {
+      setShowInitialCursor(false)
+      
+      // Typing animation for EXTRU
+      let currentIndex = 0
+      const typingInterval = setInterval(() => {
+        if (currentIndex <= fullText.length) {
+          setTypedText(fullText.slice(0, currentIndex))
+          currentIndex++
+        } else {
+          clearInterval(typingInterval)
+          // Start typing year after EXTRU is done
+          let yearIndex = 0
+          const yearInterval = setInterval(() => {
+            if (yearIndex <= fullYear.length) {
+              setTypedYear(fullYear.slice(0, yearIndex))
+              yearIndex++
+            } else {
+              clearInterval(yearInterval)
+              // Show final cursor after typing is complete
+              setShowFinalCursor(true)
+            }
+          }, 80)
+        }
+      }, 100)
+    }, 1500)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-      clearInterval(typingInterval)
+      clearTimeout(initialTimer)
     }
   }, [])
 
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-10 overflow-hidden">
-      {/* Robot Image - Fixed to right corner */}
-      <div className={`fixed top-20 right-0 lg:right-10 bottom-0 z-5 hidden lg:flex lg:items-center transition-opacity duration-500 ${
-        showRobot ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      }`}>
+      {/* Robot Image - Absolute positioned within home section */}
+      <div className="absolute top-20 right-0 lg:-right-20 bottom-0 z-5 hidden lg:flex lg:items-center">
         <div className={`relative w-full max-w-[600px] h-full max-h-[calc(100vh-5rem)] aspect-square transition-all duration-1000 delay-300 ${
           isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
         }`}>
@@ -122,6 +111,13 @@ export default function Hero() {
             }}
           >
             <div>
+              {showInitialCursor && typedText.length === 0 && (
+                <span className="typing-cursor" style={{
+                  display: 'inline-block',
+                  animation: 'blink 0.7s infinite',
+                  marginLeft: '4px'
+                }}>|</span>
+              )}
               {typedText.split('').map((char, index) => (
                 <span
                   key={index}
@@ -134,7 +130,7 @@ export default function Hero() {
                   {char}
                 </span>
               ))}
-              {typedText.length < fullText.length && (
+              {typedText.length < fullText.length && !showInitialCursor && (
                 <span className="typing-cursor" style={{
                   display: 'inline-block',
                   animation: 'blink 0.7s infinite',

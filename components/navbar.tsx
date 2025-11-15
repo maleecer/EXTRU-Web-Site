@@ -44,42 +44,56 @@ export default function Navbar() {
           <button 
             id="nav-home"
             onClick={() => scrollToSection('home')}
-            className="text-primary hover:text-accent transition duration-300 text-sm font-medium tracking-wide"
+            className="text-primary hover:text-accent transition-all duration-200 text-sm font-bold tracking-wider uppercase hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]"
+            style={{ fontFamily: 'var(--font-orbitron)' }}
           >
             Home
           </button>
           <button 
             id="nav-about"
             onClick={() => scrollToSection('about')}
-            className="text-primary hover:text-accent transition duration-300 text-sm font-medium tracking-wide"
+            className="text-primary hover:text-accent transition-all duration-200 text-sm font-bold tracking-wider uppercase hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]"
+            style={{ fontFamily: 'var(--font-orbitron)' }}
           >
             About
           </button>
           <button 
+            id="nav-recap"
+            onClick={() => scrollToSection('recap')}
+            className="text-primary hover:text-accent transition-all duration-200 text-sm font-bold tracking-wider uppercase hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]"
+            style={{ fontFamily: 'var(--font-orbitron)' }}
+          >
+            Recap
+          </button>
+          <button 
             id="nav-merchandise"
             onClick={() => scrollToSection('merchandise')}
-            className="text-primary hover:text-accent transition duration-300 text-sm font-medium tracking-wide"
+            className="text-primary hover:text-accent transition-all duration-200 text-sm font-bold tracking-wider uppercase hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]"
+            style={{ fontFamily: 'var(--font-orbitron)' }}
           >
             Merch
           </button>
           <button 
             id="nav-schedule"
             onClick={() => scrollToSection('schedule')}
-            className="text-primary hover:text-accent transition duration-300 text-sm font-medium tracking-wide"
+            className="text-primary hover:text-accent transition-all duration-200 text-sm font-bold tracking-wider uppercase hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]"
+            style={{ fontFamily: 'var(--font-orbitron)' }}
           >
             Schedule
           </button>
           <button 
             id="nav-projects"
             onClick={() => scrollToSection('projects')}
-            className="text-primary hover:text-accent transition duration-300 text-sm font-medium tracking-wide"
+            className="text-primary hover:text-accent transition-all duration-200 text-sm font-bold tracking-wider uppercase hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]"
+            style={{ fontFamily: 'var(--font-orbitron)' }}
           >
             Projects
           </button>
           <button 
             id="nav-contact"
             onClick={() => scrollToSection('contact')}
-            className="text-primary hover:text-accent transition duration-300 text-sm font-medium tracking-wide"
+            className="text-primary hover:text-accent transition-all duration-200 text-sm font-bold tracking-wider uppercase hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]"
+            style={{ fontFamily: 'var(--font-orbitron)' }}
           >
             Contact Us
           </button>
@@ -97,12 +111,13 @@ export default function Navbar() {
 
       {isMenuOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-primary/20 px-4 py-4 flex flex-col gap-4">
-          <button id="nav-mobile-home" onClick={() => scrollToSection('home')} className="text-primary hover:text-accent transition text-left">Home</button>
-          <button id="nav-mobile-about" onClick={() => scrollToSection('about')} className="text-primary hover:text-accent transition text-left">About</button>
-          <button id="nav-mobile-merchandise" onClick={() => scrollToSection('merchandise')} className="text-primary hover:text-accent transition text-left">Merch</button>
-          <button id="nav-mobile-schedule" onClick={() => scrollToSection('schedule')} className="text-primary hover:text-accent transition text-left">Schedule</button>
-          <button id="nav-mobile-projects" onClick={() => scrollToSection('projects')} className="text-primary hover:text-accent transition text-left">Projects</button>
-          <button id="nav-mobile-contact" onClick={() => scrollToSection('contact')} className="text-primary hover:text-accent transition text-left">Contact Us</button>
+          <button id="nav-mobile-home" onClick={() => scrollToSection('home')} className="text-primary hover:text-accent transition-all duration-200 text-left font-bold tracking-wider uppercase hover:translate-x-2 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]" style={{ fontFamily: 'var(--font-orbitron)' }}>Home</button>
+          <button id="nav-mobile-about" onClick={() => scrollToSection('about')} className="text-primary hover:text-accent transition-all duration-200 text-left font-bold tracking-wider uppercase hover:translate-x-2 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]" style={{ fontFamily: 'var(--font-orbitron)' }}>About</button>
+          <button id="nav-mobile-recap" onClick={() => scrollToSection('recap')} className="text-primary hover:text-accent transition-all duration-200 text-left font-bold tracking-wider uppercase hover:translate-x-2 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]" style={{ fontFamily: 'var(--font-orbitron)' }}>Recap</button>
+          <button id="nav-mobile-merchandise" onClick={() => scrollToSection('merchandise')} className="text-primary hover:text-accent transition-all duration-200 text-left font-bold tracking-wider uppercase hover:translate-x-2 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]" style={{ fontFamily: 'var(--font-orbitron)' }}>Merch</button>
+          <button id="nav-mobile-schedule" onClick={() => scrollToSection('schedule')} className="text-primary hover:text-accent transition-all duration-200 text-left font-bold tracking-wider uppercase hover:translate-x-2 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]" style={{ fontFamily: 'var(--font-orbitron)' }}>Schedule</button>
+          <button id="nav-mobile-projects" onClick={() => scrollToSection('projects')} className="text-primary hover:text-accent transition-all duration-200 text-left font-bold tracking-wider uppercase hover:translate-x-2 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]" style={{ fontFamily: 'var(--font-orbitron)' }}>Projects</button>
+          <button id="nav-mobile-contact" onClick={() => scrollToSection('contact')} className="text-primary hover:text-accent transition-all duration-200 text-left font-bold tracking-wider uppercase hover:translate-x-2 hover:drop-shadow-[0_0_8px_rgba(124,255,114,0.8)]" style={{ fontFamily: 'var(--font-orbitron)' }}>Contact Us</button>
         </div>
       )}
 

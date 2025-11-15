@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar'
 import Hero from '@/components/hero'
 import About from '@/components/about'
 import Highlights from '@/components/highlights'
+import Recap from '@/components/recap'
 import Merchandise from '@/components/merchandise'
 import Projects from '@/components/projects'
 import Schedule from '@/components/schedule'
@@ -52,10 +53,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Highlights - Cyan accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent">
+        {/* Recap - Orange accent */}
+        <div className="w-full bg-gradient-to-b from-transparent via-orange-950/10 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
-            <Highlights />
+            <Recap />
           </div>
         </div>
 

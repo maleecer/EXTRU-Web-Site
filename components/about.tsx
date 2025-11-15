@@ -11,15 +11,15 @@ export default function About() {
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mb-8"></div>
           
-          <p className="text-foreground/80 text-lg leading-relaxed mb-6">
+          <p className="text-white text-lg leading-relaxed mb-6">
             EXTRU 2026 is Sri Lanka's premier technology exhibition, bringing together innovators, developers, and tech enthusiasts from across the nation. Experience cutting-edge technologies, participate in hands-on workshops, and network with industry leaders in the field of technology and innovation.
           </p>
           
-          <p className="text-foreground/80 text-lg leading-relaxed mb-6">
+          <p className="text-white text-lg leading-relaxed mb-6">
             Hosted at the Technology Faculty Premises of Rajarata University of Sri Lanka from February 19-21, 2026, EXTRU features contributions from five dynamic departments: ICT, Electronics & Nanotechnology, Mechanical & Transport Technology, Biosystems & Process Technology, and Food & Dairy Technology.
           </p>
 
-          <p className="text-foreground/80 text-lg leading-relaxed">
+          <p className="text-white text-lg leading-relaxed">
             From AI and machine learning to robotics, biotechnology, and agritech, explore the future of technology across all domains.
           </p>
         </div>

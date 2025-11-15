@@ -21,8 +21,6 @@ export default function AnimatedGrid() {
     window.addEventListener('resize', resizeCanvas)
 
     const gridSize = 40
-    let offsetX = 0
-    let offsetY = 0
     let time = 0
 
     const drawGrid = () => {
@@ -34,10 +32,10 @@ export default function AnimatedGrid() {
       ctx.shadowBlur = 8
       ctx.shadowColor = 'rgba(51, 225, 255, 0.4)'
 
-      // Calculate offsets with wave motion
-      time += 0.1
-      offsetX = Math.sin(time) * gridSize
-      offsetY = Math.cos(time * 0.7) * gridSize
+      // Calculate offsets with circular/spiral motion
+      time += 0.3
+      const offsetX = time * 2 % gridSize
+      const offsetY = time * 2 % gridSize
 
       // Draw vertical lines
       for (let x = (offsetX % gridSize) - gridSize; x < canvas.width + gridSize; x += gridSize) {
@@ -55,14 +53,14 @@ export default function AnimatedGrid() {
         ctx.stroke()
       }
 
-      // Draw intersection dots for tech effect
-      ctx.shadowBlur = 10
+      // Draw intersection dots for tech effect with pulsing
+      ctx.shadowBlur = 10 + Math.sin(time * 2) * 3
       ctx.shadowColor = 'rgba(51, 225, 255, 0.6)'
       ctx.fillStyle = 'rgba(51, 225, 255, 0.3)'
       for (let x = (offsetX % gridSize) - gridSize; x < canvas.width + gridSize; x += gridSize) {
         for (let y = (offsetY % gridSize) - gridSize; y < canvas.height + gridSize; y += gridSize) {
           ctx.beginPath()
-          ctx.arc(x, y, 1.5, 0, Math.PI * 2)
+          ctx.arc(x, y, 1.5 + Math.sin(time * 3) * 0.5, 0, Math.PI * 2)
           ctx.fill()
         }
       }
