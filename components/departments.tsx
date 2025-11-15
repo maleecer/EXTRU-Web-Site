@@ -1,7 +1,5 @@
 'use client'
 
-import Link from 'next/link'
-
 export default function Departments() {
   const departments = [
     {
@@ -56,17 +54,12 @@ export default function Departments() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
           {departments.map((dept) => (
-            <Link key={dept.id} href={`/departments/${dept.id}`} target="_blank">
-              <div className="neon-border-cyan p-6 hover-glow h-full cursor-pointer transition transform hover:scale-105">
-                <div className="text-4xl mb-3">{dept.icon}</div>
-                <h3 className="text-2xl font-bold text-accent mb-1">{dept.name}</h3>
-                <p className="text-sm text-primary font-semibold mb-3">{dept.fullName}</p>
-                <p className="text-foreground/70 text-xs line-clamp-2">{dept.description}</p>
-                <div className="mt-4 text-primary text-sm font-semibold">
-                  View Details →
-                </div>
-              </div>
-            </Link>
+            <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105">
+              <div className="text-4xl mb-3">{dept.icon}</div>
+              <h3 className="text-2xl font-bold text-accent mb-1">{dept.name}</h3>
+              <p className="text-sm text-primary font-semibold mb-3">{dept.fullName}</p>
+              <p className="text-foreground/70 text-xs line-clamp-2">{dept.description}</p>
+            </div>
           ))}
         </div>
       </div>

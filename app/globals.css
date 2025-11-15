@@ -118,13 +118,31 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Apply technology font to all headings (provided via next/font variable) */
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-orbitron, var(--font-sans));
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#000408] text-foreground;
   }
+}
+
+/* Custom tech-style neon cursor */
+* {
+  cursor: url('/cursor-default.svg') 32 32, crosshair !important;
+}
+
+/* Cursor for interactive elements - enhanced tech targeting */
+a, button, input[type="button"], input[type="submit"], [role="button"], .cursor-pointer {
+  cursor: url('/cursor-pointer.svg') 32 32, pointer !important;
 }
 
 /* Updated neon glow effects to use new aqua color */
@@ -151,6 +169,15 @@
   }
 }
 
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
 .neon-text {
   animation: neon-glow 3s ease-in-out infinite;
 }
@@ -161,6 +188,17 @@
     linear-gradient(90deg, transparent 24%, rgba(51, 225, 255, 0.05) 25%, rgba(51, 225, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(51, 225, 255, 0.05) 75%, rgba(51, 225, 255, 0.05) 76%, transparent 77%, transparent);
   background-size: 50px 50px;
   animation: grid-fade 4s ease-in-out infinite;
+}
+
+.grid-background {
+  background-image: 
+    linear-gradient(to right, rgba(51, 225, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 225, 255, 0.15) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 15s linear infinite;
+  width: 100%;
+  height: 100%;
+  will-change: background-position;
 }
 
 .neon-border {
@@ -185,4 +223,20 @@
 .hover-glow:hover {
   box-shadow: 0 0 30px rgba(51, 225, 255, 0.8), inset 0 0 20px rgba(51, 225, 255, 0.2);
   transform: scale(1.02);
+}
+
+/* Section divider line */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(51, 225, 255, 0.6) 50%, transparent);
+  box-shadow: 0 0 10px rgba(51, 225, 255, 0.5);
+  margin: 3rem 0;
+}
+
+/* Specific hover for the hero CTA button 'Explore Exhibits' */
+.cta-exhibits:hover {
+  /* hover: use specified green (#71ea6b) and a thinner border */
+  box-shadow: 0 0 24px rgba(113, 234, 107, 0.95), inset 0 0 10px rgba(113, 234, 107, 0.15);
+  transform: none;
+  border: 1px solid #71ea6b;
 }

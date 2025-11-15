@@ -1,8 +1,11 @@
 'use client'
 
-import Link from 'next/link'
+import { useState } from 'react'
+import PreOrderModal from './pre-order-modal'
 
 export default function Merchandise() {
+  const [selectedItem, setSelectedItem] = useState<{ name: string; price: string } | null>(null)
+
   const items = [
     {
       id: 1,
@@ -50,17 +53,23 @@ export default function Merchandise() {
               </div>
               <h3 className="text-lg font-bold text-accent mb-2">{item.name}</h3>
               <p className="text-primary text-lg font-bold mb-4">{item.price}</p>
+              <button 
+                onClick={() => setSelectedItem({ name: item.name, price: item.price })}
+                className="w-full neon-border-green px-4 py-2 text-sm font-semibold text-accent hover-glow transition"
+              >
+                Pre-Order Now
+              </button>
             </div>
           ))}
         </div>
 
-        <div className="text-center">
-          <Link href="/merchandise">
-            <button className="neon-border-green px-12 py-4 text-lg font-semibold text-accent hover-glow inline-block">
-              Pre-Order Now
-            </button>
-          </Link>
-        </div>
+        {/* Pre-Order Modal */}
+        <PreOrderModal
+          isOpen={selectedItem !== null}
+          onClose={() => setSelectedItem(null)}
+          itemName={selectedItem?.name || ''}
+          itemPrice={selectedItem?.price || ''}
+        />
       </div>
     </section>
   )
