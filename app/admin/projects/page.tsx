@@ -44,19 +44,26 @@ export default function ProjectsAdmin() {
 
   const [editingId, setEditingId] = useState<number | null>(null)
   const [editForm, setEditForm] = useState<Project | null>(null)
+  const [isAddMode, setIsAddMode] = useState(false)
 
   const associations = ['ATiT', 'ASEET', 'AMT', 'RUBIC', 'AFRU']
 
   const handleEdit = (project: Project) => {
     setEditingId(project.id)
     setEditForm({ ...project })
+    setIsAddMode(false)
   }
 
   const handleSave = () => {
     if (editForm) {
-      setProjects(projects.map(p => p.id === editForm.id ? editForm : p))
+      if (isAddMode) {
+        setProjects([...projects, editForm])
+      } else {
+        setProjects(projects.map(p => p.id === editForm.id ? editForm : p))
+      }
       setEditingId(null)
       setEditForm(null)
+      setIsAddMode(false)
     }
   }
 
@@ -78,7 +85,15 @@ export default function ProjectsAdmin() {
       year: 2026,
       image: '/placeholder.jpg'
     }
-    setProjects([...projects, newProject])
+    setEditForm(newProject)
+    setEditingId(newProject.id)
+    setIsAddMode(true)
+  }
+
+  const handleCancel = () => {
+    setEditingId(null)
+    setEditForm(null)
+    setIsAddMode(false)
   }
 
   return (

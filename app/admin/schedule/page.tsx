@@ -159,6 +159,8 @@ export default function ScheduleAdmin() {
       description: 'Event description'
     }
     setEvents([...events, newEvent])
+    setEditingId(newEvent.id)
+    setEditForm(newEvent)
   }
 
   return (

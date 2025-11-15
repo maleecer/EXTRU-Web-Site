@@ -42,7 +42,7 @@ export default function Footer() {
             <h4 className="text-primary font-bold mb-4 text-lg" style={{
               textShadow: '0 0 10px rgba(51, 225, 255, 0.5)'
             }}>Quick Links</h4>
-            <ul className="space-y-2 text-foreground/70 text-sm">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-foreground/70 text-sm">
               <li><a href="#home" className="hover:text-primary transition-colors duration-300">Home</a></li>
               <li><a href="#about" className="hover:text-primary transition-colors duration-300">About</a></li>
               <li><a href="#recap" className="hover:text-primary transition-colors duration-300">Recap</a></li>

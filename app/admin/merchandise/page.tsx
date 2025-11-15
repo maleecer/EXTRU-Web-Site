@@ -36,17 +36,24 @@ export default function MerchandiseAdmin() {
   const [editingId, setEditingId] = useState<number | null>(null)
   const [editForm, setEditForm] = useState<MerchandiseItem | null>(null)
   const [showAddForm, setShowAddForm] = useState(false)
+  const [isAddMode, setIsAddMode] = useState(false)
 
   const handleEdit = (item: MerchandiseItem) => {
     setEditingId(item.id)
     setEditForm({ ...item })
+    setIsAddMode(false)
   }
 
   const handleSave = () => {
     if (editForm) {
-      setItems(items.map(item => item.id === editForm.id ? editForm : item))
+      if (isAddMode) {
+        setItems([...items, editForm])
+      } else {
+        setItems(items.map(item => item.id === editForm.id ? editForm : item))
+      }
       setEditingId(null)
       setEditForm(null)
+      setIsAddMode(false)
     }
   }
 
@@ -65,8 +72,16 @@ export default function MerchandiseAdmin() {
       sizes: ['S', 'M', 'L', 'XL'],
       image: '/placeholder.jpg'
     }
-    setItems([...items, newItem])
+    setEditForm(newItem)
+    setEditingId(newItem.id)
+    setIsAddMode(true)
     setShowAddForm(false)
+  }
+
+  const handleCancel = () => {
+    setEditingId(null)
+    setEditForm(null)
+    setIsAddMode(false)
   }
 
   return (
@@ -111,7 +126,7 @@ export default function MerchandiseAdmin() {
               key={item.id}
               className="bg-[#001a33]/50 border-2 border-primary/30 rounded-xl p-6 hover:border-primary/50 transition-all"
             >
-              {editingId === item.id && editForm ? (
+              {editingId === item.id && editForm && !isAddMode ? (
                 // Edit Mode
                 <div className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -224,6 +239,88 @@ export default function MerchandiseAdmin() {
             </div>
           ))}
         </div>
+
+        {/* Add/Edit Popup Modal */}
+        {editForm && (isAddMode || editingId) && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={handleCancel}>
+            <div className="bg-[#001a33] border-2 border-primary/50 rounded-xl p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-[0_0_50px_rgba(51,225,255,0.5)]" onClick={(e) => e.stopPropagation()}>
+              <h2 className="text-3xl font-bold text-primary mb-6" style={{ fontFamily: 'var(--font-orbitron)' }}>
+                {isAddMode ? 'ADD NEW ITEM' : 'EDIT ITEM'}
+              </h2>
+              
+              <div className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-primary mb-2">Item Name</label>
+                    <input
+                      type="text"
+                      value={editForm.name}
+                      onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
+                      className="w-full px-4 py-2 bg-black/30 border-2 border-primary/30 rounded-lg text-white focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-primary mb-2">Price (LKR)</label>
+                    <input
+                      type="number"
+                      value={editForm.price}
+                      onChange={(e) => setEditForm({ ...editForm, price: Number(e.target.value) })}
+                      className="w-full px-4 py-2 bg-black/30 border-2 border-primary/30 rounded-lg text-white focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-primary mb-2">Description</label>
+                  <textarea
+                    value={editForm.description}
+                    onChange={(e) => setEditForm({ ...editForm, description: e.target.value })}
+                    rows={3}
+                    className="w-full px-4 py-2 bg-black/30 border-2 border-primary/30 rounded-lg text-white focus:border-primary focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-primary mb-2">Available Sizes (comma separated)</label>
+                  <input
+                    type="text"
+                    value={editForm.sizes.join(', ')}
+                    onChange={(e) => setEditForm({ ...editForm, sizes: e.target.value.split(',').map(s => s.trim()) })}
+                    className="w-full px-4 py-2 bg-black/30 border-2 border-primary/30 rounded-lg text-white focus:border-primary focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-primary mb-2">Image URL</label>
+                  <input
+                    type="text"
+                    value={editForm.image}
+                    onChange={(e) => setEditForm({ ...editForm, image: e.target.value })}
+                    className="w-full px-4 py-2 bg-black/30 border-2 border-primary/30 rounded-lg text-white focus:border-primary focus:outline-none"
+                  />
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  <button
+                    onClick={handleSave}
+                    className="flex items-center gap-2 px-6 py-3 bg-accent text-black font-bold rounded-lg hover:bg-accent/80 transition-all hover:shadow-[0_0_20px_rgba(124,255,114,0.6)]"
+                    style={{ fontFamily: 'var(--font-orbitron)' }}
+                  >
+                    <Save className="w-5 h-5" />
+                    {isAddMode ? 'ADD ITEM' : 'SAVE CHANGES'}
+                  </button>
+                  <button
+                    onClick={handleCancel}
+                    className="px-6 py-3 bg-red-500/20 text-red-400 border-2 border-red-500/50 font-bold rounded-lg hover:bg-red-500/30 transition-all"
+                    style={{ fontFamily: 'var(--font-orbitron)' }}
+                  >
+                    CANCEL
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
