@@ -4,26 +4,26 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-black border-t-2 border-primary/40 mt-16 z-10" style={{
+    <footer className="relative w-full bg-[#001a33] border-t-2 border-primary/40 mt-16 z-10" style={{
       boxShadow: '0 -2px 20px rgba(51, 225, 255, 0.3)'
     }}>
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Top Section - Logos */}
-        <div className="flex flex-col items-center gap-8 mb-12">
-          <div className="flex items-center justify-center gap-8 md:gap-12">
+        <div className="flex flex-col items-center gap-6 mb-8">
+            <div className="flex items-center justify-center gap-8 md:gap-12">
             <div className="relative">
               <Image 
                 src="/EXTRU LOGO white 1.png" 
                 alt="EXTRU Logo" 
                 width={100} 
                 height={60} 
-                className="h-16 md:h-20 w-auto" 
+                className="h-12 md:h-16 w-auto" 
                 style={{
                   filter: 'drop-shadow(0 0 15px rgba(51, 225, 255, 0.7))'
                 }} 
               />
             </div>
-            <div className="h-20 w-px bg-gradient-to-b from-transparent via-primary/50 to-transparent"></div>
+            <div className="h-16 w-px bg-gradient-to-b from-transparent via-primary/50 to-transparent"></div>
             <div className="text-center">
               <h3 className="text-xl md:text-2xl font-bold text-primary" style={{
                 textShadow: '0 0 20px rgba(51, 225, 255, 0.8)'
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         {/* Middle Section - Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-center md:text-left">
           {/* Quick Links */}
           <div>
             <h4 className="text-primary font-bold mb-4 text-lg" style={{
@@ -100,7 +100,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section - Copyright */}
-        <div className="border-t border-primary/30 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/50">
+        <div className="border-t border-primary/30 pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/50">
           <p>&copy; 2026 EXTRU. All rights reserved.</p>
           <p>Rajarata University of Sri Lanka | Faculty of Technology</p>
         </div>
