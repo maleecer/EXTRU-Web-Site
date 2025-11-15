@@ -1,0 +1,188 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color palette with new neon colors */
+  --background: #001A33;
+  --foreground: #33E1FF;
+  --card: #000A14;
+  --card-foreground: #33E1FF;
+  --popover: #001A33;
+  --popover-foreground: #33E1FF;
+  --primary: #33E1FF;
+  --primary-foreground: #001A33;
+  --secondary: #7CFF72;
+  --secondary-foreground: #001A33;
+  --muted: #0d3a52;
+  --muted-foreground: #7d99b3;
+  --accent: #7CFF72;
+  --accent-foreground: #001A33;
+  --destructive: #ff0055;
+  --destructive-foreground: #001A33;
+  --border: #0d5a7f;
+  --input: #001A33;
+  --ring: #33E1FF;
+  --chart-1: #33E1FF;
+  --chart-2: #7CFF72;
+  --chart-3: #33E1FF;
+  /* Removed pink, using cyan and green only for techy feel */
+  --chart-4: #33E1FF;
+  --chart-5: #7CFF72;
+  --radius: 0.625rem;
+  --sidebar: #000A14;
+  --sidebar-foreground: #33E1FF;
+  --sidebar-primary: #33E1FF;
+  --sidebar-primary-foreground: #001A33;
+  --sidebar-accent: #7CFF72;
+  --sidebar-accent-foreground: #001A33;
+  --sidebar-border: #0d5a7f;
+  --sidebar-ring: #33E1FF;
+}
+
+.dark {
+  --background: #001A33;
+  --foreground: #33E1FF;
+  --card: #000A14;
+  --card-foreground: #33E1FF;
+  --popover: #001A33;
+  --popover-foreground: #33E1FF;
+  --primary: #33E1FF;
+  --primary-foreground: #001A33;
+  --secondary: #7CFF72;
+  --secondary-foreground: #001A33;
+  --muted: #0d3a52;
+  --muted-foreground: #7d99b3;
+  --accent: #7CFF72;
+  --accent-foreground: #001A33;
+  --destructive: #ff0055;
+  --destructive-foreground: #001A33;
+  --border: #0d5a7f;
+  --input: #001A33;
+  --ring: #33E1FF;
+  --chart-1: #33E1FF;
+  --chart-2: #7CFF72;
+  --chart-3: #33E1FF;
+  /* Removed pink, using cyan and green only for techy feel */
+  --chart-4: #33E1FF;
+  --chart-5: #7CFF72;
+  --sidebar: #000A14;
+  --sidebar-foreground: #33E1FF;
+  --sidebar-primary: #33E1FF;
+  --sidebar-primary-foreground: #001A33;
+  --sidebar-accent: #7CFF72;
+  --sidebar-accent-foreground: #001A33;
+  --sidebar-border: #0d5a7f;
+  --sidebar-ring: #33E1FF;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Updated neon glow effects to use new aqua color */
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, inset 0 0 10px rgba(51, 225, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor, inset 0 0 15px rgba(51, 225, 255, 0.5);
+  }
+}
+
+@keyframes grid-fade {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.neon-text {
+  animation: neon-glow 3s ease-in-out infinite;
+}
+
+.grid-bg {
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(51, 225, 255, 0.05) 25%, rgba(51, 225, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(51, 225, 255, 0.05) 75%, rgba(51, 225, 255, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(51, 225, 255, 0.05) 25%, rgba(51, 225, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(51, 225, 255, 0.05) 75%, rgba(51, 225, 255, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: grid-fade 4s ease-in-out infinite;
+}
+
+.neon-border {
+  border: 2px solid rgba(51, 225, 255, 0.6);
+  box-shadow: 0 0 10px rgba(51, 225, 255, 0.4), inset 0 0 10px rgba(51, 225, 255, 0.1);
+}
+
+.neon-border-cyan {
+  border: 2px solid rgba(51, 225, 255, 0.8);
+  box-shadow: 0 0 15px rgba(51, 225, 255, 0.6), inset 0 0 10px rgba(51, 225, 255, 0.1);
+}
+
+.neon-border-green {
+  border: 2px solid rgba(124, 255, 114, 0.8);
+  box-shadow: 0 0 15px rgba(124, 255, 114, 0.6), inset 0 0 10px rgba(124, 255, 114, 0.1);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(51, 225, 255, 0.8), inset 0 0 20px rgba(51, 225, 255, 0.2);
+  transform: scale(1.02);
+}

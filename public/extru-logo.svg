@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .extru-text { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; fill: #33E1FF; }
+      .extru-glow { filter: drop-shadow(0 0 8px #33E1FF) drop-shadow(0 0 12px #7CFF72); }
+    </style>
+  </defs>
+  
+  <!-- Background circle for logo -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#33E1FF" stroke-width="2" class="extru-glow" opacity="0.8"/>
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#7CFF72" stroke-width="1" opacity="0.4"/>
+  
+  <!-- EXTRU text -->
+  <text x="100" y="65" class="extru-text extru-glow">EXTRU</text>
+  <text x="165" y="65" class="extru-text" style="font-size: 20px; fill: #7CFF72;">2026</text>
+</svg>
