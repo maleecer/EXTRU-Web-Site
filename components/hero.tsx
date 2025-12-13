@@ -199,7 +199,7 @@ export default function Hero() {
             </div>
           </h1>
 
-          {/* Event Info Section vikum    */}
+          {/* Event Info Section vikum*/} 
           <div
             className={`mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-700 ${
               isVisible
