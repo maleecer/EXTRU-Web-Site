@@ -39,8 +39,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* About - Purple accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-purple-950/10 to-transparent">
+        {/* About - Subtle gradient */}
+        <div id="about" className="w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
             <About />
           </div>
@@ -53,8 +53,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Recap - Orange accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-orange-950/10 to-transparent">
+        {/* Recap */}
+        <div id="recap" className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Recap />
           </div>
@@ -67,8 +67,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Merchandise - Green accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-green-950/10 to-transparent">
+        {/* Merchandise - Subtle gradient */}
+        <div id="merchandise" className="w-full bg-gradient-to-b from-transparent via-accent/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Merchandise />
           </div>
@@ -81,8 +81,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Departments - Blue accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-blue-950/10 to-transparent">
+        {/* Departments */}
+        <div id="departments" className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Departments />
           </div>
@@ -95,8 +95,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Sponsors - Yellow accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-yellow-950/10 to-transparent">
+        {/* Sponsors - Subtle gradient */}
+        <div id="sponsors" className="w-full bg-gradient-to-b from-transparent via-secondary/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Sponsors />
           </div>
@@ -109,8 +109,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Organizing Committee - Pink accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-pink-950/10 to-transparent">
+        {/* Organizing Committee */}
+        <div id="organizing-committee" className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4">
             <OrganizingCommittee />
           </div>
@@ -123,8 +123,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Projects - Indigo accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent">
+        {/* Projects - Subtle gradient */}
+        <div id="projects" className="w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Projects />
           </div>
@@ -137,8 +137,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Schedule - Orange accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-orange-950/10 to-transparent">
+        {/* Schedule */}
+        <div id="schedule" className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Schedule />
           </div>
@@ -151,8 +151,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Contact - Teal accent */}
-        <div className="w-full bg-gradient-to-b from-transparent via-teal-950/10 to-transparent">
+        {/* Contact - Subtle gradient */}
+        <div id="contact" className="w-full bg-gradient-to-b from-transparent via-accent/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Contact />
           </div>
