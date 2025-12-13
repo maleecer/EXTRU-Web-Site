@@ -237,7 +237,7 @@ export default function Hero() {
                 className="mb-3 text-accent/80 text-xs uppercase tracking-wider font-semibold group-hover:text-accent transition-colors"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Event Date
+                Exhibition Date
               </div>
               <FaCalendarAlt
                 className="text-accent text-3xl mb-3 group-hover:scale-110 transition-transform"
@@ -249,7 +249,7 @@ export default function Hero() {
                 className="text-sm md:text-base font-semibold text-foreground group-hover:text-white transition-colors"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                February 19-21
+                February 20-22
                 <br />
                 2026
               </h3>
@@ -261,7 +261,7 @@ export default function Hero() {
                 className="mb-3 text-secondary/80 text-xs uppercase tracking-wider font-semibold group-hover:text-secondary transition-colors"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Location
+                Venue
               </div>
               <FaMapMarkerAlt
                 className="text-secondary text-3xl mb-3 group-hover:scale-110 transition-transform"
@@ -273,9 +273,9 @@ export default function Hero() {
                 className="text-sm md:text-base font-semibold text-foreground group-hover:text-white transition-colors"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Technology Faculty
+                New Faculty Complex
                 <br />
-                Premises
+                Faculty of Technology
               </h3>
             </div>
           </div>
