@@ -15,7 +15,7 @@ export default function Departments() {
     {
       id: 'ent',
       name: 'ASEET',
-      fullName: 'Association of Students in Electronics Engineering & Technology',
+      fullName: 'Association of Electrical and Electronic Technology',
       description: 'Electronics, microprocessors, and nanotechnology advances',
       color: 'cyan',
       logo: '/aseet-logo.png'
@@ -23,7 +23,7 @@ export default function Departments() {
     {
       id: 'mtt',
       name: 'AMT',
-      fullName: 'Association of Mechanical Technology',
+      fullName: 'Association of Materials Technology',
       description: 'Robotics, automation, and mechanical innovations',
       color: 'green',
       logo: '/amt-logo.png'
@@ -31,7 +31,7 @@ export default function Departments() {
     {
       id: 'bpt',
       name: 'RUBIC',
-      fullName: 'Rajarata University Biotechnology Innovation Club',
+      fullName: 'Rajarata University of Bioprocess & Innovation Community',
       description: 'Biotechnology, environmental tech, and bioengineering',
       color: 'cyan',
       logo: '/rubic-logo.png'
@@ -39,7 +39,7 @@ export default function Departments() {
     {
       id: 'fdt',
       name: 'AFRU',
-      fullName: 'Association of Food Researchers of the University',
+      fullName: 'Association of Food Technology Rajarata University of Sri Lanka',
       description: 'Food innovation, dairy technology, and agritech solutions',
       color: 'cyan',
       logo: '/afru-logo.png'
@@ -47,7 +47,7 @@ export default function Departments() {
     {
       id: 'rost',
       name: 'ROST',
-      fullName: 'Rajarata Organization of Science & Technology',
+      fullName: 'Robotic Society of Technology',
       description: 'Science and technology innovation',
       color: 'cyan',
       logo: '/rost-logo.png'

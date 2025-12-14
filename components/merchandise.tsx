@@ -13,28 +13,11 @@ export default function Merchandise() {
       price: '$15',
       image: '/extru-2026-tshirt-neon.jpg'
     },
-    {
-      id: 2,
-      name: 'Hoodie',
-      price: '$35',
-      image: '/extru-2026-hoodie-tech.jpg'
-    },
-    {
-      id: 3,
-      name: 'Sticker Pack',
-      price: '$5',
-      image: '/tech-stickers-neon.jpg'
-    },
-    {
-      id: 4,
-      name: 'Cap',
-      price: '$12',
-      image: '/extru-2026-cap.jpg'
-    },
+    
     {
       id: 5,
       name: 'Wristband',
-      price: '$3',
+      price: 'Rs 250.00',
       image: '/wristband.jpg'
     }
   ]

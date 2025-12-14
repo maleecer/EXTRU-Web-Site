@@ -63,20 +63,20 @@ export default function PreOrderModal({ isOpen, onClose, itemName, itemPrice }: 
       onClick={onClose}
     >
       <div 
-        className="relative bg-black border-2 border-primary/40 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-in zoom-in duration-300"
+        className="relative bg-black border-2 border-primary/40 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto animate-in zoom-in duration-300"
         style={{
           boxShadow: '0 0 30px rgba(51, 225, 255, 0.3)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-black border-b border-primary/30 p-6 pb-4 z-10">
-          <h2 className="text-2xl font-bold text-primary mb-2" style={{
+        <div className="sticky top-0 bg-black border-b border-primary/30 p-3 pb-2 z-10">
+          <h2 className="text-xl font-bold text-primary mb-1" style={{
             textShadow: '0 0 20px rgba(51, 225, 255, 0.6)'
           }}>
             Pre-Order {itemName}
           </h2>
-          <p className="text-secondary text-lg font-semibold">{itemPrice}</p>
+          <p className="text-secondary text-base font-semibold">{itemPrice}</p>
           <button
             type="button"
             onClick={(e) => {
@@ -92,8 +92,8 @@ export default function PreOrderModal({ isOpen, onClose, itemName, itemPrice }: 
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-6">
-          <div className="space-y-4">
+        <form onSubmit={handleSubmit} className="p-3">
+          <div className="space-y-3">
             {/* Name */}
             <div>
               <label className="block text-sm font-semibold text-primary mb-2">Full Name *</label>
