@@ -30,6 +30,12 @@ export default function Merchandise() {
       name: 'Cap',
       price: '$12',
       image: '/extru-2026-cap.jpg'
+    },
+    {
+      id: 5,
+      name: 'Wristband',
+      price: '$3',
+      image: '/wristband.jpg'
     }
   ]
 
