@@ -217,21 +217,6 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Admin Access */}
-          <div>
-            <h4 className="text-primary font-bold mb-4 text-lg" style={{
-              textShadow: '0 0 10px rgba(51, 225, 255, 0.5)',
-              fontFamily: 'var(--font-orbitron)'
-            }}>Admin</h4>
-            <Link 
-              href="/admin"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border-2 border-accent/30 rounded-lg text-accent hover:bg-accent/20 hover:border-accent hover:scale-105 transition-all duration-300 text-sm font-semibold"
-            >
-              <span>🔐</span>
-              <span>Dashboard</span>
-            </Link>
-          </div>
         </div>
 
         {/* Bottom Section - Copyright */}
