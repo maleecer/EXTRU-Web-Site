@@ -6,10 +6,18 @@ import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
 export default function DepartmentPage() {
-  const params = useParams()
-  const departmentId = params.id as string
+  const params = useParams<{ id: string }>()
+  const departmentId = params.id
+  type Project = { title: string; description: string }
+  type Department = {
+    name: string
+    fullName: string
+    description: string
+    highlights: string[]
+    projects: Project[]
+  }
 
-  const departments: Record<string, any> = {
+  const departments: Record<string, Department> = {
     ict: {
       name: 'ICT',
       fullName: 'Information & Communication Technology',
@@ -136,7 +144,7 @@ export default function DepartmentPage() {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-6">Key Focus Areas</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {dept.highlights.map((highlight, idx) => (
+              {dept.highlights.map((highlight: string, idx: number) => (
                 <div key={idx} className="neon-border-cyan p-4 flex items-start gap-3 hover-glow">
                   <span className="text-accent text-xl">•</span>
                   <span className="text-foreground">{highlight}</span>
@@ -149,7 +157,7 @@ export default function DepartmentPage() {
           <div>
             <h2 className="text-3xl font-bold text-primary mb-6">Featured Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {dept.projects.map((project, idx) => (
+              {dept.projects.map((project: Project, idx: number) => (
                 <div key={idx} className="neon-border-cyan p-6 hover-glow">
                   <h3 className="text-xl font-bold text-accent mb-2">{project.title}</h3>
                   <p className="text-foreground/70">{project.description}</p>

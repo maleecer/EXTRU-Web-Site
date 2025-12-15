@@ -10,14 +10,14 @@ export default function Merchandise() {
     {
       id: 1,
       name: 'EXTRU 2026 T-Shirt',
-      price: '$15',
+      price: 'Rs 1800.00',
       image: '/extru-2026-tshirt-neon.jpg'
     },
     
     {
-      id: 5,
+      id: 2,
       name: 'Wristband',
-      price: 'Rs 250.00',
+      price: 'Rs 200.00',
       image: '/wristband.jpg'
     }
   ]

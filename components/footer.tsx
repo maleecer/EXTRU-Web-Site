@@ -1,9 +1,22 @@
-'use client'
+"use client"
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const pathname = usePathname()
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const navbarHeight = 80
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - navbarHeight
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
+    }
+  }
+
   return (
     <footer className="relative w-full bg-[#001a33] border-t-2 border-primary/40 mt-20 z-10" style={{
       boxShadow: '0 -4px 30px rgba(51, 225, 255, 0.2)'
@@ -47,13 +60,104 @@ export default function Footer() {
               fontFamily: 'var(--font-orbitron)'
             }}>Quick Links</h4>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-gray-300 text-sm">
-              <li><Link href="#home" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Home</Link></li>
-              <li><Link href="#about" className="hover:text-primary hover:translate-x-1 transition-all inline-block">About</Link></li>
-              <li><Link href="#recap" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Recap</Link></li>
-              <li><Link href="#merchandise" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Merchandise</Link></li>
-              <li><Link href="#schedule" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Schedule</Link></li>
-              <li><Link href="#projects" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Projects</Link></li>
-              <li><Link href="#contact" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Contact</Link></li>
+              <li>
+                <Link
+                  href="/#home"
+                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  onClick={(e) => {
+                    if (pathname === '/') {
+                      e.preventDefault()
+                      scrollToSection('home')
+                    }
+                  }}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#about"
+                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  onClick={(e) => {
+                    if (pathname === '/') {
+                      e.preventDefault()
+                      scrollToSection('about')
+                    }
+                  }}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#recap"
+                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  onClick={(e) => {
+                    if (pathname === '/') {
+                      e.preventDefault()
+                      scrollToSection('recap')
+                    }
+                  }}
+                >
+                  Recap
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#merchandise"
+                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  onClick={(e) => {
+                    if (pathname === '/') {
+                      e.preventDefault()
+                      scrollToSection('merchandise')
+                    }
+                  }}
+                >
+                  Merchandise
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#schedule"
+                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  onClick={(e) => {
+                    if (pathname === '/') {
+                      e.preventDefault()
+                      scrollToSection('schedule')
+                    }
+                  }}
+                >
+                  Schedule
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#projects"
+                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  onClick={(e) => {
+                    if (pathname === '/') {
+                      e.preventDefault()
+                      scrollToSection('projects')
+                    }
+                  }}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#contact"
+                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
+                  onClick={(e) => {
+                    if (pathname === '/') {
+                      e.preventDefault()
+                      scrollToSection('contact')
+                    }
+                  }}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 

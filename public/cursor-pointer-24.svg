@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <filter id="glowGreen" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Outer glow ring -->
+  <circle cx="12" cy="12" r="9" stroke="#71ea6b" stroke-width="1.4" fill="none" opacity="0.5" filter="url(#glowGreen)"/>
+  <!-- Middle ring -->
+  <circle cx="12" cy="12" r="6" stroke="#71ea6b" stroke-width="1.6" fill="none" opacity="0.8" filter="url(#glowGreen)"/>
+  <!-- Center dot -->
+  <circle cx="12" cy="12" r="3" fill="#71ea6b" opacity="1" filter="url(#glowGreen)"/>
+  <!-- Tech corner brackets -->
+  <path d="M 3 8 L 3 3 L 8 3" stroke="#71ea6b" stroke-width="1.4" fill="none" opacity="0.7"/>
+  <path d="M 16 3 L 21 3 L 21 8" stroke="#71ea6b" stroke-width="1.4" fill="none" opacity="0.7"/>
+  <path d="M 21 16 L 21 21 L 16 21" stroke="#71ea6b" stroke-width="1.4" fill="none" opacity="0.7"/>
+  <path d="M 8 21 L 3 21 L 3 16" stroke="#71ea6b" stroke-width="1.4" fill="none" opacity="0.7"/>
+  <!-- Subtle crosshair -->
+  <line x1="12" y1="1" x2="12" y2="5" stroke="#71ea6b" stroke-width="1.2" opacity="0.5"/>
+  <line x1="12" y1="19" x2="12" y2="23" stroke="#71ea6b" stroke-width="1.2" opacity="0.5"/>
+  <line x1="1" y1="12" x2="5" y2="12" stroke="#71ea6b" stroke-width="1.2" opacity="0.5"/>
+  <line x1="19" y1="12" x2="23" y2="12" stroke="#71ea6b" stroke-width="1.2" opacity="0.5"/>
+</svg>
