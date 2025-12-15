@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Outer glow ring -->
+  <circle cx="12" cy="12" r="8" stroke="#33E1FF" stroke-width="1.2" fill="none" opacity="0.4" filter="url(#glow)"/>
+  <!-- Middle ring -->
+  <circle cx="12" cy="12" r="5" stroke="#33E1FF" stroke-width="1.4" fill="none" opacity="0.7" filter="url(#glow)"/>
+  <!-- Center dot -->
+  <circle cx="12" cy="12" r="2.5" fill="#33E1FF" opacity="0.9" filter="url(#glow)"/>
+  <!-- Tech corner brackets -->
+  <path d="M 3.5 7.5 L 3.5 3.5 L 7.5 3.5" stroke="#33E1FF" stroke-width="1.2" fill="none" opacity="0.6"/>
+  <path d="M 16.5 3.5 L 20.5 3.5 L 20.5 7.5" stroke="#33E1FF" stroke-width="1.2" fill="none" opacity="0.6"/>
+  <path d="M 20.5 16.5 L 20.5 20.5 L 16.5 20.5" stroke="#33E1FF" stroke-width="1.2" fill="none" opacity="0.6"/>
+  <path d="M 7.5 20.5 L 3.5 20.5 L 3.5 16.5" stroke="#33E1FF" stroke-width="1.2" fill="none" opacity="0.6"/>
+</svg>

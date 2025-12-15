@@ -141,7 +141,8 @@ body {
 
 /* Custom tech-style neon cursor */
 * {
-  cursor: url("/cursor-default.svg") 16 16, crosshair !important;
+  /* Use smaller 24x24 cursor with centered hotspot */
+  cursor: url("/cursor-default-24.svg") 12 12, crosshair !important;
 }
 
 /* Cursor for interactive elements */
@@ -151,7 +152,8 @@ input[type="button"],
 input[type="submit"],
 [role="button"],
 .cursor-pointer {
-  cursor: url("/cursor-pointer.svg") 16 16, pointer !important;
+  /* Use smaller 24x24 pointer with centered hotspot */
+  cursor: url("/cursor-pointer-24.svg") 12 12, pointer !important;
 }
 
 /* Animations & Effects */

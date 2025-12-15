@@ -46,15 +46,18 @@ export default function About() {
           </div>
 
           <div className="neon-border-cyan p-8 hover-glow">
-            <div className="w-full aspect-square bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/10 flex items-center justify-center rounded-lg relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+            <div
+              className="w-full aspect-square flex items-center justify-center rounded-lg relative overflow-hidden bg-center bg-cover"
+              style={{ backgroundImage: "url('/faculty-pic.png')" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40"></div>
               <div className="relative z-10 text-center">
-                <div className="text-6xl mb-6">🏛️</div>
-                <h3 className="text-2xl font-bold text-primary mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
+                {/* <div className="text-6xl mb-6">🏛️</div> */}
+                {/* <h3 className="text-2xl font-bold text-primary mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
                   Rajarata University
                 </h3>
                 <p className="text-accent text-sm font-semibold">Faculty of Technology</p>
-                <p className="text-gray-400 text-sm mt-4">Mihintale, Sri Lanka</p>
+                <p className="text-gray-400 text-sm mt-4">Mihintale, Sri Lanka</p> */}
               </div>
             </div>
           </div>
