@@ -160,12 +160,9 @@ export default function PreOrderModal({ isOpen, onClose, itemName, itemPrice }: 
                 required
                 className="w-full bg-black/50 border border-primary/30 rounded px-4 py-2 text-white focus:border-primary focus:outline-none transition"
               >
-                <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
               </select>
             </div>
 
