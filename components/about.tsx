@@ -22,7 +22,7 @@ export default function About() {
             </p>
             
             <p className="text-white text-lg leading-relaxed">
-              Hosted at the <span className="text-accent font-semibold">Technology Faculty Premises of Rajarata University of Sri Lanka</span> from <span className="text-accent font-semibold">February 19-21, 2026</span>, EXTRU features contributions from five dynamic departments: ICT, Electronics & Nanotechnology, Mechanical & Transport Technology, Biosystems & Process Technology, and Food & Dairy Technology.
+              Hosted at the <span className="text-accent font-semibold">Technology Faculty Premises of Rajarata University of Sri Lanka</span> from <span className="text-accent font-semibold">February 20-22, 2026</span>, EXTRU features contributions from five dynamic departments: ICT, Electronics & Nanotechnology, Mechanical & Transport Technology, Biosystems & Process Technology, and Food & Dairy Technology.
             </p>
 
             <p className="text-white text-lg leading-relaxed">
@@ -35,11 +35,11 @@ export default function About() {
                 <p className="text-sm text-gray-400">Days</p>
               </div>
               <div className="text-center p-4 bg-accent/10 rounded-lg border border-accent/30">
-                <p className="text-3xl font-bold text-accent mb-1">50+</p>
+                <p className="text-3xl font-bold text-accent mb-1">200+</p>
                 <p className="text-sm text-gray-400">Projects</p>
               </div>
               <div className="text-center p-4 bg-secondary/10 rounded-lg border border-secondary/30">
-                <p className="text-3xl font-bold text-secondary mb-1">2000+</p>
+                <p className="text-3xl font-bold text-secondary mb-1">7000+</p>
                 <p className="text-sm text-gray-400">Visitors</p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function About() {
               className="w-full aspect-square flex items-center justify-center rounded-lg relative overflow-hidden bg-center bg-cover"
               style={{ backgroundImage: "url('/faculty-pic.png')" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-black/40 via-black/20 to-black/40"></div>
               <div className="relative z-10 text-center">
                 {/* <div className="text-6xl mb-6">🏛️</div> */}
                 {/* <h3 className="text-2xl font-bold text-primary mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>

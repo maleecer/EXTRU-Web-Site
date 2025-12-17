@@ -1,20 +1,21 @@
 'use client'
 
 import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Recap() {
   const stats2025 = [
-    { number: '5000+', label: 'Attendees', icon: '👥' },
-    { number: '100+', label: 'Projects Showcased', icon: '🚀' },
-    { number: '30+', label: 'Industry Experts', icon: '🎤' },
-    { number: '20+', label: 'Workshops', icon: '🛠️' }
+    { number: '5000+', label: 'Attendees', icon: '' },
+    { number: '150+', label: 'Projects Showcased', icon: '' },
+    { number: '30+', label: 'Industry Experts', icon: '' },
+    { number: '20+', label: 'Workshops', icon: '' }
   ]
 
   const stats2024 = [
-    { number: '1800+', label: 'Attendees', icon: '👥' },
-    { number: '45+', label: 'Projects Showcased', icon: '🚀' },
-    { number: '25+', label: 'Industry Experts', icon: '🎤' },
-    { number: '12+', label: 'Workshops', icon: '🛠️' }
+    { number: '1800+', label: 'Attendees', icon: '' },
+    { number: '100+', label: 'Projects Showcased', icon: '' },
+    { number: '25+', label: 'Industry Experts', icon: '' },
+    { number: '12+', label: 'Workshops', icon: '' }
   ]
 
   const memories = [
@@ -78,6 +79,59 @@ export default function Recap() {
     }
   ]
 
+  // Count-up component: animates numbers when entering viewport
+  function Counter({ value, duration = 1600 }: { value: string; duration?: number }) {
+    const [count, setCount] = useState(0)
+    const [started, setStarted] = useState(false)
+    const ref = useRef<HTMLDivElement | null>(null)
+
+    useEffect(() => {
+      const node = ref.current
+      if (!node) return
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting && !started) {
+            setStarted(true)
+          }
+        },
+        { threshold: 0.4 }
+      )
+      observer.observe(node)
+      return () => observer.disconnect()
+    }, [started])
+
+    useEffect(() => {
+      if (!started) return
+      const target = parseInt(value.replace(/[^0-9]/g, ''), 10)
+      const startTime = performance.now()
+
+      const animate = (now: number) => {
+        const elapsed = now - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3) // ease-out cubic
+        const current = Math.floor(target * eased)
+        setCount(current)
+        if (progress < 1) requestAnimationFrame(animate)
+      }
+
+      const raf = requestAnimationFrame(animate)
+      return () => cancelAnimationFrame(raf)
+    }, [started, value, duration])
+
+    const hasPlus = /\+$/.test(value)
+
+    return (
+      <div
+        ref={ref}
+        className="text-4xl md:text-5xl font-bold text-accent mb-2 group-hover:text-primary transition-colors"
+      >
+        {count.toLocaleString()}
+        {hasPlus ? '+' : ''}
+      </div>
+    )
+  }
+
   return (
     <section id="recap" className="relative py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
@@ -100,9 +154,7 @@ export default function Recap() {
               <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">
                 {stat.icon}
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2 group-hover:text-primary transition-colors">
-                {stat.number}
-              </div>
+              <Counter value={stat.number} />
               <div className="text-foreground/70 text-sm font-semibold uppercase tracking-wider">
                 {stat.label}
               </div>
@@ -126,7 +178,7 @@ export default function Recap() {
                 <div className="aspect-video relative overflow-hidden bg-linear-to-br from-primary/20 to-secondary/20">
                   <Image 
                     src={memory.image}
-                    alt="Extru 2025"
+                    alt={`EXTRU 2025 ${memory.title} - ${memory.description}`}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -172,9 +224,7 @@ export default function Recap() {
                 <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">
                   {stat.icon}
                 </div>
-                <div className="text-4xl md:text-5xl font-bold text-accent mb-2 group-hover:text-primary transition-colors">
-                  {stat.number}
-                </div>
+                <Counter value={stat.number} />
                 <div className="text-foreground/70 text-sm font-semibold uppercase tracking-wider">
                   {stat.label}
                 </div>
@@ -198,7 +248,7 @@ export default function Recap() {
                   <div className="aspect-video relative overflow-hidden bg-linear-to-br from-primary/20 to-secondary/20">
                     <Image 
                       src={memory.image}
-                      alt="Extru 2024"
+                      alt={`EXTRU 2024 ${memory.title} - ${memory.description}`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -229,7 +279,7 @@ export default function Recap() {
         <div className="mt-20 text-center">
           <div className="neon-border-cyan p-8 max-w-3xl mx-auto hover-glow">
             <h3 className="text-3xl font-bold text-accent mb-4">
-              🎉 EXTRU 2026 Will Be Even Bigger!
+               EXTRU 2026 Will Be Even Bigger!
             </h3>
             <p className="text-white text-lg leading-relaxed mb-6">
               Building on last year's success, EXTRU 2026 promises more innovation, 

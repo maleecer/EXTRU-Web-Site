@@ -4,35 +4,35 @@ export default function Schedule() {
   const events = [
     { 
       day: 'Day 1', 
-      date: 'Feb 19, 2026', 
+      date: 'Feb 20, 2026', 
       dayName: 'Wednesday',
       events: [
-        { time: '09:00 AM', title: 'Opening Ceremony', description: 'Grand opening with special guests' },
-        { time: '11:00 AM', title: 'Keynote Talks', description: 'Industry leaders share insights' },
-        { time: '02:00 PM', title: 'Workshop Sessions', description: 'Hands-on technical workshops' },
-        { time: '05:00 PM', title: 'Networking Session', description: 'Meet and greet with exhibitors' }
+        { time: '09:00 AM', title: 'Opening Ceremony', description: '' },
+        { time: '11:00 AM', title: 'Comming Soon', description: '' },
+        { time: '02:00 PM', title: 'Comming Soon', description: '' },
+        { time: '05:00 PM', title: 'Comming Soon', description: '' }
       ]
     },
     { 
       day: 'Day 2', 
-      date: 'Feb 20, 2026',
+      date: 'Feb 21, 2026',
       dayName: 'Thursday',
       events: [
-        { time: '09:00 AM', title: 'Tech Talks', description: 'Latest technology trends' },
-        { time: '11:00 AM', title: 'Innovation Showcase', description: 'Student project presentations' },
-        { time: '02:00 PM', title: 'Competitions', description: 'Hackathon and challenges begin' },
-        { time: '05:00 PM', title: 'Panel Discussion', description: 'Future of technology in Sri Lanka' }
+        { time: '09:00 AM', title: 'Comming Soon', description: '' },
+        { time: '11:00 AM', title: 'Comming Soon', description: '' },
+        { time: '02:00 PM', title: 'Comming Soon', description: '' },
+        { time: '05:00 PM', title: 'Comming Soon', description: '' }
       ]
     },
     { 
       day: 'Day 3', 
-      date: 'Feb 21, 2026',
+      date: 'Feb 22, 2026',
       dayName: 'Friday',
       events: [
-        { time: '09:00 AM', title: 'Final Competitions', description: 'Competition finals and judging' },
-        { time: '12:00 PM', title: 'Awards Ceremony', description: 'Winners announcement' },
-        { time: '02:00 PM', title: 'Closing Session', description: 'Farewell and highlights' },
-        { time: '04:00 PM', title: 'Photo Session', description: 'Group photos and memories' }
+        { time: '09:00 AM', title: 'Comming Soon', description: '' },
+        { time: '12:00 PM', title: 'Comming Soon', description: '' },
+        { time: '04:00 PM', title: 'Closing Ceremony', description: '' },
+        { time: '07:00 PM', title: 'Musical Night', description: '' }
       ]
     }
   ]

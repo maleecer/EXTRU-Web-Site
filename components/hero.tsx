@@ -12,6 +12,7 @@ export default function Hero() {
   const fullYear = "2026";
   const [showFinalCursor, setShowFinalCursor] = useState(false);
   const [showInitialCursor, setShowInitialCursor] = useState(true);
+  const [daysRemaining, setDaysRemaining] = useState<number | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -49,6 +50,21 @@ export default function Hero() {
     };
   }, []);
 
+  // Calculate days remaining to Feb 20, 2026 (local time)
+  useEffect(() => {
+    const calculateDays = () => {
+      const target = new Date(2026, 1, 20, 0, 0, 0); // Feb is month index 1
+      const now = new Date();
+      const diffMs = target.getTime() - now.getTime();
+      const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      setDaysRemaining(days > 0 ? days : 0);
+    };
+
+    calculateDays();
+    const id = setInterval(calculateDays, 60 * 1000); // refresh every minute
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section
       id="home"
@@ -79,7 +95,7 @@ export default function Hero() {
 
           <Image
             src="/robot.png"
-            alt="EXTRU 2026 Robot"
+            alt="EXTRU 2026 Technology Exhibition Robot Mascot - Faculty of Technology RUSL"
             width={500}
             height={500}
             className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
@@ -280,24 +296,36 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <button
-            className={`mt-12 px-12 md:px-16 py-4 text-base md:text-lg font-semibold inline-block rounded-lg transition-all duration-300 bg-primary hover:bg-primary/90 relative overflow-hidden group shadow-lg hover:shadow-2xl ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-20"
+          {/* Days Countdown (replaces CTA button) */}
+          <div
+            className={`mt-12 inline-flex items-center justify-center md:justify-start transition-all duration-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
             }`}
-            style={{
-              fontFamily: "var(--font-poppins)",
-              color: "white",
-              boxShadow:
-                "0 0 30px rgba(59, 130, 246, 0.5), 0 4px 15px rgba(0, 0, 0, 0.3)",
-              background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
-            }}
+            aria-live="polite"
           >
-            <span className="relative z-10">Explore Exhibits</span>
-            <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-          </button>
+            <div
+              className="px-8 py-5 rounded-xl border border-primary/30 bg-primary/10 backdrop-blur-sm shadow-lg"
+              style={{ boxShadow: "0 0 30px rgba(59, 130, 246, 0.25)" }}
+            >
+              <div
+                className="text-xs uppercase tracking-wider font-semibold mb-1 text-primary/80"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Days to go
+              </div>
+              <div className="flex items-baseline gap-3">
+                <span
+                  className="text-5xl md:text-6xl font-extrabold text-primary"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  {daysRemaining ?? "--"}
+                </span>
+                <span className="text-sm md:text-base text-foreground/80">
+                  until Feb 20, 2026
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -385,7 +413,7 @@ export default function Hero() {
       `}</style>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent"></div>
     </section>
   );
 }

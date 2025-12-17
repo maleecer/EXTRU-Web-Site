@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="relative">
               <Image 
                 src="/EXTRU LOGO white 1.png" 
-                alt="EXTRU Logo" 
+                alt="EXTRU 2026 - Faculty of Technology RUSL Annual Exhibition" 
                 width={120} 
                 height={72} 
                 className="h-16 md:h-20 w-auto" 
@@ -37,7 +37,7 @@ export default function Footer() {
                 }} 
               />
             </div>
-            <div className="h-20 w-px bg-gradient-to-b from-transparent via-primary/60 to-transparent"></div>
+            <div className="h-20 w-px bg-linear-to-b from-transparent via-primary/60 to-transparent"></div>
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-1" style={{
                 textShadow: '0 0 20px rgba(51, 225, 255, 0.8)',
@@ -46,7 +46,7 @@ export default function Footer() {
                 EXTRU 2026
               </h3>
               <p className="text-sm text-primary/80 font-semibold">Faculty of Technology, RUSL</p>
-              <p className="text-xs text-accent mt-1">February 19-21, 2026</p>
+              <p className="text-xs text-accent mt-1">February 20-22, 2026</p>
             </div>
           </div>
         </div>
