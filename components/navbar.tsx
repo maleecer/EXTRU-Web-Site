@@ -80,7 +80,7 @@ export default function Navbar() {
           <span className="logo-wrap rounded-md p-1">
             <Image
               src="/EXTRU LOGO white 1.png"
-              alt="EXTRU 2026"
+              alt="EXTRU 2026 Logo - Annual Technology Exhibition"
               width={80}
               height={48}
               className="logo-img w-20 h-auto animate-pulse-glow"

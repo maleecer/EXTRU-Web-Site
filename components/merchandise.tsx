@@ -21,7 +21,7 @@ export default function Merchandise() {
       id: 1,
       name: 'EXTRU 2026 T-Shirt',
       price: 'Rs 1800.00',
-      images: ['/extru-2026-tshirt-neon.jpeg'],
+      images: ['/Merchandise/extru-2026-tshirt-neon.jpeg'],
       inStock: true,
       preorderUrl: 'https://forms.gle/CnqPm76KLeDr7zYBA'
     }
@@ -53,7 +53,7 @@ export default function Merchandise() {
       id: 5,
       name: 'Wristband Red Mixed',
       price: 'Rs 200.00',
-      images: ['/Merchandise/Red-shade.png'],
+      images: ['/Merchandise/Red-shade.png', '/Merchandise/Red-shade-side.png'],
       inStock: true
     },
   ]
@@ -86,7 +86,7 @@ export default function Merchandise() {
                 <div className="mt-3 aspect-video rounded overflow-hidden">
                   <img
                     src={item.images[1]}
-                    alt={`${item.name} side view`}
+                    alt="EXTRU"
                     className="w-full h-full object-cover cursor-zoom-in"
                     onClick={() => setPreviewSrc(item.images?.[1] || null)}
                   />
@@ -135,7 +135,7 @@ export default function Merchandise() {
               <div className="aspect-square bg-linear-to-br from-primary/20 to-secondary/20 rounded overflow-hidden">
                 <img
                   src={item.images?.[0] || "/placeholder.svg"}
-                  alt={`${item.name} top view`}
+                  alt="EXTRU"
                   className="w-full h-full object-cover cursor-zoom-in"
                   onClick={() => setPreviewSrc(item.images?.[0] || null)}
                 />
@@ -163,7 +163,7 @@ export default function Merchandise() {
                   )}
                 </div>
                 <p className="text-primary text-lg font-bold mb-4">{item.price}</p>
-                <button
+                {/* <button
                   onClick={() => {
                     if (!item.inStock) return
                     setSelectedItem({ name: item.name, price: item.price })
@@ -175,7 +175,7 @@ export default function Merchandise() {
                   }`}
                 >
                   {item.inStock ? 'Pre-Order Now' : 'Unavailable'}
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

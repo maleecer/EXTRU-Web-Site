@@ -33,6 +33,46 @@ export default function Projects() {
           team: ['Student 6',],
           year: '2025'
         },
+        { 
+          id: 3, 
+          title: '', 
+          description: '', 
+          image: '/ATIT/01.jpg',
+          fullDescription: '',
+          technologies: [''],
+          team: ['Student 6',],
+          year: '2025'
+        },
+        { 
+          id: 4, 
+          title: '', 
+          description: '', 
+          image: '/ATIT/02.jpg',
+          fullDescription: '',
+          technologies: [''],
+          team: ['Student 6',],
+          year: '2025'
+        },
+        { 
+          id: 5, 
+          title: '', 
+          description: '', 
+          image: '/ATIT/03.jpg',
+          fullDescription: '',
+          technologies: [''],
+          team: ['Student 6',],
+          year: '2025'
+        },
+        { 
+          id: 6, 
+          title: '', 
+          description: '', 
+          image: '/ATIT/04.jpg',
+          fullDescription: '',
+          technologies: [''],
+          team: ['Student 6',],
+          year: '2025'
+        },
       ]
     },
     {
@@ -161,7 +201,37 @@ export default function Projects() {
           id: 40, 
           title: '', 
           description: '', 
-          image: '/placeholder.jpg',
+          image: 'AMT/01.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 16',],
+          year: '2025'
+        },
+        { 
+          id: 41, 
+          title: '', 
+          description: '', 
+          image: 'AMT/02.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 16',],
+          year: '2025'
+        },
+        { 
+          id: 42, 
+          title: '', 
+          description: '', 
+          image: 'AMT/03.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 16',],
+          year: '2025'
+        },
+        { 
+          id: 43, 
+          title: '', 
+          description: '', 
+          image: 'AMT/04.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 16',],
@@ -178,7 +248,67 @@ export default function Projects() {
           id: 60, 
           title: '', 
           description: '', 
-          image: '/placeholder.jpg',
+          image: '/RUBIC/01.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
+        { 
+          id: 61, 
+          title: '', 
+          description: '', 
+          image: '/RUBIC/02.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
+        { 
+          id: 62, 
+          title: '', 
+          description: '', 
+          image: '/RUBIC/03.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
+        { 
+          id: 63, 
+          title: '', 
+          description: '', 
+          image: '/RUBIC/04.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
+        { 
+          id: 64, 
+          title: '', 
+          description: '', 
+          image: '/RUBIC/05.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
+        { 
+          id: 65, 
+          title: '', 
+          description: '', 
+          image: '/RUBIC/06.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
+        { 
+          id: 66, 
+          title: '', 
+          description: '', 
+          image: '/RUBIC/07.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
@@ -220,7 +350,53 @@ export default function Projects() {
           technologies: ['', 'Food Science'],
           team: ['Student 5'],
           year: '2025'
-        }
+        },
+        { 
+          id: 83, 
+          title: '', 
+          description: '', 
+          image: '/AFRU/01.jpg',
+          fullDescription: '',
+          technologies: ['', 'Food Science'],
+          team: ['Student 5'],
+          year: '2025'
+        },
+        { 
+          id: 84, 
+          title: '', 
+          description: '', 
+          image: '/AFRU/02.jpg',
+          fullDescription: '',
+          technologies: ['', 'Food Science'],
+          team: ['Student 5'],
+          year: '2025'
+        },
+      ]
+    },{
+      association: 'ROST',
+      logo: '/rost-logo.png',
+      color: 'cyan',
+      projects: [
+        { 
+          id: 60, 
+          title: '', 
+          description: '', 
+          image: '/ROST/01.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
+        { 
+          id: 61, 
+          title: '', 
+          description: '', 
+          image: '/ROST/02.jpg',
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
+        },
       ]
     }
   ]
@@ -241,7 +417,7 @@ export default function Projects() {
                 <div className="w-16 h-16 relative">
                   <Image 
                     src={assoc.logo} 
-                    alt={`${assoc.association} logo`}
+                    alt="EXTRU"
                     fill
                     className="object-contain"
                   />
