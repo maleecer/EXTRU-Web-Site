@@ -226,7 +226,7 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="relative py-20 px-4 md:px-8">
+    <section id="projects" className="relative pb-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
           Featured Projects
