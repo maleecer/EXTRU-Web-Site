@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<any>(null)
+  const [expandedAssoc, setExpandedAssoc] = useState<Record<string, boolean>>({})
 
   const projectsByAssociation = [
     {
@@ -14,34 +15,24 @@ export default function Projects() {
       projects: [
         { 
           id: 1, 
-          title: 'AI-Powered Chatbot', 
-          description: 'Intelligent customer service automation using NLP', 
-          image: '/placeholder.jpg',
-          fullDescription: 'An advanced AI-powered chatbot that uses Natural Language Processing to understand and respond to customer queries. Built with modern machine learning frameworks, it provides 24/7 automated support with high accuracy.',
-          technologies: ['Python', 'TensorFlow', 'NLTK', 'React'],
-          team: ['Student 1', 'Student 2', 'Student 3'],
-          year: '2026'
+          title: 'Smart House Automation System', 
+          description: 'IoT-based home automation for energy efficiency', 
+          image: '/ATIT/Smart house.jpg',
+          fullDescription: 'Home automation system that integrates IoT devices to control lighting, temperature, and security. Features energy-efficient algorithms and remote access via mobile app.',
+          technologies: ['Arduino', 'Sensors', 'Mobile App'],
+          team: ['Student 6',],
+          year: '2025'
         },
         { 
           id: 2, 
-          title: 'Blockchain Voting System', 
-          description: 'Secure and transparent digital voting platform', 
-          image: '/placeholder.jpg',
-          fullDescription: 'A decentralized voting system built on blockchain technology ensuring transparency, security, and immutability of votes. Features include voter authentication, real-time results, and complete audit trails.',
-          technologies: ['Solidity', 'Ethereum', 'Web3.js', 'Node.js'],
-          team: ['Student 4', 'Student 5', 'Student 6'],
-          year: '2026'
+          title: 'Automated Trafic Light System', 
+          description: 'Traffic signal system using computer vision', 
+          image: '/ATIT/Automated Color Light System.jpg',
+          fullDescription: 'Color light system that adjusts signals based on real-time traffic and pedestrian data using computer vision techniques.',
+          technologies: ['Image Processing', 'Python', 'Microcontrollers','Ultrasonic Sensors','PIR Sensors'],
+          team: ['Student 6',],
+          year: '2025'
         },
-        { 
-          id: 3, 
-          title: 'Cybersecurity Dashboard', 
-          description: 'Real-time threat detection and monitoring', 
-          image: '/placeholder.jpg',
-          fullDescription: 'A comprehensive cybersecurity monitoring dashboard that provides real-time threat detection, network analysis, and security alerts. Includes machine learning models for anomaly detection.',
-          technologies: ['Python', 'Splunk', 'ELK Stack', 'React'],
-          team: ['Student 7', 'Student 8'],
-          year: '2026'
-        }
       ]
     },
     {
@@ -50,35 +41,115 @@ export default function Projects() {
       color: 'cyan',
       projects: [
         { 
-          id: 4, 
-          title: 'IoT Smart Home', 
-          description: 'Automated home control with sensors and microcontrollers', 
-          image: '/placeholder.jpg',
-          fullDescription: 'An integrated IoT system for home automation featuring smart lighting, temperature control, security monitoring, and energy management. Controlled via mobile app with voice command support.',
-          technologies: ['Arduino', 'ESP32', 'MQTT', 'Flutter'],
-          team: ['Student 9', 'Student 10', 'Student 11'],
-          year: '2026'
+          id: 20, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/01.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
         },
         { 
-          id: 5, 
-          title: 'Nano-sensor Array', 
-          description: 'Advanced nanotechnology for environmental monitoring', 
-          image: '/placeholder.jpg',
-          fullDescription: 'A network of nano-scale sensors for detecting environmental pollutants with high precision. Capable of real-time air quality monitoring and hazardous substance detection.',
-          technologies: ['Nanotechnology', 'C++', 'LoRaWAN', 'Python'],
-          team: ['Student 12', 'Student 13'],
-          year: '2026'
+          id: 21, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/02.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
         },
         { 
-          id: 6, 
-          title: 'Solar Power Optimizer', 
-          description: 'Maximum power point tracking system', 
-          image: '/placeholder.jpg',
-          fullDescription: 'An intelligent solar power optimization system using MPPT algorithms to maximize energy harvest from solar panels. Features weather prediction integration and battery management.',
-          technologies: ['Embedded C', 'Arduino', 'MPPT', 'IoT'],
-          team: ['Student 14', 'Student 15'],
-          year: '2026'
-        }
+          id: 22, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/03.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 23, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/04.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 24, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/05.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 25, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/06.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 26, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/07.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 27, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/08.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 28, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/09.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 29, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/10.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
+        { 
+          id: 30, 
+          title: '', 
+          description: '', 
+          image: '/ASEET/11.jpg',
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 9',],
+          year: '2025'
+        },
       ]
     },
     {
@@ -87,35 +158,15 @@ export default function Projects() {
       color: 'green',
       projects: [
         { 
-          id: 7, 
-          title: 'Autonomous Robot', 
-          description: 'Self-navigating robot for industrial automation', 
+          id: 40, 
+          title: '', 
+          description: '', 
           image: '/placeholder.jpg',
-          fullDescription: 'A fully autonomous mobile robot designed for industrial environments. Features SLAM navigation, obstacle avoidance, and automated task execution for warehouse and manufacturing operations.',
-          technologies: ['ROS', 'Python', 'LiDAR', 'Computer Vision'],
-          team: ['Student 16', 'Student 17', 'Student 18'],
-          year: '2026'
+          fullDescription: '',
+          technologies: ['', '', '', ''],
+          team: ['Student 16',],
+          year: '2025'
         },
-        { 
-          id: 8, 
-          title: 'Smart Irrigation System', 
-          description: 'Water conservation through automated agriculture', 
-          image: '/placeholder.jpg',
-          fullDescription: 'An intelligent irrigation system that optimizes water usage based on soil moisture, weather forecasts, and crop requirements. Reduces water consumption by up to 40% while improving crop yields.',
-          technologies: ['IoT', 'Sensors', 'Machine Learning', 'Mobile App'],
-          team: ['Student 19', 'Student 20'],
-          year: '2026'
-        },
-        { 
-          id: 9, 
-          title: '3D Printed Prosthetics', 
-          description: 'Affordable prosthetic limbs using additive manufacturing', 
-          image: '/placeholder.jpg',
-          fullDescription: 'Custom-designed prosthetic limbs created using 3D printing technology. Significantly reduces cost while maintaining functionality and comfort. Includes modular design for easy customization.',
-          technologies: ['CAD', '3D Printing', 'Biomechanics', 'Materials Science'],
-          team: ['Student 21', 'Student 22'],
-          year: '2026'
-        }
       ]
     },
     {
@@ -124,35 +175,15 @@ export default function Projects() {
       color: 'cyan',
       projects: [
         { 
-          id: 10, 
-          title: 'Bio-plastic Production', 
-          description: 'Eco-friendly plastic from agricultural waste', 
+          id: 60, 
+          title: '', 
+          description: '', 
           image: '/placeholder.jpg',
-          fullDescription: 'Sustainable bio-plastic production from agricultural waste materials. Biodegradable and environmentally friendly alternative to conventional plastics with similar mechanical properties.',
-          technologies: ['Biotechnology', 'Fermentation', 'Chemical Engineering'],
-          team: ['Student 23', 'Student 24', 'Student 25'],
-          year: '2026'
+          fullDescription: '',
+          technologies: ['', '', ''],
+          team: ['Student 23',],
+          year: '2025'
         },
-        { 
-          id: 11, 
-          title: 'DNA Sequencing Tool', 
-          description: 'Low-cost genetic analysis platform', 
-          image: '/placeholder.jpg',
-          fullDescription: 'An affordable DNA sequencing platform designed for educational and research purposes. Makes genetic analysis accessible with simplified workflow and automated data analysis.',
-          technologies: ['Molecular Biology', 'Bioinformatics', 'Python', 'Lab Equipment'],
-          team: ['Student 26', 'Student 27'],
-          year: '2026'
-        },
-        { 
-          id: 12, 
-          title: 'Enzyme Bioreactor', 
-          description: 'Industrial enzyme production optimization', 
-          image: '/placeholder.jpg',
-          fullDescription: 'Optimized bioreactor system for large-scale enzyme production. Features automated control of pH, temperature, and nutrient supply for maximum enzyme yield and quality.',
-          technologies: ['Bioprocess Engineering', 'Automation', 'Sensors', 'Control Systems'],
-          team: ['Student 28', 'Student 29'],
-          year: '2026'
-        }
       ]
     },
     {
@@ -161,34 +192,34 @@ export default function Projects() {
       color: 'cyan',
       projects: [
         { 
-          id: 13, 
-          title: 'Food Safety Detector', 
-          description: 'Rapid contamination detection system', 
-          image: '/placeholder.jpg',
-          fullDescription: 'A portable device for rapid detection of food contaminants and pathogens. Provides results in minutes using biosensor technology, ensuring food safety at every stage of the supply chain.',
-          technologies: ['Biosensors', 'Microbiology', 'Electronics', 'Mobile App'],
-          team: ['Student 30', 'Student 31'],
-          year: '2026'
+          id: 80, 
+          title: 'Nutran Rice', 
+          description: 'Rice enriched with additional nutrients for better health', 
+          image: '/AFRU/Nutran Rice.jpeg',
+          fullDescription: 'Rice fortified with essential vitamins and minerals to enhance nutritional value. Developed using advanced agricultural techniques to support better health outcomes in communities reliant on rice as a staple food.',
+          technologies: ['Food Science', '',],
+          team: ['Student 5'],
+          year: '2025'
         },
         { 
-          id: 14, 
-          title: 'Smart Dairy Monitor', 
-          description: 'Real-time milk quality analysis', 
-          image: '/placeholder.jpg',
-          fullDescription: 'Real-time milk quality monitoring system that analyzes fat content, protein levels, and detects adulterants. IoT-enabled for continuous monitoring throughout the dairy supply chain.',
-          technologies: ['IoT', 'Spectroscopy', 'Data Analytics', 'Cloud Computing'],
-          team: ['Student 32', 'Student 33'],
-          year: '2026'
+          id: 81, 
+          title: 'Coco masala hot sauce', 
+          description: 'Hot sauce made from diferent types of fruits', 
+          image: '/AFRU/Coco masala hot sauce.jpeg',
+          fullDescription: 'Hot sauce crafted from a blend of tropical fruits and spices, delivering a unique flavor profile. Perfect for adding a spicy kick to any dish while enjoying the natural sweetness of fruits.',
+          technologies: ['Food Science', ''],
+          team: ['Student 5'],
+          year: '2025'
         },
         { 
-          id: 15, 
-          title: 'Fruit Ripening Control', 
-          description: 'Ethylene-based ripening optimization', 
-          image: '/placeholder.jpg',
-          fullDescription: 'Automated fruit ripening system using controlled ethylene application. Optimizes ripening time, reduces waste, and ensures consistent quality for commercial fruit distribution.',
-          technologies: ['Automation', 'Sensors', 'Control Systems', 'Food Science'],
-          team: ['Student 34', 'Student 35'],
-          year: '2026'
+          id: 82, 
+          title: 'Green cob plate', 
+          description: 'Plates made from corn cobs as an eco-friendly alternative to plastic', 
+          image: '/AFRU/Green cob plate.jpeg',
+          fullDescription: 'Eco-friendly plates manufactured from corn cobs, providing a sustainable alternative to single-use plastics. These biodegradable plates are sturdy, compostable, and perfect for eco-conscious consumers.',
+          technologies: ['', 'Food Science'],
+          team: ['Student 5'],
+          year: '2025'
         }
       ]
     }
@@ -200,7 +231,7 @@ export default function Projects() {
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
           Featured Projects
         </h2>
-        <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
+        <div className="h-1 w-32 bg-linear-to-r from-primary to-secondary mx-auto mb-16"></div>
 
         <div className="space-y-16">
           {projectsByAssociation.map((assoc, idx) => (
@@ -217,20 +248,20 @@ export default function Projects() {
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-accent">{assoc.association}</h3>
-                  <div className="h-0.5 w-20 bg-gradient-to-r from-primary to-transparent mt-2"></div>
+                  <div className="h-0.5 w-20 bg-linear-to-r from-primary to-transparent mt-2"></div>
                 </div>
               </div>
 
               {/* Projects Grid */}
               <div className="grid md:grid-cols-3 gap-6">
-                {assoc.projects.map((project) => (
+                {(expandedAssoc[assoc.association] ? assoc.projects : assoc.projects.slice(0, 6)).map((project) => (
                   <div 
                     key={project.id} 
                     className="neon-border-cyan group hover-glow transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
                     onClick={() => setSelectedProject(project)}
                   >
                     {/* Project Image */}
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
+                    <div className="aspect-video bg-linear-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
                       <Image 
                         src={project.image}
                         alt={project.title}
@@ -238,7 +269,7 @@ export default function Projects() {
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       {/* Overlay on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span className="text-white text-sm font-semibold">View Details →</span>
                       </div>
                     </div>
@@ -255,6 +286,23 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
+
+              {/* See more / See less */}
+              {assoc.projects.length > 6 && (
+                <div className="flex justify-center">
+                  <button
+                    onClick={() =>
+                      setExpandedAssoc((prev) => ({
+                        ...prev,
+                        [assoc.association]: !prev[assoc.association],
+                      }))
+                    }
+                    className="mt-2 px-5 py-2 neon-border-cyan text-accent hover-glow font-semibold"
+                  >
+                    {expandedAssoc[assoc.association] ? 'See less' : 'See more'}
+                  </button>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -270,7 +318,7 @@ export default function Projects() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="sticky top-0 bg-gradient-to-r from-primary/20 to-secondary/20 border-b border-primary/30 p-6 flex justify-between items-start backdrop-blur-md">
+              <div className="sticky top-0 bg-linear-to-r from-primary/20 to-secondary/20 border-b border-primary/30 p-6 flex justify-between items-start backdrop-blur-md">
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h3>
                   <p className="text-accent text-sm">{selectedProject.description}</p>
@@ -344,7 +392,7 @@ export default function Projects() {
               </div>
 
               {/* Modal Footer */}
-              <div className="border-t border-primary/30 p-6 bg-gradient-to-r from-primary/10 to-secondary/10">
+              <div className="border-t border-primary/30 p-6 bg-linear-to-r from-primary/10 to-secondary/10">
                 <button 
                   onClick={() => setSelectedProject(null)}
                   className="w-full bg-primary/20 hover:bg-primary/30 border border-primary/50 text-primary hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(51,225,255,0.5)]"
