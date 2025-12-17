@@ -44,16 +44,37 @@ export default function Sponsors() {
         </h2>
         <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
 
-        {/* Sponsors Grid */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          {sponsors.map((sponsor) => (
-            <div key={sponsor.id} className="neon-border-cyan p-6 hover-glow flex items-center justify-center h-32">
-              <div className="text-center">
-                <div className="text-3xl mb-2">🏢</div>
-                <p className="font-semibold text-foreground">{sponsor.name}</p>
+        {/* Sponsors Scrolling Animation */}
+        <div className="relative overflow-hidden mb-12">
+          <style jsx>{`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .scroll-container {
+              display: flex;
+              animation: scroll 20s linear infinite;
+              width: fit-content;
+            }
+            .scroll-container:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
+          <div className="scroll-container">
+            {/* Render sponsors twice for seamless loop */}
+            {[...sponsors, ...sponsors].map((sponsor, index) => (
+              <div key={`${sponsor.id}-${index}`} className="neon-border-cyan p-6 hover-glow flex items-center justify-center h-32 mx-3 min-w-[250px]">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🏢</div>
+                  <p className="font-semibold text-foreground">{sponsor.name}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Share Section */}
