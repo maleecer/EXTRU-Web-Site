@@ -64,7 +64,7 @@ export default function Merchandise() {
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
           Merchandise
         </h2>
-        <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
+        <div className="h-1 w-32 bg-linear-to-r from-primary to-secondary mx-auto mb-16"></div>
 
         {/* Shirts Section */}
         <h3 className="text-2xl font-bold text-primary mb-4" style={{ fontFamily: 'var(--font-orbitron)' }}>Shirts</h3>
@@ -72,7 +72,7 @@ export default function Merchandise() {
           {shirts.map((item) => (
             <div key={item.id} className="neon-border-cyan p-4 hover-glow group">
               {/* Top view (main) */}
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded overflow-hidden">
+              <div className="aspect-square bg-linear-to-br from-primary/20 to-secondary/20 rounded overflow-hidden">
                 <img
                   src={item.images?.[0] || "/placeholder.svg"}
                   alt={`${item.name} top view`}
@@ -132,7 +132,7 @@ export default function Merchandise() {
           {bangles.map((item) => (
             <div key={item.id} className="neon-border-cyan p-4 hover-glow group">
               {/* Top view (main) */}
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded overflow-hidden">
+              <div className="aspect-square bg-linear-to-br from-primary/20 to-secondary/20 rounded overflow-hidden">
                 <img
                   src={item.images?.[0] || "/placeholder.svg"}
                   alt={`${item.name} top view`}

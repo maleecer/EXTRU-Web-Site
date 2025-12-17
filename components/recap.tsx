@@ -85,7 +85,7 @@ export default function Recap() {
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
           EXTRU 2025 Recap
         </h2>
-        <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
+        <div className="h-1 w-32 bg-linear-to-r from-primary to-secondary mx-auto mb-4"></div>
         <p className="text-center text-foreground/70 text-lg mb-16 max-w-3xl mx-auto">
           Relive the incredible moments from last year's exhibition
         </p>
@@ -123,7 +123,7 @@ export default function Recap() {
                 className="neon-border-cyan group hover-glow transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
               >
                 {/* Image Container */}
-                <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                <div className="aspect-video relative overflow-hidden bg-linear-to-br from-primary/20 to-secondary/20">
                   <Image 
                     src={memory.image}
                     alt="Extru 2025"
@@ -131,7 +131,7 @@ export default function Recap() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
                   
                   {/* Title on Image */}
                   <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -142,7 +142,7 @@ export default function Recap() {
                 </div>
                 
                 {/* Description */}
-                <div className="p-4 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <div className="p-4 bg-linear-to-br from-primary/5 to-secondary/5">
                   <p className="text-foreground/70 text-sm leading-relaxed">
                     {memory.description}
                   </p>
@@ -157,7 +157,7 @@ export default function Recap() {
           <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
             EXTRU 2024 Recap
           </h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
+          <div className="h-1 w-32 bg-linear-to-r from-primary to-secondary mx-auto mb-4"></div>
           <p className="text-center text-foreground/70 text-lg mb-16 max-w-3xl mx-auto">
             Relive the incredible moments from the 2024 exhibition
           </p>
@@ -195,7 +195,7 @@ export default function Recap() {
                   className="neon-border-cyan group hover-glow transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
                 >
                   {/* Image Container */}
-                  <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                  <div className="aspect-video relative overflow-hidden bg-linear-to-br from-primary/20 to-secondary/20">
                     <Image 
                       src={memory.image}
                       alt="Extru 2024"
@@ -203,7 +203,7 @@ export default function Recap() {
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
                     
                     {/* Title on Image */}
                     <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -214,7 +214,7 @@ export default function Recap() {
                   </div>
                   
                   {/* Description */}
-                  <div className="p-4 bg-gradient-to-br from-primary/5 to-secondary/5">
+                  <div className="p-4 bg-linear-to-br from-primary/5 to-secondary/5">
                     <p className="text-foreground/70 text-sm leading-relaxed">
                       {memory.description}
                     </p>

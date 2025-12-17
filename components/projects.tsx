@@ -231,7 +231,7 @@ export default function Projects() {
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
           Featured Projects
         </h2>
-        <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
+        <div className="h-1 w-32 bg-linear-to-r from-primary to-secondary mx-auto mb-16"></div>
 
         <div className="space-y-16">
           {projectsByAssociation.map((assoc, idx) => (
@@ -248,7 +248,7 @@ export default function Projects() {
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-accent">{assoc.association}</h3>
-                  <div className="h-0.5 w-20 bg-gradient-to-r from-primary to-transparent mt-2"></div>
+                  <div className="h-0.5 w-20 bg-linear-to-r from-primary to-transparent mt-2"></div>
                 </div>
               </div>
 
@@ -261,7 +261,7 @@ export default function Projects() {
                     onClick={() => setSelectedProject(project)}
                   >
                     {/* Project Image */}
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
+                    <div className="aspect-video bg-linear-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
                       <Image 
                         src={project.image}
                         alt={project.title}
@@ -269,7 +269,7 @@ export default function Projects() {
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       {/* Overlay on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span className="text-white text-sm font-semibold">View Details →</span>
                       </div>
                     </div>
@@ -318,7 +318,7 @@ export default function Projects() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="sticky top-0 bg-gradient-to-r from-primary/20 to-secondary/20 border-b border-primary/30 p-6 flex justify-between items-start backdrop-blur-md">
+              <div className="sticky top-0 bg-linear-to-r from-primary/20 to-secondary/20 border-b border-primary/30 p-6 flex justify-between items-start backdrop-blur-md">
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h3>
                   <p className="text-accent text-sm">{selectedProject.description}</p>
@@ -392,7 +392,7 @@ export default function Projects() {
               </div>
 
               {/* Modal Footer */}
-              <div className="border-t border-primary/30 p-6 bg-gradient-to-r from-primary/10 to-secondary/10">
+              <div className="border-t border-primary/30 p-6 bg-linear-to-r from-primary/10 to-secondary/10">
                 <button 
                   onClick={() => setSelectedProject(null)}
                   className="w-full bg-primary/20 hover:bg-primary/30 border border-primary/50 text-primary hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(51,225,255,0.5)]"
