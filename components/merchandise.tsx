@@ -21,7 +21,7 @@ export default function Merchandise() {
       id: 1,
       name: 'EXTRU 2026 T-Shirt',
       price: 'Rs 1800.00',
-      images: ['/Merchandise/extru-2026-tshirt-neon.jpeg'],
+      images: ['/Merchandise/t shirt 12.png'],
       inStock: true,
       preorderUrl: 'https://forms.gle/CnqPm76KLeDr7zYBA'
     }
@@ -68,26 +68,26 @@ export default function Merchandise() {
 
         {/* Shirts Section */}
         <h3 className="text-2xl font-bold text-primary mb-4" style={{ fontFamily: 'var(--font-orbitron)' }}>Shirts</h3>
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {shirts.map((item) => (
             <div key={item.id} className="neon-border-cyan p-4 hover-glow group">
-              {/* Top view (main) */}
-              <div className="aspect-square bg-linear-to-br from-primary/20 to-secondary/20 rounded overflow-hidden">
+              {/* Main image - landscape format */}
+              <div className="aspect-video bg-linear-to-br from-primary/20 to-secondary/20 rounded overflow-hidden">
                 <img
                   src={item.images?.[0] || "/placeholder.svg"}
-                  alt={`${item.name} top view`}
-                  className="w-full h-full object-cover cursor-zoom-in"
+                  alt={`${item.name}`}
+                  className="w-full h-full object-contain cursor-zoom-in"
                   onClick={() => setPreviewSrc(item.images?.[0] || null)}
                 />
               </div>
 
-              {/* Side/bottom view (optional) */}
+              {/* Additional view (optional) */}
               {item.images && item.images[1] && (
                 <div className="mt-3 aspect-video rounded overflow-hidden">
                   <img
                     src={item.images[1]}
-                    alt="EXTRU"
-                    className="w-full h-full object-cover cursor-zoom-in"
+                    alt={`${item.name} - additional view`}
+                    className="w-full h-full object-contain cursor-zoom-in"
                     onClick={() => setPreviewSrc(item.images?.[1] || null)}
                   />
                 </div>
