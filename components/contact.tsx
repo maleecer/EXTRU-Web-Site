@@ -108,7 +108,7 @@ export default function Contact() {
                   <h3 className="text-primary font-bold text-lg mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
                     Email
                   </h3>
-                  <p className="text-gray-300">info@extru2026.lk</p>
+                  <p className="text-gray-300">extru@tec.rjt.ac.lk</p>
                   <p className="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
                 </div>
               </div>

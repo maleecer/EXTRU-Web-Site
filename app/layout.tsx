@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+// Analytics removed - enable in Vercel dashboard if needed
 import "./globals.css";
 
 const inter = Inter({
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "EXTRU 2026 - Technology Exhibition at RUSL",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title: "EXTRU 2026 - Annual Technology Exhibition | Faculty of Technology RUSL",
     description:
       "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition. February 20-22, 2026 at RUSL.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
     creator: "@extru2026",
   },
   robots: {
@@ -100,12 +100,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add your verification codes when available
-    google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
-  },
+  // Site verification handled via DNS TXT records - no meta tags needed
   icons: {
     icon: [
       {
@@ -139,8 +134,6 @@ export default function RootLayout({
       "EXTRU 2026 is Sri Lanka's premier technology exhibition featuring 150+ innovative student projects, workshops, tech talks, and networking opportunities.",
     startDate: "2026-02-20T09:00:00+05:30",
     endDate: "2026-02-22T18:00:00+05:30",
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
       "@type": "Place",
       name: "New Faculty Complex, Faculty of Technology",
@@ -159,7 +152,7 @@ export default function RootLayout({
       url: "https://tech.rjt.ac.lk",
     },
     image: [
-      `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com"}/og-image.jpg`,
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com"}/og-image.png`,
       `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com"}/robot.png`,
     ],
     offers: {
@@ -196,7 +189,7 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
-      email: "info@extru2026.com",
+      email: "extru@tec.rjt.ac.lk",
     },
   };
 
@@ -215,7 +208,6 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
-        <Analytics />
       </body>
     </html>
   );

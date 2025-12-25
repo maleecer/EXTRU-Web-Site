@@ -2,7 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { FaCalendarAlt, FaMapMarkerAlt, FaUniversity } from "react-icons/fa";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+// Dynamically import the 3D model component (client-side only)
+const Robot3DModel = dynamic(() => import("@/components/robot-3d-model"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+    </div>
+  ),
+});
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,18 +78,17 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex items-center justify-center pt-10 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center pt-10 overflow-visible"
     >
-      {/* Robot Image - Absolute positioned within home section */}
-      <div className="absolute top-20 right-0 lg:-right-20 bottom-0 z-5 hidden lg:flex lg:items-center">
+      {/* 3D Robot Model - Absolute positioned within home section */}
+      <div className="absolute top-1/2 right-4 xl:right-8 -translate-y-1/2 z-20 hidden lg:block">
         <div
-          className={`relative w-full max-w-[600px] h-full max-h-[calc(100vh-5rem)] aspect-square transition-all duration-1000 delay-300 ${
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
-          }`}
+          className={`relative w-[450px] xl:w-[550px] h-[450px] xl:h-[550px] transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
+            }`}
         >
-          {/* Professional Holographic Effect */}
+          {/* Professional Holographic Effect - Behind the model */}
           <div
-            className="absolute inset-0 rounded-full border border-primary/20"
+            className="absolute inset-0 rounded-full border border-primary/20 pointer-events-none z-0"
             style={{
               background:
                 "radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%)",
@@ -89,24 +98,14 @@ export default function Hero() {
             }}
           ></div>
 
-          {/* Rotating Rings */}
-          <div className="absolute inset-10 rounded-full border border-dashed border-primary/15 animate-[spin_20s_linear_infinite]"></div>
-          <div className="absolute inset-20 rounded-full border border-dotted border-secondary/15 animate-[spin_15s_linear_infinite_reverse]"></div>
+          {/* Rotating Rings - Behind the model */}
+          <div className="absolute inset-10 rounded-full border border-dashed border-primary/15 animate-[spin_20s_linear_infinite] pointer-events-none z-0"></div>
+          <div className="absolute inset-20 rounded-full border border-dotted border-secondary/15 animate-[spin_15s_linear_infinite_reverse] pointer-events-none z-0"></div>
 
-          <Image
-            src="/robot.png"
-            alt="EXTRU 2026 Technology Exhibition Robot Mascot - Faculty of Technology RUSL"
-            width={500}
-            height={500}
-            className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
-            style={{
-              filter:
-                "drop-shadow(0 0 40px rgba(59, 130, 246, 0.4)) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))",
-              animation:
-                "robotFloat 6s ease-in-out infinite, robotMove 8s ease-in-out infinite",
-            }}
-            priority
-          />
+          {/* 3D Model - Interactive layer on top */}
+          <div className="relative z-10 w-full h-full cursor-grab active:cursor-grabbing">
+            <Robot3DModel modelPath="/robot.glb" />
+          </div>
         </div>
       </div>
 
@@ -114,11 +113,10 @@ export default function Hero() {
         <div className="text-center lg:text-left lg:max-w-3xl">
           {/* Main Title with professional styling */}
           <h1
-            className={`text-6xl md:text-8xl lg:text-7xl xl:text-8xl font-bold mb-8 tracking-wider transition-all duration-1000 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`text-6xl md:text-8xl lg:text-7xl xl:text-8xl font-bold mb-8 tracking-wider transition-all duration-1000 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+              }`}
             style={{
               fontFamily: "var(--font-poppins)",
               color: "var(--primary)",
@@ -215,13 +213,12 @@ export default function Hero() {
             </div>
           </h1>
 
-          {/* Event Info Section vikum*/} 
+          {/* Event Info Section vikum*/}
           <div
-            className={`mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-700 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-20"
-            }`}
+            className={`mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-700 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-20"
+              }`}
           >
             {/* Organized By */}
             <div className="flex flex-col items-center text-center p-6 rounded-xl hover:bg-primary/5 transition-all border border-transparent hover:border-primary/30 group backdrop-blur-sm">
@@ -298,9 +295,8 @@ export default function Hero() {
 
           {/* Days Countdown (replaces CTA button) */}
           <div
-            className={`mt-12 inline-flex items-center justify-center md:justify-start transition-all duration-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-            }`}
+            className={`mt-12 inline-flex items-center justify-center md:justify-start transition-all duration-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+              }`}
             aria-live="polite"
           >
             <div

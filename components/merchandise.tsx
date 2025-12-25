@@ -39,7 +39,7 @@ export default function Merchandise() {
       id: 3,
       name: 'Wristband Black',
       price: 'Rs 200.00',
-      images: ['/Merchandise/Black.png', '/Merchandise/Black-side.png'],
+      images: ['/Merchandise/Black.png', '/Merchandise/black-side.png'],
       inStock: true
     },
     {
