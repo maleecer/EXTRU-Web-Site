@@ -172,7 +172,7 @@ export default function Footer() {
                 <span className="text-accent text-lg">📧</span>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href="mailto:info@extru2026.lk" className="hover:underline">info@extru2026.lk</a>
+                  <a href="mailto:extru@tec.rjt.ac.lk" className="hover:underline">extru@tec.rjt.ac.lk</a>
                 </div>
               </li>
               <li className="flex items-start gap-3 hover:text-primary transition-colors">

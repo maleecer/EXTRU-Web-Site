@@ -108,7 +108,7 @@ export default function Robot3DModel({
                 dpr={[1, 2]}
                 frameloop="always"
                 onCreated={({ gl }) => {
-                    gl.setClearColor('#00000000', 0)
+                    gl.setClearColor('#000000', 0)
                 }}
             >
                 <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={50} />
