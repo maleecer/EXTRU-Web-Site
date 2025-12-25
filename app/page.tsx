@@ -109,10 +109,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Organizing Committee */}
-        <div id="organizing-committee" className="w-full">
+        {/* Projects - Subtle gradient */}
+        <div id="projects" className="w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
-            <OrganizingCommittee />
+            <Projects />
           </div>
         </div>
 
@@ -123,10 +123,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Projects - Subtle gradient */}
-        <div id="projects" className="w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+        {/* Organizing Committee */}
+        <div id="organizing-committee" className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4">
-            <Projects />
+            <OrganizingCommittee />
           </div>
         </div>
 

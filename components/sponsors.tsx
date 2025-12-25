@@ -37,7 +37,7 @@ export default function Sponsors() {
   }
 
   return (
-    <section id="sponsors" className="relative py-20 px-4 md:px-8">
+    <section id="sponsors" className="relative pt-20 pb-0 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text">
           Our Sponsors
