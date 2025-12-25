@@ -32,13 +32,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Divider Line */}
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-7xl px-4">
-            <div className="section-divider"></div>
-          </div>
-        </div>
-
         {/* About - Subtle gradient */}
         <div id="about" className="w-full bg-gradient-to-b from-transparent via-primary/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
@@ -123,20 +116,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Organizing Committee */}
-        <div id="organizing-committee" className="w-full">
-          <div className="w-full max-w-7xl mx-auto px-4">
-            <OrganizingCommittee />
-          </div>
-        </div>
-
-        {/* Divider Line */}
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-7xl px-4">
-            <div className="section-divider"></div>
-          </div>
-        </div>
-
         {/* Schedule */}
         <div id="schedule" className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4">
@@ -155,6 +134,20 @@ export default function Home() {
         <div id="contact" className="w-full bg-gradient-to-b from-transparent via-accent/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Contact />
+          </div>
+        </div>
+
+        {/* Divider Line */}
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-7xl px-4">
+            <div className="section-divider"></div>
+          </div>
+        </div>
+
+        {/* Organizing Committee */}
+        <div id="organizing-committee" className="w-full">
+          <div className="w-full max-w-7xl mx-auto px-4">
+            <OrganizingCommittee />
           </div>
         </div>
       </div>
