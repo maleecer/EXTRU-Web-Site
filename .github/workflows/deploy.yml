@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
 
       - name: Install dependencies
@@ -31,10 +31,11 @@ jobs:
           REMOTE_HOST: ${{ secrets.VPS_HOST }}
           REMOTE_USER: ${{ secrets.VPS_USER }}
           REMOTE_PORT: ${{ secrets.VPS_PORT }}
-          SOURCE: ".next/ public/ package.json package-lock.json next.config.mjs"
+          SOURCE: "./"
           TARGET: ${{ secrets.DEPLOY_PATH }}
+          EXCLUDE: "node_modules/, .git/, .github/"
           SCRIPT_AFTER: |
             export PATH=/usr/local/bin:/usr/bin:$PATH
             cd ${{ secrets.DEPLOY_PATH }}
-            npm ci --omit=dev
+            npm ci --omit=dev --legacy-peer-deps
             pm2 restart extru-web || pm2 start npm --name "extru-web" -- start
