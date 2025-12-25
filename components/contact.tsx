@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaCalendarAlt, FaPaperPlane } from 'react-icons/fa'
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaCalendarAlt, FaPaperPlane, FaGlobe } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -116,8 +116,23 @@ export default function Contact() {
                   <h3 className="text-primary font-bold text-lg mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
                     Email
                   </h3>
-                  <p className="text-gray-300">extru@tec.rjt.ac.lk</p>
+                  <a href="mailto:extru@tec.rjt.ac.lk" className="text-gray-300 hover:text-primary transition-colors">extru@tec.rjt.ac.lk</a>
                   <p className="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="neon-border p-6 hover-glow group transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/30">
+                  <FaGlobe className="text-2xl text-purple-400 group-hover:animate-spin-slow" />
+                </div>
+                <div>
+                  <h3 className="text-purple-400 font-bold text-lg mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
+                    Website
+                  </h3>
+                  <a href="https://extru.edu.lk" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-purple-400 transition-colors">extru.edu.lk</a>
+                  <p className="text-gray-400 text-sm mt-1">Visit our official website</p>
                 </div>
               </div>
             </div>
@@ -131,7 +146,7 @@ export default function Contact() {
                   <h3 className="text-accent font-bold text-lg mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
                     Phone
                   </h3>
-                  <p className="text-gray-300">+94 25 226 1000</p>
+                  <a href="tel:+94252261000" className="text-gray-300 hover:text-accent transition-colors">+94 25 226 1000</a>
                   <p className="text-gray-400 text-sm mt-1">Mon-Fri, 9:00 AM - 5:00 PM</p>
                 </div>
               </div>

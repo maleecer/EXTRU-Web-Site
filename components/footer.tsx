@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube, FaGlobe } from 'react-icons/fa'
 
 export default function Footer() {
   const pathname = usePathname()
@@ -175,7 +175,16 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href="mailto:extru@tec.rjt.ac.lk" className="hover:underline">extru@tec.rjt.ac.lk</a>
+                  <a href="mailto:extru@tec.rjt.ac.lk" className="hover:underline hover:text-primary transition-colors">extru@tec.rjt.ac.lk</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 group hover:text-primary transition-colors">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <FaGlobe className="text-lg text-purple-400 group-hover:text-primary transition-colors" />
+                </div>
+                <div>
+                  <p className="font-semibold">Website</p>
+                  <a href="https://extru.edu.lk" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-purple-400 transition-colors">extru.edu.lk</a>
                 </div>
               </li>
               <li className="flex items-start gap-3 group hover:text-primary transition-colors">
@@ -184,7 +193,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <a href="tel:+94252261000" className="hover:underline">+94 25 226 1000</a>
+                  <a href="tel:+94252261000" className="hover:underline hover:text-primary transition-colors">+94 25 226 1000</a>
                 </div>
               </li>
               <li className="flex items-start gap-3 group hover:text-primary transition-colors">
