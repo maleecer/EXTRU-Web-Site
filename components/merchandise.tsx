@@ -79,7 +79,6 @@ export default function Merchandise() {
                   className="w-full h-full object-contain cursor-zoom-in"
                   onClick={() => setPreviewSrc(item.images?.[0] || null)}
                 />
-                
               </div>
 
               {/* Additional view (optional) */}
