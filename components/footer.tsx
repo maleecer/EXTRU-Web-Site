@@ -168,42 +168,42 @@ export default function Footer() {
               textShadow: '0 0 10px rgba(51, 225, 255, 0.5)',
               fontFamily: 'var(--font-orbitron)'
             }}>Contact Us</h4>
-            <ul className="space-y-3 text-gray-300 text-sm">
+            <ul className="space-y-4 text-gray-300 text-sm">
               <li className="flex items-start gap-3 group hover:text-primary transition-colors">
-                <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <FaEnvelope className="text-lg text-accent group-hover:text-primary transition-colors" />
+                <div className="w-12 h-12 bg-gradient-to-br from-accent/30 via-accent/20 to-accent/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg shadow-accent/30 border border-accent/20">
+                  <FaEnvelope className="text-lg text-accent group-hover:text-white transition-all duration-300" />
                 </div>
                 <div>
-                  <p className="font-semibold">Email</p>
-                  <a href="mailto:extru@tec.rjt.ac.lk" className="hover:underline hover:text-primary transition-colors">extru@tec.rjt.ac.lk</a>
+                  <p className="font-bold text-accent group-hover:text-primary transition-colors">Email</p>
+                  <a href="mailto:extru@tec.rjt.ac.lk" className="hover:underline hover:text-primary transition-colors block">extru@tec.rjt.ac.lk</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 group hover:text-purple-400 transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500/30 via-purple-500/20 to-purple-500/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg shadow-purple-500/30 border border-purple-400/20">
+                  <FaGlobe className="text-lg text-purple-400 group-hover:text-white transition-all duration-300 group-hover:rotate-180" style={{ transition: 'all 0.6s ease' }} />
+                </div>
+                <div>
+                  <p className="font-bold text-purple-400 group-hover:text-purple-300 transition-colors">Website</p>
+                  <a href="https://extru.edu.lk" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-purple-300 transition-colors block">extru.edu.lk</a>
                 </div>
               </li>
               <li className="flex items-start gap-3 group hover:text-primary transition-colors">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <FaGlobe className="text-lg text-purple-400 group-hover:text-primary transition-colors" />
+                <div className="w-12 h-12 bg-gradient-to-br from-primary/30 via-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg shadow-primary/30 border border-primary/20">
+                  <FaPhoneAlt className="text-lg text-primary group-hover:text-white transition-all duration-300 group-hover:rotate-12" />
                 </div>
                 <div>
-                  <p className="font-semibold">Website</p>
-                  <a href="https://extru.edu.lk" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-purple-400 transition-colors">extru.edu.lk</a>
+                  <p className="font-bold text-primary group-hover:text-accent transition-colors">Phone</p>
+                  <a href="tel:+94252261000" className="hover:underline hover:text-primary transition-colors block">+94 25 226 1000</a>
                 </div>
               </li>
-              <li className="flex items-start gap-3 group hover:text-primary transition-colors">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <FaPhoneAlt className="text-lg text-primary group-hover:text-accent transition-colors" />
+              <li className="flex items-start gap-3 group hover:text-secondary transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-secondary/30 via-secondary/20 to-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg shadow-secondary/30 border border-secondary/20">
+                  <FaMapMarkerAlt className="text-lg text-secondary group-hover:text-white transition-all duration-300 group-hover:-translate-y-1" />
                 </div>
                 <div>
-                  <p className="font-semibold">Phone</p>
-                  <a href="tel:+94252261000" className="hover:underline hover:text-primary transition-colors">+94 25 226 1000</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 group hover:text-primary transition-colors">
-                <div className="w-10 h-10 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <FaMapMarkerAlt className="text-lg text-secondary group-hover:text-accent transition-colors" />
-                </div>
-                <div>
-                  <p className="font-semibold">Location</p>
-                  <p>Technology Faculty</p>
-                  <p>Mihintale, Sri Lanka</p>
+                  <p className="font-bold text-secondary group-hover:text-accent transition-colors">Location</p>
+                  <p className="text-gray-400">Technology Faculty</p>
+                  <p className="text-gray-400">Mihintale, Sri Lanka</p>
                 </div>
               </li>
             </ul>
@@ -215,21 +215,26 @@ export default function Footer() {
               textShadow: '0 0 10px rgba(51, 225, 255, 0.5)',
               fontFamily: 'var(--font-orbitron)'
             }}>Follow Us</h4>
-            <div className="flex flex-wrap gap-3">
-              <a href="#" className="group w-12 h-12 bg-gradient-to-br from-blue-600/20 to-blue-600/10 border-2 border-blue-500/30 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600/40 hover:to-blue-600/20 hover:border-blue-500 hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-lg hover:shadow-blue-500/50" aria-label="Facebook">
-                <FaFacebookF className="text-xl text-blue-400 group-hover:text-white transition-colors" />
+            <div className="flex flex-wrap gap-4">
+              <a href="#" className="group relative w-14 h-14 bg-gradient-to-br from-blue-600/30 to-blue-600/10 border-2 border-blue-500/40 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600/60 hover:to-blue-600/30 hover:border-blue-400 hover:scale-125 hover:rotate-12 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/60 overflow-hidden" aria-label="Facebook">
+                <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/20 transition-all duration-500"></div>
+                <FaFacebookF className="text-2xl text-blue-400 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-110" />
               </a>
-              <a href="#" className="group w-12 h-12 bg-gradient-to-br from-pink-600/20 to-purple-600/10 border-2 border-pink-500/30 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-600/40 hover:to-purple-600/20 hover:border-pink-500 hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-lg hover:shadow-pink-500/50" aria-label="Instagram">
-                <FaInstagram className="text-xl text-pink-400 group-hover:text-white transition-colors" />
+              <a href="#" className="group relative w-14 h-14 bg-gradient-to-br from-pink-600/30 via-purple-600/20 to-purple-600/10 border-2 border-pink-500/40 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-600/60 hover:via-purple-600/40 hover:to-purple-600/30 hover:border-pink-400 hover:scale-125 hover:rotate-12 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-pink-500/60 overflow-hidden" aria-label="Instagram">
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/0 to-purple-500/0 group-hover:from-pink-500/20 group-hover:to-purple-500/20 transition-all duration-500"></div>
+                <FaInstagram className="text-2xl text-pink-400 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-110 group-hover:rotate-12" />
               </a>
-              <a href="#" className="group w-12 h-12 bg-gradient-to-br from-blue-700/20 to-blue-700/10 border-2 border-blue-600/30 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-700/40 hover:to-blue-700/20 hover:border-blue-600 hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-lg hover:shadow-blue-600/50" aria-label="LinkedIn">
-                <FaLinkedinIn className="text-xl text-blue-500 group-hover:text-white transition-colors" />
+              <a href="#" className="group relative w-14 h-14 bg-gradient-to-br from-blue-700/30 to-blue-700/10 border-2 border-blue-600/40 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-700/60 hover:to-blue-700/30 hover:border-blue-500 hover:scale-125 hover:rotate-12 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-600/60 overflow-hidden" aria-label="LinkedIn">
+                <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition-all duration-500"></div>
+                <FaLinkedinIn className="text-2xl text-blue-500 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-110" />
               </a>
-              <a href="#" className="group w-12 h-12 bg-gradient-to-br from-sky-500/20 to-sky-500/10 border-2 border-sky-400/30 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-sky-500/40 hover:to-sky-500/20 hover:border-sky-400 hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-lg hover:shadow-sky-400/50" aria-label="Twitter">
-                <FaTwitter className="text-xl text-sky-400 group-hover:text-white transition-colors" />
+              <a href="#" className="group relative w-14 h-14 bg-gradient-to-br from-sky-500/30 to-sky-500/10 border-2 border-sky-400/40 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-sky-500/60 hover:to-sky-500/30 hover:border-sky-300 hover:scale-125 hover:rotate-12 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-sky-400/60 overflow-hidden" aria-label="Twitter">
+                <div className="absolute inset-0 bg-sky-400/0 group-hover:bg-sky-400/20 transition-all duration-500"></div>
+                <FaTwitter className="text-2xl text-sky-400 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-110 group-hover:-rotate-12" />
               </a>
-              <a href="#" className="group w-12 h-12 bg-gradient-to-br from-red-600/20 to-red-600/10 border-2 border-red-500/30 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-red-600/40 hover:to-red-600/20 hover:border-red-500 hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-lg hover:shadow-red-500/50" aria-label="YouTube">
-                <FaYoutube className="text-xl text-red-500 group-hover:text-white transition-colors" />
+              <a href="#" className="group relative w-14 h-14 bg-gradient-to-br from-red-600/30 to-red-600/10 border-2 border-red-500/40 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-red-600/60 hover:to-red-600/30 hover:border-red-400 hover:scale-125 hover:rotate-12 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-red-500/60 overflow-hidden" aria-label="YouTube">
+                <div className="absolute inset-0 bg-red-500/0 group-hover:bg-red-500/20 transition-all duration-500"></div>
+                <FaYoutube className="text-2xl text-red-500 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-110" />
               </a>
             </div>
           </div>
