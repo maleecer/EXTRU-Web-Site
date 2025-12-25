@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaCalendarAlt, FaPaperPlane } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -89,20 +90,27 @@ export default function Contact() {
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full neon-border-green px-6 py-4 text-accent font-bold hover-glow transition uppercase tracking-wider disabled:opacity-50"
+                className="w-full neon-border-green px-6 py-4 text-accent font-bold hover-glow transition uppercase tracking-wider disabled:opacity-50 flex items-center justify-center gap-3 group"
                 style={{ fontFamily: 'var(--font-orbitron)' }}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? (
+                  'Sending...'
+                ) : (
+                  <>
+                    Send Message
+                    <FaPaperPlane className="text-xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                  </>
+                )}
               </button>
             </form>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <div className="neon-border p-6">
+            <div className="neon-border p-6 hover-glow group transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">📧</span>
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/30">
+                  <FaEnvelope className="text-2xl text-primary group-hover:animate-pulse" />
                 </div>
                 <div>
                   <h3 className="text-primary font-bold text-lg mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
@@ -114,10 +122,10 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="neon-border p-6">
+            <div className="neon-border p-6 hover-glow group transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">📞</span>
+                <div className="w-14 h-14 bg-gradient-to-br from-accent/30 to-accent/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent/30">
+                  <FaPhoneAlt className="text-2xl text-accent group-hover:animate-bounce" />
                 </div>
                 <div>
                   <h3 className="text-accent font-bold text-lg mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
@@ -129,10 +137,10 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="neon-border p-6">
+            <div className="neon-border p-6 hover-glow group transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">📍</span>
+                <div className="w-14 h-14 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-secondary/30">
+                  <FaMapMarkerAlt className="text-2xl text-secondary group-hover:animate-pulse" />
                 </div>
                 <div>
                   <h3 className="text-secondary font-bold text-lg mb-2" style={{ fontFamily: 'var(--font-orbitron)' }}>
@@ -145,12 +153,19 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="neon-border p-6 bg-gradient-to-br from-primary/5 to-accent/5">
-              <h3 className="text-primary font-bold text-lg mb-3" style={{ fontFamily: 'var(--font-orbitron)' }}>
-                Event Dates
-              </h3>
-              <p className="text-white text-xl font-bold mb-2">February 19-21, 2026</p>
-              <p className="text-gray-400 text-sm">Mark your calendars! 🗓️</p>
+            <div className="neon-border p-6 bg-gradient-to-br from-primary/5 to-accent/5 hover-glow group transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-accent/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/30">
+                  <FaCalendarAlt className="text-2xl text-primary group-hover:text-accent transition-colors duration-300" />
+                </div>
+                <div>
+                  <h3 className="text-primary font-bold text-lg mb-3" style={{ fontFamily: 'var(--font-orbitron)' }}>
+                    Event Dates
+                  </h3>
+                  <p className="text-white text-xl font-bold mb-2">February 19-21, 2026</p>
+                  <p className="text-gray-400 text-sm">Mark your calendars!</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
