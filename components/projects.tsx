@@ -35,8 +35,8 @@ export default function Projects() {
         },
         { 
           id: 3, 
-          title: '', 
-          description: '', 
+          title: 'Arduino CNC Drawing Machine', 
+          description: 'A low-cost, Arduino-based CNC drawing machine that automatically draws images, patterns, and text on paper with high accuracy.', 
           image: '/ATIT/01.jpg',
           fullDescription: '',
           technologies: [''],
