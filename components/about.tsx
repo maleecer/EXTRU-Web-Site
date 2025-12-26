@@ -9,24 +9,21 @@ export default function About() {
             About EXTRU 2026
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Sri Lanka's Premier Technology Exhibition
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <div className="space-y-6">
             <p className="text-white text-lg leading-relaxed">
-              EXTRU 2026 is Sri Lanka's premier technology exhibition, bringing together <span className="text-primary font-semibold">innovators</span>, <span className="text-primary font-semibold">developers</span>, and <span className="text-primary font-semibold">tech enthusiasts</span> from across the nation. Experience cutting-edge technologies, participate in hands-on workshops, and network with industry leaders in the field of technology and innovation.
+              <span className="text-primary font-bold text-xl">EXTRU 2026</span> is the <span className="text-primary font-semibold">third edition</span> of the Faculty of Technology's prestigious <span className="text-accent font-semibold">Innovation and Technology Exhibition</span>, proudly organized by the <span className="text-accent font-semibold">Faculty of Technology, Rajarata University of Sri Lanka</span>.
             </p>
             
             <p className="text-white text-lg leading-relaxed">
-              Hosted at the <span className="text-accent font-semibold">Technology Faculty Premises of Rajarata University of Sri Lanka</span> from <span className="text-accent font-semibold">February 20-22, 2026</span>, EXTRU features contributions from five dynamic departments: ICT, Electronics & Nanotechnology, Mechanical & Transport Technology, Biosystems & Process Technology, and Food & Dairy Technology.
+              Following the great success of <span className="text-primary font-semibold">EXTRU 2024</span> and <span className="text-primary font-semibold">EXTRU 2025</span>, the exhibition returns in <span className="text-accent font-semibold">February 2026</span>, featuring <span className="text-secondary">new ideas</span>, <span className="text-secondary">modern innovations</span>, and <span className="text-secondary">national-level collaborations</span>.
             </p>
 
             <p className="text-white text-lg leading-relaxed">
-              From <span className="text-secondary">AI and machine learning</span> to <span className="text-secondary">robotics</span>, <span className="text-secondary">biotechnology</span>, and <span className="text-secondary">agritech</span>, explore the future of technology across all domains.
+              The exhibition aims to showcase the <span className="text-primary font-semibold">creativity</span>, <span className="text-primary font-semibold">talent</span>, and <span className="text-primary font-semibold">practical knowledge</span> of both undergraduate and postgraduate students. It will bring together <span className="text-accent">industries</span>, <span className="text-accent">academics</span>, <span className="text-accent">schools</span>, and <span className="text-accent">government organizations</span> to exchange ideas, share expertise, and inspire future innovation.
             </p>
 
             <div className="grid grid-cols-3 gap-4 pt-6">

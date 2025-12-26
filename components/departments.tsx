@@ -84,7 +84,6 @@ export default function Departments() {
               <div className="flex flex-col items-center gap-2 flex-grow justify-center">
                 <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
                 <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
-                <p className="text-foreground/70 text-xs text-center line-clamp-3">{dept.description}</p>
               </div>
             </div>
           ))}
@@ -104,7 +103,6 @@ export default function Departments() {
               <div className="flex flex-col items-center gap-2 flex-grow justify-center">
                 <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
                 <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
-                <p className="text-foreground/70 text-xs text-center line-clamp-3">{dept.description}</p>
               </div>
             </div>
           ))}
