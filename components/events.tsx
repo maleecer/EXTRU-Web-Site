@@ -138,12 +138,16 @@ export default function Events() {
                 </div>
 
                 {/* Action Button */}
-                <button className="neon-border-green w-full px-4 py-3 bg-gradient-to-r from-accent/20 to-accent/10 text-accent font-bold hover-glow transition uppercase tracking-wider group/btn relative overflow-hidden text-xs" style={{ fontFamily: 'var(--font-orbitron)' }}>
+                <button 
+                  disabled
+                  className="w-full px-4 py-3 bg-gradient-to-r from-gray-800/60 to-gray-900/60 text-gray-400 font-bold transition uppercase tracking-wider relative overflow-hidden text-xs border-2 border-gray-700/50 rounded cursor-not-allowed" 
+                  style={{ fontFamily: 'var(--font-orbitron)' }}
+                  title="No registration required for this event"
+                >
                   <span className="relative z-10 flex items-center justify-center gap-2">
-                    Register
-                    <FaChevronRight className="group-hover/btn:translate-x-1 transition-transform duration-300 text-xs" />
+                    No Registration Needed
+                    <FaChevronRight className="text-xs" />
                   </span>
-                  <div className="absolute inset-0 bg-accent/0 group-hover/btn:bg-accent/10 transition-all duration-300"></div>
                 </button>
               </div>
             </div>

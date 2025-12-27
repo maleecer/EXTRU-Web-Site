@@ -267,10 +267,7 @@ export default function Footer() {
         {/* Bottom Section - Copyright */}
         <div className="border-t border-primary/30 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <p className="text-center md:text-left">
-            &copy; 2026 EXTRU. All rights reserved. | Built with ❤️ by Tech Team
-          </p>
-          <p className="text-center md:text-right">
-            <span className="text-accent font-semibold">Rajarata University of Sri Lanka</span> | Faculty of Technology
+            &copy; 2026 EXTRU. All rights reserved. | Built with ❤️ by EXTRU Organizing Committee 2026
           </p>
         </div>
       </div>
