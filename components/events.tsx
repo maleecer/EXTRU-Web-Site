@@ -69,13 +69,13 @@ export default function Events() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-accent/5 to-primary/0 group-hover:via-accent/10 transition-all duration-700"></div>
               
               {/* Image */}
-              <div className="relative h-56 overflow-hidden rounded-t-lg">
+              <div className="relative h-56 overflow-hidden rounded-t-lg bg-black/40">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-transparent z-10"></div>
                 <Image 
                   src={event.image} 
                   alt={event.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-contain group-hover:scale-105 transition-transform duration-700"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = '/Extru-2025/1.jpg';
