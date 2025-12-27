@@ -61,6 +61,7 @@ export default function Navbar() {
         top: offsetPosition,
         behavior: "smooth",
       });
+      
     }
     setIsMenuOpen(false);
   };
