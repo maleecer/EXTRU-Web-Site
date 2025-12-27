@@ -7,6 +7,7 @@ import About from '@/components/about'
 import Highlights from '@/components/highlights'
 import Recap from '@/components/recap'
 import Merchandise from '@/components/merchandise'
+import Events from '@/components/events'
 import Projects from '@/components/projects'
 import Schedule from '@/components/schedule'
 import Contact from '@/components/contact'
@@ -50,6 +51,20 @@ export default function Home() {
         <div id="recap" className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Recap />
+          </div>
+        </div>
+
+        {/* Divider Line */}
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-7xl px-4">
+            <div className="section-divider"></div>
+          </div>
+        </div>
+
+        {/* Events */}
+        <div id="events" className="w-full">
+          <div className="w-full max-w-7xl mx-auto px-4">
+            <Events />
           </div>
         </div>
 
