@@ -9,33 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          node-version: '24'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --legacy-peer-deps
-
-      - name: Build Next.js
-        run: npm run build
-
-      - name: Deploy to VPS via SSH
-        uses: easingthemes/ssh-deploy@v4
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.VPS_HOST }}
-          REMOTE_USER: ${{ secrets.VPS_USER }}
-          REMOTE_PORT: ${{ secrets.VPS_PORT }}
-          SOURCE: "./"
-          TARGET: ${{ secrets.DEPLOY_PATH }}
-          EXCLUDE: "node_modules/, .git/, .github/"
-          SCRIPT_AFTER: |
-            export PATH=/usr/local/bin:/usr/bin:$PATH
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
             cd ${{ secrets.DEPLOY_PATH }}
-            npm ci --omit=dev --legacy-peer-deps
+            git pull origin main
+            npm ci --legacy-peer-deps
+            npm run build
             pm2 restart extru-web || pm2 start npm --name "extru-web" -- start
