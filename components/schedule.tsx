@@ -8,9 +8,9 @@ export default function Schedule() {
       dayName: 'Wednesday',
       events: [
         { time: '09:00 AM', title: 'Opening Ceremony', description: '' },
-        { time: '11:00 AM', title: 'Comming Soon', description: '' },
-        { time: '02:00 PM', title: 'Comming Soon', description: '' },
-        { time: '05:00 PM', title: 'Comming Soon', description: '' }
+        { time: '11:00 AM', title: 'Coming Soon', description: '' },
+        { time: '02:00 PM', title: 'Coming Soon', description: '' },
+        { time: '05:00 PM', title: 'Coming Soon', description: '' }
       ]
     },
     { 
@@ -18,10 +18,10 @@ export default function Schedule() {
       date: 'Feb 21, 2026',
       dayName: 'Thursday',
       events: [
-        { time: '09:00 AM', title: 'Comming Soon', description: '' },
-        { time: '11:00 AM', title: 'Comming Soon', description: '' },
-        { time: '02:00 PM', title: 'Comming Soon', description: '' },
-        { time: '05:00 PM', title: 'Comming Soon', description: '' }
+        { time: '09:00 AM', title: 'Coming Soon', description: '' },
+        { time: '11:00 AM', title: 'Coming Soon', description: '' },
+        { time: '02:00 PM', title: 'Coming Soon', description: '' },
+        { time: '05:00 PM', title: 'Coming Soon', description: '' }
       ]
     },
     { 
@@ -29,8 +29,8 @@ export default function Schedule() {
       date: 'Feb 22, 2026',
       dayName: 'Friday',
       events: [
-        { time: '09:00 AM', title: 'Comming Soon', description: '' },
-        { time: '12:00 PM', title: 'Comming Soon', description: '' },
+        { time: '09:00 AM', title: 'Coming Soon', description: '' },
+        { time: '12:00 PM', title: 'Coming Soon', description: '' },
         { time: '04:00 PM', title: 'Closing Ceremony', description: '' },
         { time: '07:00 PM', title: 'Musical Night', description: '' }
       ]
