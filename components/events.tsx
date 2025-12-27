@@ -137,22 +137,14 @@ export default function Events() {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="grid grid-cols-2 gap-3">
-                  <button className="neon-border-green px-4 py-3 bg-gradient-to-r from-accent/20 to-accent/10 text-accent font-bold hover-glow transition uppercase tracking-wider group/btn relative overflow-hidden text-xs" style={{ fontFamily: 'var(--font-orbitron)' }}>
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      Register
-                      <FaChevronRight className="group-hover/btn:translate-x-1 transition-transform duration-300 text-xs" />
-                    </span>
-                    <div className="absolute inset-0 bg-accent/0 group-hover/btn:bg-accent/10 transition-all duration-300"></div>
-                  </button>
-                  <button className="neon-border px-4 py-3 bg-gradient-to-r from-primary/20 to-primary/10 text-primary font-bold hover-glow transition uppercase tracking-wider group/btn relative overflow-hidden text-xs" style={{ fontFamily: 'var(--font-orbitron)' }}>
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      <FaQrcode className="text-sm" />
-                      QR
-                    </span>
-                  </button>
-                </div>
+                {/* Action Button */}
+                <button className="neon-border-green w-full px-4 py-3 bg-gradient-to-r from-accent/20 to-accent/10 text-accent font-bold hover-glow transition uppercase tracking-wider group/btn relative overflow-hidden text-xs" style={{ fontFamily: 'var(--font-orbitron)' }}>
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    Register
+                    <FaChevronRight className="group-hover/btn:translate-x-1 transition-transform duration-300 text-xs" />
+                  </span>
+                  <div className="absolute inset-0 bg-accent/0 group-hover/btn:bg-accent/10 transition-all duration-300"></div>
+                </button>
               </div>
             </div>
           ))}
