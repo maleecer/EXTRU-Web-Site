@@ -213,9 +213,11 @@ export default function Footer() {
                   </div>
                 </div>
                 <div>
-                  <p className="font-bold text-secondary group-hover:text-white transition-colors mb-1">Location</p>
-                  <p className="text-gray-300">Technology Faculty</p>
-                  <p className="text-gray-400 text-xs">Mihintale, Sri Lanka</p>
+                  <p className="font-bold text-secondary group-hover:text-white transition-colors mb-1">Address</p>
+                  <p className="text-gray-300">EXTRU Organizing Committee,</p>
+                  <p className="text-gray-300">Faculty of Technology,</p>
+                  <p className="text-gray-300">Rajarata University of Sri Lanka,</p>
+                  <p className="text-gray-300">Mihintale, Sri Lanka</p>
                 </div>
               </li>
             </ul>
