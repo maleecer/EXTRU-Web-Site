@@ -213,9 +213,11 @@ export default function Footer() {
                   </div>
                 </div>
                 <div>
-                  <p className="font-bold text-secondary group-hover:text-white transition-colors mb-1">Location</p>
-                  <p className="text-gray-300">Technology Faculty</p>
-                  <p className="text-gray-400 text-xs">Mihintale, Sri Lanka</p>
+                  <p className="font-bold text-secondary group-hover:text-white transition-colors mb-1">Address</p>
+                  <p className="text-gray-300">EXTRU Organizing Committee,</p>
+                  <p className="text-gray-300">Faculty of Technology,</p>
+                  <p className="text-gray-300">Rajarata University of Sri Lanka,</p>
+                  <p className="text-gray-300">Mihintale, Sri Lanka</p>
                 </div>
               </li>
             </ul>
@@ -228,7 +230,7 @@ export default function Footer() {
               fontFamily: 'var(--font-orbitron)'
             }}>
               Follow Us
-              <span className="text-xs text-accent">✨</span>
+              <span className="text-xs text-accent"></span>
             </h4>
             <div className="flex flex-wrap gap-4">
               <a href="#" className="group relative w-16 h-16 bg-gradient-to-br from-blue-600/40 via-blue-600/20 to-blue-600/10 border-2 border-blue-500/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600/70 hover:to-blue-600/40 hover:border-blue-400 hover:scale-125 hover:-rotate-6 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/70 overflow-hidden backdrop-blur-sm" aria-label="Facebook">
@@ -267,10 +269,7 @@ export default function Footer() {
         {/* Bottom Section - Copyright */}
         <div className="border-t border-primary/30 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <p className="text-center md:text-left">
-            &copy; 2026 EXTRU. All rights reserved. | Built with ❤️ by Tech Team
-          </p>
-          <p className="text-center md:text-right">
-            <span className="text-accent font-semibold">Rajarata University of Sri Lanka</span> | Faculty of Technology
+            &copy; 2026 EXTRU. All rights reserved. | Built with ❤️ by EXTRU Organizing Committee 2026
           </p>
         </div>
       </div>
