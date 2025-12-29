@@ -130,6 +130,8 @@ export default function Hero() {
               animation: "float 6s ease-in-out infinite",
             }}
           >
+            {/* Hidden text for SEO crawlers */}
+            <span className="sr-only">EXTRU 2026 - Annual Technology Exhibition at Faculty of Technology RUSL</span>
             <div>
               {showInitialCursor && typedText.length === 0 && (
                 <span
