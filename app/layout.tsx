@@ -18,11 +18,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "EXTRU 2026 - Annual Technology Exhibition | Faculty of Technology RUSL",
-    template: "%s | EXTRU 2026",
+    default: "EXTRU 2026 - Technology Exhibition | Faculty of Technology RUSL",
+    template: "%s | EXTRU 2026 - Faculty of Technology RUSL",
   },
   description:
-    "EXTRU 2026 is Sri Lanka's premier technology exhibition organized by Faculty of Technology, Rajarata University. Join 5000+ attendees for innovation showcases, workshops, and networking on February 20-22, 2026.",
+    "EXTRU 2026: an Anuual Tech exhibition at RUSL. Organized by the Students' Union of Faculty of Technology, Rajarata University of Sri Lanka. 150+ student projects, workshops & networking.",
   keywords: [
     "EXTRU",
     "EXTRU 2026",
@@ -50,7 +50,8 @@ export const metadata: Metadata = {
     "Technology Conference",
     "Tech Event 2026",
     "Mihintale",
-    "Sri Lanka Tech Events"
+    "Sri Lanka Tech Events",
+    "Faculty of Technology RUSL"
   ],
   authors: [{ name: "Faculty of Technology, RUSL" }],
   creator: "Faculty of Technology, Rajarata University of Sri Lanka",
@@ -60,12 +61,12 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://extru.edu.lk"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "EXTRU 2026 - Annual Technology Exhibition | Faculty of Technology RUSL",
+    title: "EXTRU 2026 - Technology Exhibition | Faculty of Technology RUSL",
     description:
       "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. February 20-22, 2026 at RUSL.",
     url: "/",
@@ -152,15 +153,15 @@ export default function RootLayout({
       url: "https://tech.rjt.ac.lk",
     },
     image: [
-      `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com"}/og-image.png`,
-      `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com"}/robot.png`,
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru.edu.lk"}/og-image.png`,
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru.edu.lk"}/robot.png`,
     ],
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       price: "0",
       priceCurrency: "LKR",
-      url: process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com",
+      url: process.env.NEXT_PUBLIC_SITE_URL || "https://extru.edu.lk",
     },
     performer: {
       "@type": "Organization",
@@ -176,8 +177,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "EXTRU 2026",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com",
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru2026.com"}/icon.svg`,
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://extru.edu.lk",
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru.edu.lk"}/icon.svg`,
     description:
       "Annual technology exhibition organized by Faculty of Technology, Rajarata University of Sri Lanka",
     sameAs: [
