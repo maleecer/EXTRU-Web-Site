@@ -230,7 +230,7 @@ export default function Footer() {
               fontFamily: 'var(--font-orbitron)'
             }}>
               Follow Us
-              <span className="text-xs text-accent">✨</span>
+              <span className="text-xs text-accent"></span>
             </h4>
             <div className="flex flex-wrap gap-4">
               <a href="#" className="group relative w-16 h-16 bg-gradient-to-br from-blue-600/40 via-blue-600/20 to-blue-600/10 border-2 border-blue-500/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600/70 hover:to-blue-600/40 hover:border-blue-400 hover:scale-125 hover:-rotate-6 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/70 overflow-hidden backdrop-blur-sm" aria-label="Facebook">
