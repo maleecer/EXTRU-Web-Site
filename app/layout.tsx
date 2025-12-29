@@ -137,10 +137,10 @@ export default function RootLayout({
     endDate: "2026-02-22T18:00:00+05:30",
     location: {
       "@type": "Place",
-      name: "New Faculty Complex, Faculty of Technology",
+      name: "Faculty of Technology, Rajarata University of Sri Lanka",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Faculty of Technology, Rajarata University of Sri Lanka",
+        streetAddress: "EXTRU Organizing Committee, Faculty of Technology, Rajarata University of Sri Lanka",
         addressLocality: "Mihintale",
         addressRegion: "North Central Province",
         postalCode: "50300",
@@ -150,7 +150,7 @@ export default function RootLayout({
     organizer: {
       "@type": "Organization",
       name: "Faculty of Technology, Rajarata University of Sri Lanka",
-      url: "https://tech.rjt.ac.lk",
+      url: "https://fot.rjt.ac.lk",
     },
     image: [
       `${process.env.NEXT_PUBLIC_SITE_URL || "https://extru.edu.lk"}/og-image.png`,
