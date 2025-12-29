@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "EXTRU 2026 - Annual Technology Exhibition | Faculty of Technology RUSL",
+    default: "EXTRU 2026",
     template: "%s | EXTRU 2026",
   },
   description:
