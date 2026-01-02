@@ -19,7 +19,7 @@ export default function About() {
             </p>
             
             <p className="text-white text-lg leading-relaxed">
-              Following the great success of <span className="text-primary font-semibold">EXTRU 2024</span> and <span className="text-primary font-semibold">EXTRU 2025</span>, the exhibition returns in <span className="text-accent font-semibold">February 2026</span>, featuring <span className="text-secondary">new ideas</span>, <span className="text-secondary">modern innovations</span>, and <span className="text-secondary">national-level collaborations</span>.
+              Following the great success of <span className="text-primary font-semibold">EXTRU 2024</span> and <span className="text-primary font-semibold">EXTRU 2025</span>, the exhibition returns in <span className="text-accent font-semibold">March 2026</span>, featuring <span className="text-secondary">new ideas</span>, <span className="text-secondary">modern innovations</span>, and <span className="text-secondary">national-level collaborations</span>.
             </p>
 
             <p className="text-white text-lg leading-relaxed">
@@ -28,7 +28,7 @@ export default function About() {
 
             <div className="grid grid-cols-3 gap-4 pt-6">
               <div className="text-center p-4 bg-primary/10 rounded-lg border border-primary/30">
-                <p className="text-3xl font-bold text-primary mb-1">3</p>
+                <p className="text-3xl font-bold text-primary mb-1">2</p>
                 <p className="text-sm text-gray-400">Days</p>
               </div>
               <div className="text-center p-4 bg-accent/10 rounded-lg border border-accent/30">

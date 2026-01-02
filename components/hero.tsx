@@ -60,10 +60,10 @@ export default function Hero() {
     };
   }, []);
 
-  // Calculate days remaining to Feb 20, 2026 (local time)
+  // Calculate days remaining to March 5, 2026 (local time)
   useEffect(() => {
     const calculateDays = () => {
-      const target = new Date(2026, 1, 20, 0, 0, 0); // Feb is month index 1
+      const target = new Date(2026, 2, 5, 0, 0, 0); // March is month index 2
       const now = new Date();
       const diffMs = target.getTime() - now.getTime();
       const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
@@ -264,7 +264,7 @@ export default function Hero() {
                 className="text-sm md:text-base font-semibold text-foreground group-hover:text-white transition-colors"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                February 20-22
+                March 5-6
                 <br />
                 2026
               </h3>
@@ -319,7 +319,7 @@ export default function Hero() {
                   {daysRemaining ?? "--"}
                 </span>
                 <span className="text-sm md:text-base text-foreground/80">
-                  until Feb 20, 2026
+                  until March 5, 2026
                 </span>
               </div>
             </div>

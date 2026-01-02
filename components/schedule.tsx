@@ -4,35 +4,32 @@ export default function Schedule() {
   const events = [
     { 
       day: 'Day 1', 
-      date: 'Feb 20, 2026', 
-      dayName: 'Wednesday',
+      date: 'March 5, 2026', 
+      dayName: 'Thursday',
       events: [
-        { time: '09:00 AM', title: 'Opening Ceremony', description: '' },
-        { time: '11:00 AM', title: 'Coming Soon', description: '' },
-        { time: '02:00 PM', title: 'Coming Soon', description: '' },
-        { time: '05:00 PM', title: 'Coming Soon', description: '' }
+        { time: '08:00 AM', title: 'Coming Soon', description: '' },
+        { time: '09:00 AM', title: 'Coming Soon', description: '' },
+        { time: '10:30 AM', title: 'Coming Soon', description: '' },
+        { time: '12:00 PM', title: 'Coming Soon', description: '' },
+        { time: '01:00 PM', title: 'Coming Soon', description: '' },
+        { time: '02:30 PM', title: 'Coming Soon', description: '' },
+        { time: '04:00 PM', title: 'Coming Soon', description: '' },
+        { time: '05:30 PM', title: 'Coming Soon', description: '' }
       ]
     },
     { 
       day: 'Day 2', 
-      date: 'Feb 21, 2026',
-      dayName: 'Thursday',
-      events: [
-        { time: '09:00 AM', title: 'Coming Soon', description: '' },
-        { time: '11:00 AM', title: 'Coming Soon', description: '' },
-        { time: '02:00 PM', title: 'Coming Soon', description: '' },
-        { time: '05:00 PM', title: 'Coming Soon', description: '' }
-      ]
-    },
-    { 
-      day: 'Day 3', 
-      date: 'Feb 22, 2026',
+      date: 'March 6, 2026',
       dayName: 'Friday',
       events: [
+        { time: '08:30 AM', title: 'Coming Soon', description: '' },
         { time: '09:00 AM', title: 'Coming Soon', description: '' },
+        { time: '10:30 AM', title: 'Coming Soon', description: '' },
         { time: '12:00 PM', title: 'Coming Soon', description: '' },
-        { time: '04:00 PM', title: 'Closing Ceremony', description: '' },
-        { time: '07:00 PM', title: 'Musical Night', description: '' }
+        { time: '01:00 PM', title: 'Coming Soon', description: '' },
+        { time: '02:30 PM', title: 'Coming Soon', description: '' },
+        { time: '04:00 PM', title: 'Coming Soon', description: '' },
+        { time: '06:00 PM', title: 'Coming Soon', description: '' }
       ]
     }
   ]
@@ -45,7 +42,7 @@ export default function Schedule() {
         </h2>
         <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {events.map((day, idx) => (
             <div key={idx} className="neon-border-cyan hover-glow transition-all duration-300 hover:scale-105">
               {/* Day Header */}
