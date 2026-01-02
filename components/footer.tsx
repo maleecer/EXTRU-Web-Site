@@ -47,7 +47,7 @@ export default function Footer() {
                 EXTRU 2026
               </h3>
               <p className="text-sm text-primary/80 font-semibold">Faculty of Technology, RUSL</p>
-              <p className="text-xs text-accent mt-1">March 5-6, 2026</p>
+              <p className="text-xs text-accent mt-1">March 6-7, 2026</p>
             </div>
           </div>
         </div>

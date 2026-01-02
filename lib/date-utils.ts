@@ -1,7 +1,7 @@
 /**
  * Parse various date formats and return a Date object
  * Supports formats like:
- * - "March 5-6, 2026"
+ * - "March 6-7, 2026"
  * - "January 15-16, 2026"
  * - "December 28, 2026"
  * - "EXTRU 2024" (will be treated as past)

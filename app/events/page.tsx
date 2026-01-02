@@ -51,7 +51,7 @@ const events: Event[] = [
     subtitle: 'TECHNOLOGY SHOWCASE',
     description: 'The biggest technology exhibition of the year featuring innovative projects, workshops, and demonstrations from all departments of the Faculty of Technology.',
     category: 'Exhibition',
-    date: 'March 5-6, 2026',
+    date: 'March 6-7, 2026',
     time: '9:00 AM - 6:00 PM',
     location: 'Technology Faculty',
     venue: 'Faculty of Technology Premises',

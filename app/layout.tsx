@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EXTRU 2026 - Technology Exhibition | Faculty of Technology RUSL",
     description:
-      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. March 5-6, 2026 at RUSL.",
+      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. March 6-7, 2026 at RUSL.",
     url: "/",
     siteName: "EXTRU 2026",
     locale: "en_US",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EXTRU 2026 - Annual Technology Exhibition | Faculty of Technology RUSL",
     description:
-      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition. March 5-6, 2026 at RUSL.",
+      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition. March 6-7, 2026 at RUSL.",
     images: ["/og-image.png"],
     creator: "@extru2026",
   },
@@ -125,8 +125,8 @@ export default function RootLayout({
     name: "EXTRU 2026 - Annual Technology Exhibition",
     description:
       "EXTRU 2026 is Sri Lanka's premier technology exhibition featuring 150+ innovative student projects, workshops, tech talks, and networking opportunities.",
-    startDate: "2026-03-05T09:00:00+05:30",
-    endDate: "2026-03-06T18:00:00+05:30",
+    startDate: "2026-03-06T09:00:00+05:30",
+    endDate: "2026-03-07T18:00:00+05:30",
     location: {
       "@type": "Place",
       name: "Faculty of Technology, Rajarata University of Sri Lanka",

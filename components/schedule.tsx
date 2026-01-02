@@ -4,8 +4,8 @@ export default function Schedule() {
   const events = [
     { 
       day: 'Day 1', 
-      date: 'March 5, 2026', 
-      dayName: 'Thursday',
+      date: 'March 6, 2026', 
+      dayName: 'Friday',
       events: [
         { time: '08:00 AM', title: 'Coming Soon', description: '' },
         { time: '09:00 AM', title: 'Coming Soon', description: '' },
@@ -19,8 +19,8 @@ export default function Schedule() {
     },
     { 
       day: 'Day 2', 
-      date: 'March 6, 2026',
-      dayName: 'Friday',
+      date: 'March 7, 2026',
+      dayName: 'Saturday',
       events: [
         { time: '08:30 AM', title: 'Coming Soon', description: '' },
         { time: '09:00 AM', title: 'Coming Soon', description: '' },
