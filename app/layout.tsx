@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EXTRU 2026 - Technology Exhibition | Faculty of Technology RUSL",
     description:
-      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. February 20-22, 2026 at RUSL.",
+      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. March 5-6, 2026 at RUSL.",
     url: "/",
     siteName: "EXTRU 2026",
     locale: "en_US",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EXTRU 2026 - Annual Technology Exhibition | Faculty of Technology RUSL",
     description:
-      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition. February 20-22, 2026 at RUSL.",
+      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition. March 5-6, 2026 at RUSL.",
     images: ["/og-image.png"],
     creator: "@extru2026",
   },
@@ -104,20 +104,12 @@ export const metadata: Metadata = {
   // Site verification handled via DNS TXT records - no meta tags needed
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/extru-logo.svg", type: "image/svg+xml" },
     ],
-    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/EXTRU LOGO white 1.png",
   },
 };
 
@@ -133,8 +125,8 @@ export default function RootLayout({
     name: "EXTRU 2026 - Annual Technology Exhibition",
     description:
       "EXTRU 2026 is Sri Lanka's premier technology exhibition featuring 150+ innovative student projects, workshops, tech talks, and networking opportunities.",
-    startDate: "2026-02-20T09:00:00+05:30",
-    endDate: "2026-02-22T18:00:00+05:30",
+    startDate: "2026-03-05T09:00:00+05:30",
+    endDate: "2026-03-06T18:00:00+05:30",
     location: {
       "@type": "Place",
       name: "Faculty of Technology, Rajarata University of Sri Lanka",
