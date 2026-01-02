@@ -47,56 +47,55 @@ export default function ScrollToTop() {
     >
       <button
         onClick={scrollToTop}
-        className="group relative flex flex-col items-center justify-center bg-black/80 backdrop-blur-md border border-primary/40 hover:border-primary transition-all duration-300 py-4 px-3 rounded-sm overflow-hidden"
-        style={{
-          boxShadow: '0 0 20px rgba(51, 225, 255, 0.3)',
-        }}
+        className="group relative w-14 h-14 bg-gradient-to-br from-[#0a1f3d] via-[#0d1b2a] to-[#000814] border-2 border-primary/50 hover:border-primary rounded-full transition-all duration-300 hover:scale-110 overflow-hidden shadow-xl shadow-primary/30 hover:shadow-primary/60"
       >
-        {/* Progress bar - fills from top to bottom */}
-        <div 
-          className="absolute top-0 left-0 right-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/20 transition-all duration-100 ease-out border-b-2 border-primary/50"
-          style={{
-            height: `${scrollProgress}%`,
-            boxShadow: '0 0 20px rgba(59, 130, 246, 0.6), inset 0 0 10px rgba(59, 130, 246, 0.3)',
-          }}
-        ></div>
-
-        {/* Vertical text */}
-        <div className="flex flex-col items-center gap-1 mb-3 relative z-10">
-          <span className="text-white text-sm font-medium tracking-wider writing-vertical">
-            Scroll to top
-          </span>
-        </div>
-
-        {/* Animated arrow */}
-        <div className="relative w-6 h-6 flex items-center justify-center z-10">
-          <div
-            className="absolute w-2 h-2 rounded-full bg-secondary transition-all duration-300 group-hover:animate-bounce"
+        {/* Animated Background Glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        {/* Circular Progress Ring */}
+        <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 56 56">
+          <circle
+            cx="28"
+            cy="28"
+            r="24"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+            className="text-primary/20"
+          />
+          <circle
+            cx="28"
+            cy="28"
+            r="24"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+            className="text-primary transition-all duration-100"
+            strokeDasharray={`${2 * Math.PI * 24}`}
+            strokeDashoffset={`${2 * Math.PI * 24 * (1 - scrollProgress / 100)}`}
+            strokeLinecap="round"
             style={{
-              boxShadow: '0 0 10px rgba(124, 255, 114, 0.8), 0 0 20px rgba(124, 255, 114, 0.5)',
+              filter: 'drop-shadow(0 0 4px rgba(59, 130, 246, 0.8))',
             }}
-          ></div>
+          />
+        </svg>
+
+        {/* Arrow Icon */}
+        <div className="relative z-10 flex items-center justify-center w-full h-full">
           <svg
-            className="w-6 h-6 text-secondary transition-transform duration-300 group-hover:-translate-y-1"
+            className="w-6 h-6 text-primary group-hover:text-white transition-all duration-300 group-hover:-translate-y-1"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            style={{
-              filter: 'drop-shadow(0 0 8px rgba(124, 255, 114, 0.6))',
-            }}
+            strokeWidth={2.5}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </div>
-      </button>
 
-      <style jsx>{`
-        .writing-vertical {
-          writing-mode: vertical-rl;
-          text-orientation: mixed;
-          transform: rotate(180deg);
-        }
-      `}</style>
+        {/* Pulse Effect on Hover */}
+        <div className="absolute inset-0 rounded-full bg-primary/30 opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+      </button>
     </div>
   )
 }
