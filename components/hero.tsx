@@ -83,7 +83,7 @@ export default function Hero() {
       {/* 3D Robot Model - Absolute positioned within home section */}
       <div className="absolute top-1/2 right-4 xl:right-8 -translate-y-1/2 z-20 hidden lg:block">
         <div
-          className={`relative w-[450px] xl:w-[550px] h-[450px] xl:h-[550px] transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
+          className={`relative w-[500px] xl:w-[600px] h-[500px] xl:h-[600px] transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
             }`}
         >
           {/* Professional Holographic Effect - Behind the model */}

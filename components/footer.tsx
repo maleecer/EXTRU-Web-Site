@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube, FaGlobe } from 'react-icons/fa'
+import { FaEnvelope, FaFacebookF, FaLinkedinIn, FaGlobe } from 'react-icons/fa'
 
 export default function Footer() {
   const pathname = usePathname()
@@ -193,33 +193,6 @@ export default function Footer() {
                   <a href="https://extru.edu.lk" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-purple-300 transition-colors block group-hover:translate-x-1 transition-transform">extru.edu.lk</a>
                 </div>
               </li>
-              <li className="flex items-start gap-4 group hover:text-primary transition-colors">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-primary/30 rounded-xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary/50 via-primary/30 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-xl shadow-primary/40 border-2 border-primary/30 relative backdrop-blur-sm">
-                    <FaPhoneAlt className="text-xl text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold text-primary group-hover:text-white transition-colors mb-1">Phone</p>
-                  <a href="tel:+94252261000" className="hover:underline hover:text-accent transition-colors block group-hover:translate-x-1 transition-transform">+94 25 226 1000</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4 group hover:text-secondary transition-colors">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-secondary/30 rounded-xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-secondary/50 via-secondary/30 to-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-xl shadow-secondary/40 border-2 border-secondary/30 relative backdrop-blur-sm">
-                    <FaMapMarkerAlt className="text-xl text-white group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300" />
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold text-secondary group-hover:text-white transition-colors mb-1">Address</p>
-                  <p className="text-gray-300">EXTRU Organizing Committee,</p>
-                  <p className="text-gray-300">Faculty of Technology,</p>
-                  <p className="text-gray-300">Rajarata University of Sri Lanka,</p>
-                  <p className="text-gray-300">Mihintale, Sri Lanka</p>
-                </div>
-              </li>
             </ul>
           </div>
 
@@ -233,30 +206,15 @@ export default function Footer() {
               <span className="text-xs text-accent"></span>
             </h4>
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="group relative w-16 h-16 bg-gradient-to-br from-blue-600/40 via-blue-600/20 to-blue-600/10 border-2 border-blue-500/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600/70 hover:to-blue-600/40 hover:border-blue-400 hover:scale-125 hover:-rotate-6 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/70 overflow-hidden backdrop-blur-sm" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1ZbG7M7w2p/" target="_blank" rel="noopener noreferrer" className="group relative w-16 h-16 bg-gradient-to-br from-blue-600/40 via-blue-600/20 to-blue-600/10 border-2 border-blue-500/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600/70 hover:to-blue-600/40 hover:border-blue-400 hover:scale-125 hover:-rotate-6 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/70 overflow-hidden backdrop-blur-sm" aria-label="Facebook">
                 <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/30 transition-all duration-500"></div>
                 <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <FaFacebookF className="text-2xl text-blue-300 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-125" />
               </a>
-              <a href="#" className="group relative w-16 h-16 bg-gradient-to-br from-pink-600/40 via-purple-600/30 to-purple-600/10 border-2 border-pink-500/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-600/70 hover:via-purple-600/50 hover:to-purple-600/40 hover:border-pink-400 hover:scale-125 hover:rotate-12 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-pink-500/70 overflow-hidden backdrop-blur-sm" aria-label="Instagram">
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/0 to-purple-500/0 group-hover:from-pink-500/30 group-hover:to-purple-500/30 transition-all duration-500"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <FaInstagram className="text-2xl text-pink-300 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-125 group-hover:rotate-12" />
-              </a>
-              <a href="#" className="group relative w-16 h-16 bg-gradient-to-br from-blue-700/40 via-blue-700/20 to-blue-700/10 border-2 border-blue-600/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-700/70 hover:to-blue-700/40 hover:border-blue-500 hover:scale-125 hover:-rotate-6 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-600/70 overflow-hidden backdrop-blur-sm" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/extru-2026-%E2%80%93-innovation-technology-exhibition/" target="_blank" rel="noopener noreferrer" className="group relative w-16 h-16 bg-gradient-to-br from-blue-700/40 via-blue-700/20 to-blue-700/10 border-2 border-blue-600/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-700/70 hover:to-blue-700/40 hover:border-blue-500 hover:scale-125 hover:-rotate-6 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-600/70 overflow-hidden backdrop-blur-sm" aria-label="LinkedIn">
                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/30 transition-all duration-500"></div>
                 <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <FaLinkedinIn className="text-2xl text-blue-400 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-125" />
-              </a>
-              <a href="#" className="group relative w-16 h-16 bg-gradient-to-br from-sky-500/40 via-sky-500/20 to-sky-500/10 border-2 border-sky-400/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-sky-500/70 hover:to-sky-500/40 hover:border-sky-300 hover:scale-125 hover:rotate-12 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-sky-400/70 overflow-hidden backdrop-blur-sm" aria-label="Twitter">
-                <div className="absolute inset-0 bg-sky-400/0 group-hover:bg-sky-400/30 transition-all duration-500"></div>
-                <div className="absolute inset-0 bg-sky-300/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <FaTwitter className="text-2xl text-sky-300 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-125 group-hover:-rotate-12" />
-              </a>
-              <a href="#" className="group relative w-16 h-16 bg-gradient-to-br from-red-600/40 via-red-600/20 to-red-600/10 border-2 border-red-500/50 rounded-2xl flex items-center justify-center hover:bg-gradient-to-br hover:from-red-600/70 hover:to-red-600/40 hover:border-red-400 hover:scale-125 hover:-rotate-6 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-red-500/70 overflow-hidden backdrop-blur-sm" aria-label="YouTube">
-                <div className="absolute inset-0 bg-red-500/0 group-hover:bg-red-500/30 transition-all duration-500"></div>
-                <div className="absolute inset-0 bg-red-400/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <FaYoutube className="text-2xl text-red-400 group-hover:text-white transition-all duration-300 relative z-10 group-hover:scale-125" />
               </a>
             </div>
             <p className="text-gray-400 text-xs mt-4 flex items-center gap-2">

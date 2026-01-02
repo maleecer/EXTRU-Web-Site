@@ -145,24 +145,17 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Team - Organizing Committee */}
+        <div id="team" className="w-full bg-gradient-to-b from-transparent via-secondary/5 to-transparent">
+          <div className="w-full max-w-7xl mx-auto px-4">
+            <OrganizingCommittee />
+          </div>
+        </div>
+
         {/* Contact - Subtle gradient */}
         <div id="contact" className="w-full bg-gradient-to-b from-transparent via-accent/5 to-transparent">
           <div className="w-full max-w-7xl mx-auto px-4">
             <Contact />
-          </div>
-        </div>
-
-        {/* Divider Line */}
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-7xl px-4">
-            <div className="section-divider"></div>
-          </div>
-        </div>
-
-        {/* Organizing Committee */}
-        <div id="organizing-committee" className="w-full">
-          <div className="w-full max-w-7xl mx-auto px-4">
-            <OrganizingCommittee />
           </div>
         </div>
       </div>

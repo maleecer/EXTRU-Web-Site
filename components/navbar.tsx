@@ -18,10 +18,9 @@ export default function Navbar() {
         "merchandise",
         "departments",
         "sponsors",
-        "organizing-committee",
         "projects",
         "schedule",
-        "contact",
+        "team",
       ];
       const scrollPosition = window.scrollY + 150; // Adjust offset for navbar height
 
@@ -51,7 +50,9 @@ export default function Navbar() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+    // Map contact to team section
+    const targetSection = sectionId === 'contact' ? 'team' : sectionId;
+    const element = document.getElementById(targetSection);
     if (element) {
       const navbarHeight = 80; // Approximate navbar height
       const elementPosition =
