@@ -18,11 +18,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "EXTRU 2026 - Technology Exhibition | Faculty of Technology RUSL",
+    default: "EXTRU 2026 - Tech Exhibition | Faculty of Technology RUSL",
     template: "%s | EXTRU 2026 - Faculty of Technology RUSL",
   },
   description:
-    "EXTRU 2026: an Anuual Tech exhibition at RUSL. Organized by the Students' Union of Faculty of Technology, Rajarata University of Sri Lanka. 150+ student projects, workshops & networking.",
+    "EXTRU 2026: an Anuual Tech exhibition at Rajarata University of Sri Lanka. Organized by the Students' Union of Faculty of Technology, Rajarata University of Sri Lanka. 150+ student projects, workshops & networking.",
   keywords: [
     "EXTRU",
     "EXTRU 2026",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "EXTRU 2026 - Technology Exhibition | Faculty of Technology RUSL",
+    title: "EXTRU 2026 - Tech Exhibition | Faculty of Technology RUSL",
     description:
       "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. March 6-7, 2026 at RUSL.",
     url: "/",
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EXTRU 2026 - Annual Technology Exhibition | Faculty of Technology RUSL",
+    title: "EXTRU 2026 - Annual Tech Exhibition | Faculty of Technology RUSL",
     description:
       "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition. March 6-7, 2026 at RUSL.",
     images: ["/og-image.png"],
@@ -143,7 +143,7 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: "EXTRU 2026 - Annual Technology Exhibition",
+    name: "EXTRU 2026 - Annual Tech Exhibition",
     description:
       "EXTRU 2026 is Sri Lanka's premier technology exhibition featuring 150+ innovative student projects, workshops, tech talks, and networking opportunities.",
     startDate: "2026-03-06T09:00:00+05:30",

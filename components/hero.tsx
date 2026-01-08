@@ -78,7 +78,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex items-center justify-center pt-10 overflow-visible"
+      className="relative w-full min-h-screen flex items-center justify-center pt-28 md:pt-10 overflow-visible"
     >
       {/* 3D Robot Model - Absolute positioned within home section */}
       <div className="absolute top-1/2 right-4 xl:right-8 -translate-y-1/2 z-20 hidden lg:block">
@@ -113,7 +113,7 @@ export default function Hero() {
         <div className="text-center lg:text-left lg:max-w-3xl">
           {/* Main Title with professional styling */}
           <h1
-            className={`text-6xl md:text-8xl lg:text-7xl xl:text-8xl font-bold mb-8 tracking-wider transition-all duration-1000 ${isVisible
+            className={`text-5xl md:text-8xl lg:text-7xl xl:text-8xl font-bold mb-8 tracking-wider transition-all duration-1000 ${isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
               }`}
