@@ -40,8 +40,8 @@ export default function Recap() {
       image: '/Extru-2025/11.jpeg'
     },
     { 
-      title: 'Cultural Night',
-      description: 'Vibrant performances and entertainment',
+      title: 'Crafting Expo',
+      description: 'Artisan Workshops & Handmade Creations',
       image: '/Extru-2025/09.jpeg'
     },
     { 
