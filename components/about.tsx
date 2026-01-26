@@ -36,7 +36,7 @@ export default function About() {
                 <p className="text-sm text-gray-400">Projects</p>
               </div>
               <div className="text-center p-4 bg-secondary/10 rounded-lg border border-secondary/30">
-                <p className="text-3xl font-bold text-secondary mb-1">7000+</p>
+                <p className="text-3xl font-bold text-secondary mb-1">10000+</p>
                 <p className="text-sm text-gray-400">Visitors</p>
               </div>
             </div>
