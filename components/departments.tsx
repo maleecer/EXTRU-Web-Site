@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Departments() {
   const departments = [
@@ -10,7 +11,8 @@ export default function Departments() {
       fullName: 'Association of Technology in IT',
       description: 'Software development, cybersecurity, and digital innovation',
       color: 'cyan',
-      logo: '/atit-logo.png'
+      logo: '/atit-logo.png',
+      url: 'https://www.atit-rajarata.edu.lk/'
     },
     {
       id: 'ent',
@@ -71,41 +73,77 @@ export default function Departments() {
         <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-          {departments.slice(0, 4).map((dept) => (
-            <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between">
-              <div className="w-32 h-32 mb-4 relative flex items-center justify-center">
-                <Image 
-                  src={dept.logo} 
-                  alt={`${dept.name} logo`}
-                  fill
-                  className="object-contain"
-                />
+          {departments.slice(0, 4).map((dept) => {
+            const CardContent = (
+              <>
+                <div className="w-32 h-32 mb-4 relative flex items-center justify-center">
+                  <Image
+                    src={dept.logo}
+                    alt={`${dept.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex flex-col items-center gap-2 flex-grow justify-center">
+                  <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
+                  <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
+                </div>
+              </>
+            )
+
+            return dept.url ? (
+              <Link
+                key={dept.id}
+                href={dept.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between cursor-pointer"
+              >
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between">
+                {CardContent}
               </div>
-              <div className="flex flex-col items-center gap-2 flex-grow justify-center">
-                <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
-                <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {departments.slice(4, 7).map((dept) => (
-            <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between">
-              <div className="w-32 h-32 mb-4 relative flex items-center justify-center">
-                <Image 
-                  src={dept.logo} 
-                  alt={`${dept.name} logo`}
-                  fill
-                  className="object-contain"
-                />
+          {departments.slice(4, 7).map((dept) => {
+            const CardContent = (
+              <>
+                <div className="w-32 h-32 mb-4 relative flex items-center justify-center">
+                  <Image
+                    src={dept.logo}
+                    alt={`${dept.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex flex-col items-center gap-2 flex-grow justify-center">
+                  <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
+                  <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
+                </div>
+              </>
+            )
+
+            return dept.url ? (
+              <Link
+                key={dept.id}
+                href={dept.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between cursor-pointer"
+              >
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={dept.id} className="neon-border-cyan p-6 hover-glow h-full transition transform hover:scale-105 flex flex-col items-center justify-between">
+                {CardContent}
               </div>
-              <div className="flex flex-col items-center gap-2 flex-grow justify-center">
-                <h3 className="text-2xl font-bold text-accent text-center">{dept.name}</h3>
-                <p className="text-sm text-primary font-semibold text-center">{dept.fullName}</p>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

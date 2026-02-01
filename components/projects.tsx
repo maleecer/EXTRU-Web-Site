@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Projects() {
@@ -12,62 +13,63 @@ export default function Projects() {
       association: 'ATiT',
       logo: '/atit-logo.png',
       color: 'cyan',
+      url: 'https://www.atit-rajarata.edu.lk/',
       projects: [
-        { 
-          id: 1, 
-          title: 'Smart House Automation System', 
-          description: 'IoT-based home automation for energy efficiency', 
+        {
+          id: 1,
+          title: 'Smart House Automation System',
+          description: 'IoT-based home automation for energy efficiency',
           image: '/ATIT/Smart house.jpg',
           fullDescription: 'Home automation system that integrates IoT devices to control lighting, temperature, and security. Features energy-efficient algorithms and remote access via mobile app.',
           technologies: ['Arduino', 'Sensors', 'Mobile App'],
           team: ['Student 6',],
           year: '2025'
         },
-        { 
-          id: 2, 
-          title: 'Automated Trafic Light System', 
-          description: 'Traffic signal system using computer vision', 
+        {
+          id: 2,
+          title: 'Automated Trafic Light System',
+          description: 'Traffic signal system using computer vision',
           image: '/ATIT/Automated Color Light System.jpg',
           fullDescription: 'Color light system that adjusts signals based on real-time traffic and pedestrian data using computer vision techniques.',
-          technologies: ['Image Processing', 'Python', 'Microcontrollers','Ultrasonic Sensors','PIR Sensors'],
+          technologies: ['Image Processing', 'Python', 'Microcontrollers', 'Ultrasonic Sensors', 'PIR Sensors'],
           team: ['Student 6',],
           year: '2025'
         },
-        { 
-          id: 3, 
-          title: 'Arduino CNC Drawing Machine', 
-          description: 'A low-cost, Arduino-based CNC drawing machine that automatically draws images, patterns, and text on paper with high accuracy.', 
+        {
+          id: 3,
+          title: 'Arduino CNC Drawing Machine',
+          description: 'A low-cost, Arduino-based CNC drawing machine that automatically draws images, patterns, and text on paper with high accuracy.',
           image: '/ATIT/01.jpg',
           fullDescription: '',
           technologies: [''],
           team: ['Student 6',],
           year: '2025'
         },
-        
-        { 
-          id: 4, 
-          title: '', 
-          description: '', 
+
+        {
+          id: 4,
+          title: '',
+          description: '',
           image: '/ATIT/02.jpg',
           fullDescription: '',
           technologies: [''],
           team: ['Student 6',],
           year: '2025'
         },
-        { 
-          id: 5, 
-          title: '', 
-          description: '', 
+        {
+          id: 5,
+          title: '',
+          description: '',
           image: '/ATIT/03.jpg',
           fullDescription: '',
           technologies: [''],
           team: ['Student 6',],
           year: '2025'
         },
-        { 
-          id: 6, 
-          title: '', 
-          description: '', 
+        {
+          id: 6,
+          title: '',
+          description: '',
           image: '/ATIT/04.jpg',
           fullDescription: '',
           technologies: [''],
@@ -81,110 +83,110 @@ export default function Projects() {
       logo: '/aseet-logo.png',
       color: 'cyan',
       projects: [
-        { 
-          id: 20, 
-          title: '', 
-          description: '', 
+        {
+          id: 20,
+          title: '',
+          description: '',
           image: '/ASEET/01.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 21, 
-          title: '', 
-          description: '', 
+        {
+          id: 21,
+          title: '',
+          description: '',
           image: '/ASEET/02.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 22, 
-          title: '', 
-          description: '', 
+        {
+          id: 22,
+          title: '',
+          description: '',
           image: '/ASEET/03.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 23, 
-          title: '', 
-          description: '', 
+        {
+          id: 23,
+          title: '',
+          description: '',
           image: '/ASEET/04.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 24, 
-          title: '', 
-          description: '', 
+        {
+          id: 24,
+          title: '',
+          description: '',
           image: '/ASEET/05.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 25, 
-          title: '', 
-          description: '', 
+        {
+          id: 25,
+          title: '',
+          description: '',
           image: '/ASEET/06.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 26, 
-          title: '', 
-          description: '', 
+        {
+          id: 26,
+          title: '',
+          description: '',
           image: '/ASEET/07.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 27, 
-          title: '', 
-          description: '', 
+        {
+          id: 27,
+          title: '',
+          description: '',
           image: '/ASEET/08.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 28, 
-          title: '', 
-          description: '', 
+        {
+          id: 28,
+          title: '',
+          description: '',
           image: '/ASEET/09.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 29, 
-          title: '', 
-          description: '', 
+        {
+          id: 29,
+          title: '',
+          description: '',
           image: '/ASEET/10.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 9',],
           year: '2025'
         },
-        { 
-          id: 30, 
-          title: '', 
-          description: '', 
+        {
+          id: 30,
+          title: '',
+          description: '',
           image: '/ASEET/11.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
@@ -198,40 +200,40 @@ export default function Projects() {
       logo: '/amt-logo.png',
       color: 'green',
       projects: [
-        { 
-          id: 40, 
-          title: '', 
-          description: '', 
+        {
+          id: 40,
+          title: '',
+          description: '',
           image: 'AMT/01.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 16',],
           year: '2025'
         },
-        { 
-          id: 41, 
-          title: '', 
-          description: '', 
+        {
+          id: 41,
+          title: '',
+          description: '',
           image: 'AMT/02.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 16',],
           year: '2025'
         },
-        { 
-          id: 42, 
-          title: '', 
-          description: '', 
+        {
+          id: 42,
+          title: '',
+          description: '',
           image: 'AMT/03.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
           team: ['Student 16',],
           year: '2025'
         },
-        { 
-          id: 43, 
-          title: '', 
-          description: '', 
+        {
+          id: 43,
+          title: '',
+          description: '',
           image: 'AMT/04.jpg',
           fullDescription: '',
           technologies: ['', '', '', ''],
@@ -245,70 +247,70 @@ export default function Projects() {
       logo: '/rubic-logo.png',
       color: 'cyan',
       projects: [
-        { 
-          id: 60, 
-          title: '', 
-          description: '', 
+        {
+          id: 60,
+          title: '',
+          description: '',
           image: '/RUBIC/01.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
           year: '2025'
         },
-        { 
-          id: 61, 
-          title: '', 
-          description: '', 
+        {
+          id: 61,
+          title: '',
+          description: '',
           image: '/RUBIC/02.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
           year: '2025'
         },
-        { 
-          id: 62, 
-          title: '', 
-          description: '', 
+        {
+          id: 62,
+          title: '',
+          description: '',
           image: '/RUBIC/03.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
           year: '2025'
         },
-        { 
-          id: 63, 
-          title: '', 
-          description: '', 
+        {
+          id: 63,
+          title: '',
+          description: '',
           image: '/RUBIC/04.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
           year: '2025'
         },
-        { 
-          id: 64, 
-          title: '', 
-          description: '', 
+        {
+          id: 64,
+          title: '',
+          description: '',
           image: '/RUBIC/05.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
           year: '2025'
         },
-        { 
-          id: 65, 
-          title: '', 
-          description: '', 
+        {
+          id: 65,
+          title: '',
+          description: '',
           image: '/RUBIC/06.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
           year: '2025'
         },
-        { 
-          id: 66, 
-          title: '', 
-          description: '', 
+        {
+          id: 66,
+          title: '',
+          description: '',
           image: '/RUBIC/07.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
@@ -322,50 +324,50 @@ export default function Projects() {
       logo: '/afru-logo.png',
       color: 'cyan',
       projects: [
-        { 
-          id: 80, 
-          title: 'Nutran Rice', 
-          description: 'Rice enriched with additional nutrients for better health', 
+        {
+          id: 80,
+          title: 'Nutran Rice',
+          description: 'Rice enriched with additional nutrients for better health',
           image: '/AFRU/Nutran Rice.jpeg',
           fullDescription: 'Rice fortified with essential vitamins and minerals to enhance nutritional value. Developed using advanced agricultural techniques to support better health outcomes in communities reliant on rice as a staple food.',
           technologies: ['Food Science', '',],
           team: ['Student 5'],
           year: '2025'
         },
-        { 
-          id: 81, 
-          title: 'Coco masala hot sauce', 
-          description: 'Hot sauce made from diferent types of fruits', 
+        {
+          id: 81,
+          title: 'Coco masala hot sauce',
+          description: 'Hot sauce made from diferent types of fruits',
           image: '/AFRU/Coco masala hot sauce.jpeg',
           fullDescription: 'Hot sauce crafted from a blend of tropical fruits and spices, delivering a unique flavor profile. Perfect for adding a spicy kick to any dish while enjoying the natural sweetness of fruits.',
           technologies: ['Food Science', ''],
           team: ['Student 5'],
           year: '2025'
         },
-        { 
-          id: 82, 
-          title: 'Green cob plate', 
-          description: 'Plates made from corn cobs as an eco-friendly alternative to plastic', 
+        {
+          id: 82,
+          title: 'Green cob plate',
+          description: 'Plates made from corn cobs as an eco-friendly alternative to plastic',
           image: '/AFRU/Green cob plate.jpeg',
           fullDescription: 'Eco-friendly plates manufactured from corn cobs, providing a sustainable alternative to single-use plastics. These biodegradable plates are sturdy, compostable, and perfect for eco-conscious consumers.',
           technologies: ['', 'Food Science'],
           team: ['Student 5'],
           year: '2025'
         },
-        { 
-          id: 83, 
-          title: '', 
-          description: '', 
+        {
+          id: 83,
+          title: '',
+          description: '',
           image: '/AFRU/01.jpg',
           fullDescription: '',
           technologies: ['', 'Food Science'],
           team: ['Student 5'],
           year: '2025'
         },
-        { 
-          id: 84, 
-          title: '', 
-          description: '', 
+        {
+          id: 84,
+          title: '',
+          description: '',
           image: '/AFRU/02.jpg',
           fullDescription: '',
           technologies: ['', 'Food Science'],
@@ -373,25 +375,25 @@ export default function Projects() {
           year: '2025'
         },
       ]
-    },{
+    }, {
       association: 'ROST',
       logo: '/rost-logo.png',
       color: 'cyan',
       projects: [
-        { 
-          id: 60, 
-          title: '', 
-          description: '', 
+        {
+          id: 60,
+          title: '',
+          description: '',
           image: '/ROST/01.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
           team: ['Student 23',],
           year: '2025'
         },
-        { 
-          id: 61, 
-          title: '', 
-          description: '', 
+        {
+          id: 61,
+          title: '',
+          description: '',
           image: '/ROST/02.jpg',
           fullDescription: '',
           technologies: ['', '', ''],
@@ -416,15 +418,45 @@ export default function Projects() {
               {/* Association Header */}
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-16 h-16 relative">
-                  <Image 
-                    src={assoc.logo} 
+                  <Image
+                    src={assoc.logo}
                     alt="EXTRU"
                     fill
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-accent">{assoc.association}</h3>
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-3xl font-bold text-accent">{assoc.association}</h3>
+                    {assoc.url && (
+                      <Link
+                        href={assoc.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative p-2 hover:bg-primary/20 rounded-lg transition-colors"
+                        title="Open in new tab"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-5 h-5 text-primary group-hover:text-accent transition-colors"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        {/* Tooltip */}
+                        <span className="absolute left-1/2 -translate-x-1/2 -bottom-10 px-3 py-1.5 bg-black/90 text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-primary/30">
+                          Open in new tab
+                        </span>
+                      </Link>
+                    )}
+                  </div>
                   <div className="h-0.5 w-20 bg-linear-to-r from-primary to-transparent mt-2"></div>
                 </div>
               </div>
@@ -432,14 +464,14 @@ export default function Projects() {
               {/* Projects Grid */}
               <div className="grid md:grid-cols-3 gap-6">
                 {(expandedAssoc[assoc.association] ? assoc.projects : assoc.projects.slice(0, 6)).map((project) => (
-                  <div 
-                    key={project.id} 
+                  <div
+                    key={project.id}
                     className="neon-border-cyan group hover-glow transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
                     onClick={() => setSelectedProject(project)}
                   >
                     {/* Project Image */}
                     <div className="aspect-video bg-linear-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
-                      <Image 
+                      <Image
                         src={project.image}
                         alt={project.title}
                         fill
@@ -450,7 +482,7 @@ export default function Projects() {
                         <span className="text-white text-sm font-semibold">View Details →</span>
                       </div>
                     </div>
-                    
+
                     {/* Project Info */}
                     <div className="p-6">
                       <h4 className="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
@@ -486,11 +518,11 @@ export default function Projects() {
 
         {/* Project Details Modal */}
         {selectedProject && (
-          <div 
+          <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
             onClick={() => setSelectedProject(null)}
           >
-            <div 
+            <div
               className="bg-[#05232e] border-2 border-primary/50 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-[0_0_30px_rgba(51,225,255,0.3)] animate-in zoom-in duration-300"
               onClick={(e) => e.stopPropagation()}
             >
@@ -500,7 +532,7 @@ export default function Projects() {
                   <h3 className="text-3xl font-bold text-white mb-2">{selectedProject.title}</h3>
                   <p className="text-accent text-sm">{selectedProject.description}</p>
                 </div>
-                <button 
+                <button
                   onClick={() => setSelectedProject(null)}
                   className="text-primary hover:text-accent transition-colors text-3xl leading-none ml-4"
                 >
@@ -512,7 +544,7 @@ export default function Projects() {
               <div className="p-6 space-y-6">
                 {/* Project Image */}
                 <div className="aspect-video relative rounded-lg overflow-hidden border border-primary/30">
-                  <Image 
+                  <Image
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     fill
@@ -533,7 +565,7 @@ export default function Projects() {
                   <h4 className="text-xl font-bold text-primary mb-3">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech: string, idx: number) => (
-                      <span 
+                      <span
                         key={idx}
                         className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-primary text-sm font-semibold hover:bg-primary/20 transition-colors"
                       >
@@ -548,7 +580,7 @@ export default function Projects() {
                   <h4 className="text-xl font-bold text-primary mb-3">Team Members</h4>
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.team.map((member: string, idx: number) => (
-                      <div 
+                      <div
                         key={idx}
                         className="flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-lg"
                       >
@@ -570,7 +602,7 @@ export default function Projects() {
 
               {/* Modal Footer */}
               <div className="border-t border-primary/30 p-6 bg-linear-to-r from-primary/10 to-secondary/10">
-                <button 
+                <button
                   onClick={() => setSelectedProject(null)}
                   className="w-full bg-primary/20 hover:bg-primary/30 border border-primary/50 text-primary hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(51,225,255,0.5)]"
                 >
