@@ -34,7 +34,35 @@ const events: Event[] = [
     image: '/Event/rost01.jpg',
     // status will be auto-calculated from date
     featured: true
-  }
+  },
+  {
+    id: '2',
+    title: 'Step Up: Study Beyond Borders',
+    subtitle: 'Awareness Session',
+    description: 'an insightful awareness session on research opportunities and scholarships in the USA',
+    category: 'RUBIC',
+    date: 'January 31, 2026',
+    time: '7:00 PM',
+    venue: 'Online Via Zoom',
+    capacity: '',
+    image: '/Event/rubic01.jpeg',
+    // status will be auto-calculated from date
+    featured: true
+  },
+  {
+    id: '3',
+    title: 'Pharmaceutical Science & Technology Workshop ',
+    subtitle: 'Workshop',
+    description: 'The event will provide students with valuable insights into pharmaceutical innovations, industry applications, and career pathways, creating a platform for learning, exposure, and professional development. ',
+    category: 'RUBIC',
+    date: 'February 17, 2026',
+    time: '8:30 AM – 12:30 PM',
+    venue: 'S 502, Sollertia Building Complex',
+    capacity: '',
+    image: '/Event/rubic02.jpeg',
+    // status will be auto-calculated from date
+    featured: true
+  },
   // Add more events here
   // Example:
   // {
