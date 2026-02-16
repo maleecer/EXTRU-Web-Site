@@ -94,6 +94,12 @@ export default function Events() {
     const currentStatus = getEventStatus(event.date)
     const statusMatch = selectedStatus === 'all' || currentStatus === selectedStatus
     return statusMatch
+  }).sort((a, b) => {
+    // Define status priority: ongoing (1), upcoming (2), completed (3)
+    const statusPriority = { ongoing: 1, upcoming: 2, completed: 3 }
+    const statusA = getEventStatus(a.date)
+    const statusB = getEventStatus(b.date)
+    return statusPriority[statusA] - statusPriority[statusB]
   })
 
   return (
