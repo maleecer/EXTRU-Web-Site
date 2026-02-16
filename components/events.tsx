@@ -60,7 +60,6 @@ const events: Event[] = [
     venue: 'S 502, Sollertia Building Complex',
     capacity: '',
     image: '/Event/rubic02.jpeg',
-    // status will be auto-calculated from date
     featured: true
   },
   // Add more events here
@@ -222,6 +221,15 @@ export default function Events() {
                     <div>
                       <p className="text-gray-500 text-xs uppercase">Date</p>
                       <p className="text-white font-semibold text-sm">{event.date}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-accent/30 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-accent/20">
+                      <FaClock className="text-accent text-sm" />
+                    </div>
+                    <div>
+                      <p className="text-gray-500 text-xs uppercase">Time</p>
+                      <p className="text-white font-semibold text-sm">{event.time}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
