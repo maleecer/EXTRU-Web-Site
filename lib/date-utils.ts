@@ -68,29 +68,76 @@ function getMonthIndex(monthName: string): number {
 }
 
 /**
- * Calculate event status based on dates
+ * Parse time string and return start/end time objects
+ * Supports formats like:
+ * - "9:00 AM - 12:00 PM"
+ * - "8:30 AM – 12:30 PM" (with en-dash)
+ * - "7:00 PM" (single time, no end time)
+ */
+function parseTimeString(timeString: string): { startTime: { hours: number; minutes: number } | null; endTime: { hours: number; minutes: number } | null } {
+  if (!timeString) return { startTime: null, endTime: null };
+
+  // Normalize en-dash and em-dash to regular hyphen
+  const normalized = timeString.replace(/[–—]/g, '-');
+
+  const timePattern = /(\d{1,2}):(\d{2})\s*(AM|PM)/gi;
+  const matches = [...normalized.matchAll(timePattern)];
+
+  if (matches.length === 0) return { startTime: null, endTime: null };
+
+  const parseTime = (match: RegExpMatchArray): { hours: number; minutes: number } => {
+    let hours = parseInt(match[1]);
+    const minutes = parseInt(match[2]);
+    const period = match[3].toUpperCase();
+
+    if (period === 'PM' && hours !== 12) hours += 12;
+    if (period === 'AM' && hours === 12) hours = 0;
+
+    return { hours, minutes };
+  };
+
+  const startTime = parseTime(matches[0]);
+  const endTime = matches.length > 1 ? parseTime(matches[1]) : null;
+
+  return { startTime, endTime };
+}
+
+/**
+ * Calculate event status based on dates and optional time
  * Returns: 'upcoming' | 'ongoing' | 'completed'
  */
-export function getEventStatus(dateString: string): 'upcoming' | 'ongoing' | 'completed' {
+export function getEventStatus(dateString: string, timeString?: string): 'upcoming' | 'ongoing' | 'completed' {
   const { startDate, endDate } = parseEventDate(dateString);
   
   if (!startDate || !endDate) {
-    // If we can't parse the date, return upcoming by default
     return 'upcoming';
   }
 
   const now = new Date();
-  now.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
 
   const start = new Date(startDate);
-  start.setHours(0, 0, 0, 0);
-
   const end = new Date(endDate);
-  end.setHours(23, 59, 59, 999); // Set to end of day
+
+  if (timeString) {
+    const { startTime, endTime } = parseTimeString(timeString);
+    if (startTime) {
+      start.setHours(startTime.hours, startTime.minutes, 0, 0);
+    } else {
+      start.setHours(0, 0, 0, 0);
+    }
+    if (endTime) {
+      end.setHours(endTime.hours, endTime.minutes, 0, 0);
+    } else {
+      end.setHours(23, 59, 59, 999);
+    }
+  } else {
+    start.setHours(0, 0, 0, 0);
+    end.setHours(23, 59, 59, 999);
+  }
 
   if (now < start) {
     return 'upcoming';
-  } else if (now >= start && now <= end) {
+  } else if (now <= end) {
     return 'ongoing';
   } else {
     return 'completed';

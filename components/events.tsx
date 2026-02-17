@@ -91,14 +91,14 @@ export default function Events() {
   ]
 
   const filteredEvents = events.filter(event => {
-    const currentStatus = getEventStatus(event.date)
+    const currentStatus = getEventStatus(event.date, event.time)
     const statusMatch = selectedStatus === 'all' || currentStatus === selectedStatus
     return statusMatch
   }).sort((a, b) => {
     // Define status priority: ongoing (1), upcoming (2), completed (3)
     const statusPriority = { ongoing: 1, upcoming: 2, completed: 3 }
-    const statusA = getEventStatus(a.date)
-    const statusB = getEventStatus(b.date)
+    const statusA = getEventStatus(a.date, a.time)
+    const statusB = getEventStatus(b.date, b.time)
     return statusPriority[statusA] - statusPriority[statusB]
   })
 
@@ -124,7 +124,7 @@ export default function Events() {
                 </div>
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider" style={{ fontFamily: 'var(--font-orbitron)' }}>
                   Filter by Status
-                </h3>
+                </h3> no man its jus t 
               </div>
               <div className="text-xs text-gray-400">
                 <span className="text-accent font-bold">{filteredEvents.length}</span> results
@@ -169,7 +169,7 @@ export default function Events() {
         {/* Events Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredEvents.map((event) => {
-            const currentStatus = getEventStatus(event.date);
+            const currentStatus = getEventStatus(event.date, event.time);
             
             return (
             <div key={event.id} className="neon-border-cyan group relative overflow-hidden rounded-lg bg-gradient-to-br from-black/60 to-primary/5 backdrop-blur-sm hover-glow transition transform hover:scale-105 flex flex-col">
