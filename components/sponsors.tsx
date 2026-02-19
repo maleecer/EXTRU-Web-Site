@@ -28,13 +28,13 @@ export default function Sponsors() {
       tier: 'silver',
       website: 'https://wso2.com'
     },
-    {
-      id: 3,
-      name: 'ATA International PVT LTD',
-      //logo: '/SPONSOR-LOGO/ATA.jpg',
-      tier: 'bronze',
-      website: 'https://www.ataintl.lk/'
-    },
+    // {
+    //   id: 3,
+    //   name: 'ATA International PVT LTD',
+    //   //logo: '/SPONSOR-LOGO/ATA.jpg',
+    //   tier: 'bronze',
+    //   website: 'https://www.ataintl.lk/'
+    // },
   ]
 
   const tierConfig = {
