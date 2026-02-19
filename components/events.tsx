@@ -18,6 +18,7 @@ interface Event {
   image: string
   status?: 'upcoming' | 'ongoing' | 'completed' // Optional - will be auto-calculated from date
   featured?: boolean
+  registrationLink?: string
 }
 
 const events: Event[] = [
@@ -28,7 +29,7 @@ const events: Event[] = [
     description: 'How to Write a Project Report.',
     category: 'ROST',
     date: 'December 28, 2025',
-    time: '9:00 AM - 12:00 PM',
+    time: '9:00 AM',
     venue: 'L2 Hall',
     capacity: '',
     image: '/Event/rost01.jpg',
@@ -56,11 +57,38 @@ const events: Event[] = [
     description: 'The event will provide students with valuable insights into pharmaceutical innovations, industry applications, and career pathways, creating a platform for learning, exposure, and professional development. ',
     category: 'RUBIC',
     date: 'February 17, 2026',
-    time: '8:30 AM – 12:30 PM',
+    time: '8:30 AM',
     venue: 'S 502, Sollertia Building Complex',
     capacity: '',
     image: '/Event/rubic02.jpeg',
     featured: true
+  },
+   {
+    id: '4',
+    title: 'ROST Introduction Session',
+    subtitle: 'Session',
+    description: 'An exciting launch session introducing ROST, featuring interactive activities, networking, and the unveiling of our 2026 robotics roadmap',
+    category: 'ROST',
+    date: 'January 25, 2026',
+    time: '9:00 AM',
+    venue: 'S 501, Sollertia Building Complex',
+    capacity: '',
+    image: '/Event/rost02.jpeg',
+    featured: true
+  },
+  {
+    id: '5',
+    title: 'Arduino Workshop',
+    subtitle: 'Workshop',
+    description: 'An exciting hands-on workshop designed to turn your ideas into reality — from basic Arduino projects to advanced embedded systems and autonomous innovations',
+    category: 'ROST',
+    date: 'February 20, 2026',
+    time: '9:00 AM',
+    venue: 'IOT Lab',
+    capacity: '',
+    image: '/Event/rost03.jpeg',
+    featured: true,
+    registrationLink: 'https://forms.gle/KBgJHQLuxEtcuKXk6'
   },
   // Add more events here
   // Example:
@@ -95,11 +123,8 @@ export default function Events() {
     const statusMatch = selectedStatus === 'all' || currentStatus === selectedStatus
     return statusMatch
   }).sort((a, b) => {
-    // Define status priority: ongoing (1), upcoming (2), completed (3)
-    const statusPriority = { ongoing: 1, upcoming: 2, completed: 3 }
-    const statusA = getEventStatus(a.date, a.time)
-    const statusB = getEventStatus(b.date, b.time)
-    return statusPriority[statusA] - statusPriority[statusB]
+    // Sort by date: newest first (new to old)
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
   })
 
   return (
@@ -124,7 +149,7 @@ export default function Events() {
                 </div>
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider" style={{ fontFamily: 'var(--font-orbitron)' }}>
                   Filter by Status
-                </h3> no man its jus t 
+                </h3> 
               </div>
               <div className="text-xs text-gray-400">
                 <span className="text-accent font-bold">{filteredEvents.length}</span> results
@@ -250,17 +275,44 @@ export default function Events() {
                 </div>
 
                 {/* Action Button */}
-                <button 
-                  disabled
-                  className="w-full px-4 py-3 bg-gradient-to-r from-gray-800/60 to-gray-900/60 text-gray-400 font-bold transition uppercase tracking-wider relative overflow-hidden text-xs border-2 border-gray-700/50 rounded cursor-not-allowed" 
-                  style={{ fontFamily: 'var(--font-orbitron)' }}
-                  title="No registration required for this event"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    No Registration Needed
-                    <FaChevronRight className="text-xs" />
-                  </span>
-                </button>
+                {event.registrationLink && currentStatus === 'upcoming' ? (
+                  <a 
+                    href={event.registrationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full px-4 py-3 bg-gradient-to-r from-primary to-accent text-white font-bold transition uppercase tracking-wider relative overflow-hidden text-xs border-2 border-accent/50 rounded hover:shadow-lg hover:shadow-accent/30 block text-center" 
+                    style={{ fontFamily: 'var(--font-orbitron)' }}
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      Register Now
+                      <FaChevronRight className="text-xs" />
+                    </span>
+                  </a>
+                ) : event.registrationLink && (currentStatus === 'ongoing' || currentStatus === 'completed') ? (
+                  <button 
+                    disabled
+                    className="w-full px-4 py-3 bg-gradient-to-r from-gray-800/60 to-gray-900/60 text-gray-400 font-bold transition uppercase tracking-wider relative overflow-hidden text-xs border-2 border-gray-700/50 rounded cursor-not-allowed" 
+                    style={{ fontFamily: 'var(--font-orbitron)' }}
+                    title="Registration closed"
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      Registration Closed
+                      <FaChevronRight className="text-xs" />
+                    </span>
+                  </button>
+                ) : (
+                  <button 
+                    disabled
+                    className="w-full px-4 py-3 bg-gradient-to-r from-gray-800/60 to-gray-900/60 text-gray-400 font-bold transition uppercase tracking-wider relative overflow-hidden text-xs border-2 border-gray-700/50 rounded cursor-not-allowed" 
+                    style={{ fontFamily: 'var(--font-orbitron)' }}
+                    title="No registration required for this event"
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      No Registration Needed
+                      <FaChevronRight className="text-xs" />
+                    </span>
+                  </button>
+                )}
               </div>
             </div>
             );
