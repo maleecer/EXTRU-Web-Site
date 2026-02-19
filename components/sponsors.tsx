@@ -31,7 +31,7 @@ export default function Sponsors() {
     {
       id: 3,
       name: 'ATA International PVT LTD',
-      logo: '/SPONSOR-LOGO/ATA.jpg',
+      //logo: '/SPONSOR-LOGO/ATA.jpg',
       tier: 'bronze',
       website: 'https://www.ataintl.lk/'
     },
