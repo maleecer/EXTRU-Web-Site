@@ -16,7 +16,7 @@ export default function Sponsors() {
     // Emerald Tier
     {
       id: 1,
-      name: "Lap Mart",
+      name: "LapMart",
       logo: "/SPONSOR-LOGO/lapmart.jpeg",
       tier: "gold",
       website: "https://lapmart.lk/",
