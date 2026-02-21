@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaUsers, FaChevronRight, FaQrcode, FaFilter, FaThLarge, FaHourglassHalf, FaPlayCircle, FaCheckCircle } from 'react-icons/fa'
-import { getEventStatus, getStatusBadgeClasses } from '../lib/date-utils'
+import { getEventStatus, getStatusBadgeClasses, parseEventDate } from '../lib/date-utils'
 
 interface Event {
   id: string
@@ -82,13 +82,27 @@ const events: Event[] = [
     subtitle: 'Workshop',
     description: 'An exciting hands-on workshop designed to turn your ideas into reality — from basic Arduino projects to advanced embedded systems and autonomous innovations',
     category: 'ROST',
-    date: 'February 20, 2026',
+    date: 'February 22, 2026',
     time: '9:00 AM',
     venue: 'IOT Lab',
     capacity: '',
     image: '/Event/rost03.jpeg',
     featured: true,
     registrationLink: 'https://forms.gle/KBgJHQLuxEtcuKXk6'
+  },
+  {
+    id: '6',
+    title: 'Australia Research & Scholarships Awareness Session',
+    subtitle: 'Awareness Session',
+    description: 'Explore research opportunities and scholarship pathways in Australia. Get expert guidance on applications and tips for succeeding as an international student.',
+    category: 'RUBIC',
+    date: 'February 21, 2026',
+    time: '6:00 PM',
+    venue: 'Online Via Zoom',
+    capacity: '',
+    image: '/Event/rubic03.jpeg',
+    featured: true,
+    registrationLink: 'https://forms.gle/ETQxFpUM8ZAsYVjY7'
   },
   // Add more events here
   // Example:
@@ -123,8 +137,29 @@ export default function Events() {
     const statusMatch = selectedStatus === 'all' || currentStatus === selectedStatus
     return statusMatch
   }).sort((a, b) => {
-    // Sort by date: newest first (new to old)
-    return new Date(b.date).getTime() - new Date(a.date).getTime()
+    const now = new Date().getTime()
+
+    // Get status for priority ordering: ongoing > upcoming > completed
+    const statusA = getEventStatus(a.date, a.time)
+    const statusB = getEventStatus(b.date, b.time)
+    const statusOrder = { ongoing: 0, upcoming: 1, completed: 2 }
+
+    if (statusOrder[statusA] !== statusOrder[statusB]) {
+      return statusOrder[statusA] - statusOrder[statusB]
+    }
+
+    // Within same status group, sort by proximity to today
+    const dateA = parseEventDate(a.date).startDate
+    const dateB = parseEventDate(b.date).startDate
+    const timeA = dateA ? dateA.getTime() : 0
+    const timeB = dateB ? dateB.getTime() : 0
+
+    if (statusA === 'upcoming') {
+      // Upcoming: soonest first (ascending)
+      return timeA - timeB
+    }
+    // Ongoing & Completed: most recent first (descending)
+    return timeB - timeA
   })
 
   return (
