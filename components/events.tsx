@@ -111,6 +111,21 @@ const events: Event[] = [
     featured: true,
     registrationLink: 'https://forms.gle/ETQxFpUM8ZAsYVjY7'
   },
+  {
+    id: '7',
+    title: 'Arduino Workshop',
+    subtitle: 'Workshop',
+    description: 'A practical hands-on session designed to strengthen your embedded systems knowledge, covering Arduino fundamentals, interfacing techniques, and real-world project applications',
+    category: 'ASEET',
+    date: 'February 21, 2026',
+    time: '10:30 AM',
+    endTime: '',
+    venue: 'EET Department – Project Laboratory',
+    capacity: '',
+    image: '/Event/aseet.jpeg',
+    featured: true,
+    registrationLink: ''
+  },
   // Add more events here
   // Example:
   // {
