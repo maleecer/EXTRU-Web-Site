@@ -13,6 +13,7 @@ interface Event {
   category: string
   date: string
   time: string
+  endTime?: string // End time for status logic only (not displayed on card)
   venue: string
   capacity?: string
   image: string
@@ -30,6 +31,7 @@ const events: Event[] = [
     category: 'ROST',
     date: 'December 28, 2025',
     time: '9:00 AM',
+    endTime: '12:00 PM',
     venue: 'L2 Hall',
     capacity: '',
     image: '/Event/rost01.jpg',
@@ -44,6 +46,7 @@ const events: Event[] = [
     category: 'RUBIC',
     date: 'January 31, 2026',
     time: '7:00 PM',
+    endTime: '9:00 PM',
     venue: 'Online Via Zoom',
     capacity: '',
     image: '/Event/rubic01.jpeg',
@@ -58,6 +61,7 @@ const events: Event[] = [
     category: 'RUBIC',
     date: 'February 17, 2026',
     time: '8:30 AM',
+    endTime: '12:30 PM',
     venue: 'S 502, Sollertia Building Complex',
     capacity: '',
     image: '/Event/rubic02.jpeg',
@@ -71,6 +75,7 @@ const events: Event[] = [
     category: 'ROST',
     date: 'January 25, 2026',
     time: '9:00 AM',
+    endTime: '12:00 PM',
     venue: 'S 501, Sollertia Building Complex',
     capacity: '',
     image: '/Event/rost02.jpeg',
@@ -84,6 +89,7 @@ const events: Event[] = [
     category: 'ROST',
     date: 'February 22, 2026',
     time: '9:00 AM',
+    endTime: '2:00 PM',
     venue: 'IOT Lab',
     capacity: '',
     image: '/Event/rost03.jpeg',
@@ -98,6 +104,7 @@ const events: Event[] = [
     category: 'RUBIC',
     date: 'February 21, 2026',
     time: '6:00 PM',
+    endTime: '8:00 PM',
     venue: 'Online Via Zoom',
     capacity: '',
     image: '/Event/rubic03.jpeg',
@@ -133,15 +140,15 @@ export default function Events() {
   ]
 
   const filteredEvents = events.filter(event => {
-    const currentStatus = getEventStatus(event.date, event.time)
+    const currentStatus = getEventStatus(event.date, event.time, event.endTime)
     const statusMatch = selectedStatus === 'all' || currentStatus === selectedStatus
     return statusMatch
   }).sort((a, b) => {
     const now = new Date().getTime()
 
     // Get status for priority ordering: ongoing > upcoming > completed
-    const statusA = getEventStatus(a.date, a.time)
-    const statusB = getEventStatus(b.date, b.time)
+    const statusA = getEventStatus(a.date, a.time, a.endTime)
+    const statusB = getEventStatus(b.date, b.time, b.endTime)
     const statusOrder = { ongoing: 0, upcoming: 1, completed: 2 }
 
     if (statusOrder[statusA] !== statusOrder[statusB]) {
@@ -229,7 +236,7 @@ export default function Events() {
         {/* Events Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredEvents.map((event) => {
-            const currentStatus = getEventStatus(event.date, event.time);
+            const currentStatus = getEventStatus(event.date, event.time, event.endTime);
             
             return (
             <div key={event.id} className="neon-border-cyan group relative overflow-hidden rounded-lg bg-gradient-to-br from-black/60 to-primary/5 backdrop-blur-sm hover-glow transition transform hover:scale-105 flex flex-col">

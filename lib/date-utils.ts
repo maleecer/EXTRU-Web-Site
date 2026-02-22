@@ -106,7 +106,7 @@ function parseTimeString(timeString: string): { startTime: { hours: number; minu
  * Calculate event status based on dates and optional time
  * Returns: 'upcoming' | 'ongoing' | 'completed'
  */
-export function getEventStatus(dateString: string, timeString?: string): 'upcoming' | 'ongoing' | 'completed' {
+export function getEventStatus(dateString: string, timeString?: string, endTimeString?: string): 'upcoming' | 'ongoing' | 'completed' {
   const { startDate, endDate } = parseEventDate(dateString);
   
   if (!startDate || !endDate) {
@@ -125,7 +125,16 @@ export function getEventStatus(dateString: string, timeString?: string): 'upcomi
     } else {
       start.setHours(0, 0, 0, 0);
     }
-    if (endTime) {
+
+    // Use separate endTimeString if provided, otherwise fall back to endTime from timeString
+    if (endTimeString) {
+      const { startTime: parsedEndTime } = parseTimeString(endTimeString);
+      if (parsedEndTime) {
+        end.setHours(parsedEndTime.hours, parsedEndTime.minutes, 0, 0);
+      } else {
+        end.setHours(23, 59, 59, 999);
+      }
+    } else if (endTime) {
       end.setHours(endTime.hours, endTime.minutes, 0, 0);
     } else {
       end.setHours(23, 59, 59, 999);
