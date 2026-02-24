@@ -35,6 +35,13 @@ export default function Sponsors() {
       tier: "bronze",
       website: "https://www.ataintl.lk/",
     },
+    {
+      id: 4,
+      name: "Samudra Book Shop",
+      logo: "/SPONSOR-LOGO/samudra_book_shop.jpeg
+      tier: "gold",
+      website: "https://samudrabooks.com/",
+    },
   ];
 
   const tierConfig = {
