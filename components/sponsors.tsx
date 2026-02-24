@@ -38,7 +38,7 @@ export default function Sponsors() {
     {
       id: 4,
       name: "Samudra Book Shop",
-      logo: "/SPONSOR-LOGO/samudra_book_shop.jpeg
+      logo: "/SPONSOR-LOGO/samudra_book_shop.jpeg",
       tier: "gold",
       website: "https://samudrabooks.com/",
     },
