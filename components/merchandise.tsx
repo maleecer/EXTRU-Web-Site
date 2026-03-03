@@ -22,8 +22,6 @@ export default function Merchandise() {
       name: 'EXTRU 2026 T-Shirt',
       price: 'Rs 1800.00',
       images: ['/Merchandise/t shirt 12.png'],
-      inStock: true,
-      preorderUrl: 'https://forms.gle/CnqPm76KLeDr7zYBA'
     }
   ]
 
@@ -96,31 +94,15 @@ export default function Merchandise() {
               <div className="mt-4">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-lg font-bold text-accent">{item.name}</h3>
-                  {!item.inStock && (
-                    <span className="text-xs font-semibold px-2 py-1 rounded bg-destructive/20 text-destructive border border-destructive/40">
-                      Out of Stock
-                    </span>
-                  )}
                 </div>
                 <p className="text-primary text-lg font-bold mb-4">{item.price}</p>
-                {item.inStock && item.preorderUrl ? (
-                  <a
-                    href={item.preorderUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center neon-border-green px-4 py-2 text-sm font-semibold transition text-accent hover-glow"
-                  >
-                    Pre-Order Now
-                  </a>
-                ) : (
-                  <button
-                    disabled
-                    aria-disabled
-                    className="w-full neon-border-green px-4 py-2 text-sm font-semibold transition text-muted-foreground cursor-not-allowed opacity-60"
-                  >
-                    Unavailable
-                  </button>
-                )}
+                <button
+                  disabled
+                  aria-disabled
+                  className="w-full border-2 border-red-500/60 rounded px-4 py-2 text-sm font-semibold transition text-red-500 cursor-not-allowed bg-red-500/10"
+                >
+                  Orders Closed
+                </button>
               </div>
             </div>
           ))}
