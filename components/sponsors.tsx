@@ -42,6 +42,13 @@ export default function Sponsors() {
       tier: "gold",
       website: "https://samudrabooks.com/",
     },
+    {
+      id: 5,
+      name: "AVI",
+      logo: "/SPONSOR-LOGO/avi.png",
+      tier: "bronze",
+      website: "https://avi.lk/",
+    },
   ];
 
   const tierConfig = {
