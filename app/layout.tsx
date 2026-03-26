@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | EXTRU 2026 - Faculty of Technology RUSL",
   },
   description:
-    "EXTRU 2026: an Anuual Tech exhibition at Rajarata University of Sri Lanka. Organized by the Students' Union of Faculty of Technology, Rajarata University of Sri Lanka. 150+ student projects, workshops & networking.",
+    "EXTRU 2026: the Annual Tech exhibition at Rajarata University of Sri Lanka. Organized by the Students' Union of Faculty of Technology, Rajarata University of Sri Lanka. 150+ student projects, workshops & networking.",
   keywords: [
     "EXTRU",
     "EXTRU 2026",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EXTRU 2026 - Tech Exhibition | Faculty of Technology RUSL",
     description:
-      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. March 6-7, 2026 at RUSL.",
+      "5000+ attendees joined EXTRU 2026, Sri Lanka's premier technology exhibition featuring 150+ innovative projects, workshops, and industry networking. March 6-7, 2026 at RUSL.",
     url: "/",
     siteName: "EXTRU 2026",
     locale: "en_US",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EXTRU 2026 - Annual Tech Exhibition | Faculty of Technology RUSL",
     description:
-      "Join 5000+ attendees at EXTRU 2026, Sri Lanka's premier technology exhibition. March 6-7, 2026 at RUSL.",
+      "5000+ attendees joined EXTRU 2026, Sri Lanka's premier technology exhibition. March 6-7, 2026 at RUSL.",
     images: ["/og-image.png"],
     creator: "@extru2026",
     site: "@extru2026",
@@ -246,7 +246,7 @@ export default function RootLayout({
         name: "When and where is EXTRU 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "EXTRU 2026 will be held on March 6-7, 2026 at the Faculty of Technology, Rajarata University of Sri Lanka, Mihintale.",
+          text: "EXTRU 2026 was held on March 6-7, 2026 at the Faculty of Technology, Rajarata University of Sri Lanka, Mihintale.",
         },
       },
       {
@@ -254,7 +254,7 @@ export default function RootLayout({
         name: "Is EXTRU 2026 free to attend?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, EXTRU 2026 is free to attend for all visitors including students, industry professionals, and technology enthusiasts.",
+          text: "Yes, EXTRU 2026 was free to attend for all visitors including students, industry professionals, and technology enthusiasts.",
         },
       },
       {
@@ -262,7 +262,7 @@ export default function RootLayout({
         name: "What can I see at EXTRU 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You can explore 150+ innovative student projects in areas like Robotics, IoT, AI, Engineering, and more. The event includes workshops, tech talks, competitions, and networking opportunities with 5000+ attendees.",
+          text: "Visitors explored 150+ innovative student projects in areas like Robotics, IoT, AI, Engineering, and more. The event included workshops, tech talks, competitions, and networking opportunities with 5000+ attendees.",
         },
       },
       {
@@ -270,7 +270,7 @@ export default function RootLayout({
         name: "How can I participate in EXTRU 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You can participate by visiting the exhibition, attending workshops, or contacting the organizing committee at extru@tec.rjt.ac.lk for sponsorship and collaboration opportunities.",
+          text: "EXTRU 2026 was held on March 6-7, 2026. For future editions, contact the organizing committee at extru@tec.rjt.ac.lk for sponsorship and collaboration opportunities.",
         },
       },
     ],

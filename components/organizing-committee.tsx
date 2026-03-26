@@ -16,12 +16,13 @@ export default function OrganizingCommittee() {
       image: ''
     },
     {
-      name: 'Vidula Deneth',
+      name: 'Anuhas Kalupahana',
       role: 'Project Secretary',
-      email: 'vidula@extru.edu.lk',
-      phone: '+94 70 467 63 30',
+      email: 'anuhas@extru.edu.lk',
+      phone: '+94 71 277 6269',
       image: ''
     },
+    
     {
       name: 'Divantha Ambrose',
       role: 'Head of Marketing',
@@ -29,13 +30,7 @@ export default function OrganizingCommittee() {
       phone: '+94 77 208 14 95',
       image: ''
     },
-    {
-      name: 'Anuhas Kalupahana',
-      role: 'Publicity Team Head',
-      email: 'anuhas@extru.edu.lk',
-      phone: '+94 71 277 6269',
-      image: ''
-    }
+    
   ]
 
   return (
@@ -55,14 +50,14 @@ export default function OrganizingCommittee() {
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto mb-16"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {team.map((member, index) => (
               <div
                 key={index}
                 className="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Main Card Container */}
-                <div className="relative bg-gradient-to-br from-[#0a1f3d] via-[#0d1b2a] to-[#000814] rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/60 transition-all duration-500 p-6">
+                <div className="relative bg-gradient-to-br from-[#0a1f3d] via-[#0d1b2a] to-[#000814] rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/60 transition-all duration-500 p-8 min-h-[320px] flex flex-col justify-center">
 
                   {/* Animated Background Glow */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -77,7 +72,7 @@ export default function OrganizingCommittee() {
                       <div className="relative group-hover:scale-105 transition-transform duration-300">
                         <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-sm opacity-30"></div>
                         <div className="relative bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary/40 hover:to-accent/40 backdrop-blur-sm px-4 py-1.5 rounded-full border-2 border-primary/50 hover:border-primary shadow-xl transition-all duration-300">
-                          <p className="text-[10px] font-bold text-white uppercase tracking-wider drop-shadow-lg">
+                          <p className="text-xs md:text-sm font-bold text-white uppercase tracking-wider drop-shadow-lg">
                             {member.role}
                           </p>
                         </div>
@@ -87,7 +82,7 @@ export default function OrganizingCommittee() {
 
                   {/* Name Section */}
                   <div className="text-center mb-4">
-                    <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-primary transition-colors duration-300" style={{ fontFamily: 'var(--font-orbitron)' }}>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300" style={{ fontFamily: 'var(--font-orbitron)' }}>
                       {member.name}
                     </h3>
                     <div className="h-0.5 w-16 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
@@ -104,8 +99,8 @@ export default function OrganizingCommittee() {
                         <FaEnvelope className="text-white text-xs" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-[10px] text-gray-400 uppercase tracking-wide">Email</p>
-                        <p className="text-xs text-gray-200 truncate group-hover/link:text-white transition-colors">
+                        <p className="text-xs text-gray-400 uppercase tracking-wide">Email</p>
+                        <p className="text-sm text-gray-200 truncate group-hover/link:text-white transition-colors">
                           {member.email}
                         </p>
                       </div>
@@ -120,8 +115,8 @@ export default function OrganizingCommittee() {
                         <FaPhoneAlt className="text-white text-xs" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-[10px] text-gray-400 uppercase tracking-wide">Phone</p>
-                        <p className="text-xs text-gray-200 group-hover/link:text-white transition-colors">
+                        <p className="text-xs text-gray-400 uppercase tracking-wide">Phone</p>
+                        <p className="text-sm text-gray-200 group-hover/link:text-white transition-colors">
                           {member.phone}
                         </p>
                       </div>

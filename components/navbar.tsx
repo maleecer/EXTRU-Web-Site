@@ -19,7 +19,6 @@ export default function Navbar() {
         "departments",
         "sponsors",
         "projects",
-        "schedule",
         "team",
       ];
       const scrollPosition = window.scrollY + 150; // Adjust offset for navbar height
@@ -103,7 +102,6 @@ export default function Navbar() {
             "events",
             "merchandise",
             "projects",
-            "schedule",
             "contact",
           ].map((section) => (
             <button
@@ -153,7 +151,6 @@ export default function Navbar() {
             "merchandise",
             "events",
             "projects",
-            "schedule",
             "contact",
           ].map((section) => (
             <button

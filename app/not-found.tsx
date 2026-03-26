@@ -136,12 +136,6 @@ export default function NotFound() {
                         Departments
                     </Link>
                     <Link
-                        href="/#schedule"
-                        className="hover:text-primary transition-colors duration-300 cursor-pointer hover:underline underline-offset-4"
-                    >
-                        Schedule
-                    </Link>
-                    <Link
                         href="/#contact"
                         className="hover:text-primary transition-colors duration-300 cursor-pointer hover:underline underline-offset-4"
                     >

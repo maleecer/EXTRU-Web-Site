@@ -49,7 +49,7 @@ const events: Event[] = [
     id: '2',
     title: 'EXTRU 2026 - Annual Technology Exhibition',
     subtitle: 'TECHNOLOGY SHOWCASE',
-    description: 'The biggest technology exhibition of the year featuring innovative projects, workshops, and demonstrations from all departments of the Faculty of Technology.',
+    description: 'The biggest technology exhibition of the year featured innovative projects, workshops, and demonstrations from all departments of the Faculty of Technology.',
     category: 'Exhibition',
     date: 'March 6-7, 2026',
     time: '9:00 AM - 6:00 PM',
@@ -58,7 +58,7 @@ const events: Event[] = [
     capacity: '5000+ Visitors',
     image: '/Extru-2025/1.jpg',
     registrationLink: '#',
-    status: 'upcoming',
+    status: 'completed',
     featured: true,
     organizer: 'Faculty of Technology'
   },

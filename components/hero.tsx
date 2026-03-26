@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaCalendarAlt, FaMapMarkerAlt, FaUniversity } from "react-icons/fa";
+import { FaCalendarAlt, FaCheckCircle, FaMapMarkerAlt, FaUniversity } from "react-icons/fa";
 import dynamic from "next/dynamic";
 
 // Dynamically import the 3D model component (client-side only)
@@ -22,7 +22,7 @@ export default function Hero() {
   const fullYear = "2026";
   const [showFinalCursor, setShowFinalCursor] = useState(false);
   const [showInitialCursor, setShowInitialCursor] = useState(true);
-  const [daysRemaining, setDaysRemaining] = useState<number | null>(null);
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -60,20 +60,7 @@ export default function Hero() {
     };
   }, []);
 
-  // Calculate days remaining to March 6, 2026 (local time)
-  useEffect(() => {
-    const calculateDays = () => {
-      const target = new Date(2026, 2, 6, 0, 0, 0); // March is month index 2
-      const now = new Date();
-      const diffMs = target.getTime() - now.getTime();
-      const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-      setDaysRemaining(days > 0 ? days : 0);
-    };
 
-    calculateDays();
-    const id = setInterval(calculateDays, 60 * 1000); // refresh every minute
-    return () => clearInterval(id);
-  }, []);
 
   return (
     <section
@@ -252,7 +239,7 @@ export default function Hero() {
                 className="mb-3 text-accent/80 text-xs uppercase tracking-wider font-semibold group-hover:text-accent transition-colors"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Exhibition Date
+                Exhibition Held On
               </div>
               <FaCalendarAlt
                 className="text-accent text-3xl mb-3 group-hover:scale-110 transition-transform"
@@ -295,33 +282,30 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Days Countdown (replaces CTA button) */}
+          {/* Exhibition Completed Banner */}
           <div
             className={`mt-12 inline-flex items-center justify-center md:justify-start transition-all duration-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
               }`}
-            aria-live="polite"
           >
             <div
-              className="px-8 py-5 rounded-xl border border-primary/30 bg-primary/10 backdrop-blur-sm shadow-lg"
-              style={{ boxShadow: "0 0 30px rgba(59, 130, 246, 0.25)" }}
+              className="px-8 py-5 rounded-xl border border-accent/30 bg-accent/10 backdrop-blur-sm shadow-lg"
+              style={{ boxShadow: "0 0 30px rgba(6, 182, 212, 0.25)" }}
             >
               <div
-                className="text-xs uppercase tracking-wider font-semibold mb-1 text-primary/80"
+                className="text-xs uppercase tracking-wider font-semibold mb-1 text-accent/80"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Days to go
+                <FaCheckCircle className="inline-block mr-1 text-accent" /> Event Status
               </div>
               <div className="flex items-baseline gap-3">
                 <span
-                  className="text-5xl md:text-6xl font-extrabold text-primary"
+                  className="text-2xl md:text-3xl font-extrabold text-accent"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  {daysRemaining ?? "--"}
-                </span>
-                <span className="text-sm md:text-base text-foreground/80">
-                  until March 6, 2026
+                  Successfully Completed
                 </span>
               </div>
+              <p className="text-sm text-foreground/60 mt-2">March 6-7, 2026 · Thank you for joining us!</p>
             </div>
           </div>
         </div>

@@ -117,20 +117,7 @@ export default function Footer() {
                   Merchandise
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/#schedule"
-                  className="hover:text-primary hover:translate-x-1 transition-all inline-block"
-                  onClick={(e) => {
-                    if (pathname === '/') {
-                      e.preventDefault()
-                      scrollToSection('schedule')
-                    }
-                  }}
-                >
-                  Schedule
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/#projects"

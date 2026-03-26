@@ -5,25 +5,25 @@ export default function About() {
     <section id="about" className="relative py-24 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6" style={{ fontFamily: 'var(--font-orbitron)' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 neon-text" style={{ fontFamily: 'var(--font-orbitron)' }}>
             About EXTRU 2026
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+          <div className="h-1 w-32 bg-linear-to-r from-primary to-secondary mx-auto mb-6"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <div className="space-y-6">
             <p className="text-white text-lg leading-relaxed">
-              <span className="text-primary font-bold text-xl">EXTRU 2026</span> is the <span className="text-primary font-semibold">third edition</span> of the Faculty of Technology's prestigious <span className="text-accent font-semibold">Innovation and Technology Exhibition</span>, proudly organized by the <span className="text-accent font-semibold">Faculty of Technology, Rajarata University of Sri Lanka</span>.
+              <span className="text-primary font-bold text-xl">EXTRU 2026</span> was the <span className="text-primary font-semibold">third edition</span> of the Faculty of Technology's prestigious <span className="text-accent font-semibold">Innovation and Technology Exhibition</span>, proudly organized by the <span className="text-accent font-semibold">Faculty of Technology, Rajarata University of Sri Lanka</span>.
             </p>
             
             <p className="text-white text-lg leading-relaxed">
-              Following the great success of <span className="text-primary font-semibold">EXTRU 2024</span> and <span className="text-primary font-semibold">EXTRU 2025</span>, the exhibition returns in <span className="text-accent font-semibold">March 2026</span>, featuring <span className="text-secondary">new ideas</span>, <span className="text-secondary">modern innovations</span>, and <span className="text-secondary">national-level collaborations</span>.
+              Following the great success of <span className="text-primary font-semibold">EXTRU 2024</span> and <span className="text-primary font-semibold">EXTRU 2025</span>, the exhibition was held in <span className="text-accent font-semibold">March 2026</span>, featuring <span className="text-secondary">new ideas</span>, <span className="text-secondary">modern innovations</span>, and <span className="text-secondary">national-level collaborations</span>.
             </p>
 
             <p className="text-white text-lg leading-relaxed">
-              The exhibition aims to showcase the <span className="text-primary font-semibold">creativity</span>, <span className="text-primary font-semibold">talent</span>, and <span className="text-primary font-semibold">practical knowledge</span> of both undergraduate and postgraduate students. It will bring together <span className="text-accent">industries</span>, <span className="text-accent">academics</span>, <span className="text-accent">schools</span>, and <span className="text-accent">government organizations</span> to exchange ideas, share expertise, and inspire future innovation.
+              The exhibition showcased the <span className="text-primary font-semibold">creativity</span>, <span className="text-primary font-semibold">talent</span>, and <span className="text-primary font-semibold">practical knowledge</span> of both undergraduate and postgraduate students. It brought together <span className="text-accent">industries</span>, <span className="text-accent">academics</span>, <span className="text-accent">schools</span>, and <span className="text-accent">government organizations</span> to exchange ideas, share expertise, and inspire future innovation.
             </p>
 
             <div className="grid grid-cols-3 gap-4 pt-6">

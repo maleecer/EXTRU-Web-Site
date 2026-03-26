@@ -9,7 +9,6 @@ import Recap from '@/components/recap'
 import Merchandise from '@/components/merchandise'
 import Events from '@/components/events'
 import Projects from '@/components/projects'
-import Schedule from '@/components/schedule'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import OrganizingCommittee from '@/components/organizing-committee'
@@ -18,6 +17,7 @@ import Sponsors from '@/components/sponsors'
 import ScrollToTop from '@/components/scroll-to-top'
 import AnimatedGrid from '@/components/animated-grid'
 import PageLoader from '@/components/page-loader'
+import Extru2027Popup from '@/components/extru-2027-popup'
 
 export default function Home() {
   const [isPageLoading, setIsPageLoading] = useState(true)
@@ -155,20 +155,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Schedule */}
-          <div id="schedule" className="w-full">
-            <div className="w-full max-w-7xl mx-auto px-4">
-              <Schedule />
-            </div>
-          </div>
-
-          {/* Divider Line */}
-          <div className="w-full flex justify-center">
-            <div className="w-full max-w-7xl px-4">
-              <div className="section-divider"></div>
-            </div>
-          </div>
-
           {/* Team - Organizing Committee */}
           <div id="team" className="w-full bg-gradient-to-b from-transparent via-secondary/5 to-transparent">
             <div className="w-full max-w-7xl mx-auto px-4">
@@ -185,6 +171,7 @@ export default function Home() {
         </div>
         <Footer />
         <ScrollToTop />
+        <Extru2027Popup />
       </main>
     </>
   )

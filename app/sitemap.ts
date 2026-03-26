@@ -21,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { anchor: '/#events', priority: 0.8 },
     { anchor: '/#departments', priority: 0.7 },
     { anchor: '/#projects', priority: 0.7 },
-    { anchor: '/#schedule', priority: 0.7 },
     { anchor: '/#sponsors', priority: 0.6 },
     { anchor: '/#team', priority: 0.6 },
     { anchor: '/#contact', priority: 0.8 },
